@@ -1,0 +1,3 @@
+<template>
+    coucou extras
+</template>
