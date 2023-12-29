@@ -5,10 +5,23 @@
     <p></p>
     <RouterLink to="/">Accueil</RouterLink>
     <p></p>
+
+    <div class="contact">
+        <h2 class="contact__title">Une question?</h2>
+        <p class="contact__paragraph">La moindre interrogation ? Un message à nous faire passer ? C'est par ici que ça se
+            passe. </p>
+    </div>
     <div class="contact-container">
-        <h2>Contact</h2>
-        <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le samedi 19 janvier 2024 ou lors de notre defis 24h le 14 mars 2024.</p>
-        <p>En attendant, si vous avez ne serait-ce qu'une question, n’hésitez pas à nous contacter !</p>
+        <div class="contact-container--flex">
+            <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le samedi 19 janvier
+                2024
+                ou lors de notre defis 24h le 14 mars 2024.</p>
+            <MyEllipse />
+        </div>
+        <div class="contact-container--flex">
+            <MyEllipse />
+            <p>En attendant, si vous avez ne serait-ce qu'une question, n'hésitez pas à nous contacter !</p>
+        </div>
         <form @submit.prevent="sendEmail">
             <div class="form-group">
                 <label for="name">Nom:</label>
