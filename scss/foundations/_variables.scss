@@ -1,0 +1,27 @@
+@import 'functions';
+
+$primary-color: #FFA51D;
+$secondary-color: #1818BB;
+
+$white: #fefefe;
+$grey: #C2C2C2;
+$black: #010101;
+
+$gradient-primary: radial-gradient(circle, $primary-color, #ffffff00);
+$gradient-secondary: radial-gradient(circle, $secondary-color, #ffffff00);
+$gradient-black: radial-gradient(circle, $black, #ffffff00);
+$gradient-primary-secondary: radial-gradient(circle, $secondary-color, $primary-color, #ffffff00);
+
+
+$h1: rem(115);
+$h2: rem(70);
+$h3: rem(34);
+$button: rem(30);
+$body: rem(20);
+
+$font-satoshi: 'Satoshi', sans-serif;
+
+// media queries
+$small: 600px;
+$medium: 760px;
+$large: 960px;

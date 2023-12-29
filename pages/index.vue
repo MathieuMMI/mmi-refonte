@@ -44,8 +44,9 @@
     </div>
 
     <div class="cursus">
-        <p class="cursus__paragraph">Ce cursus dispensé en formation initiale ou en alternance à partir de la deuxième année
-            permet un accès direct à la vie professionnelle et autorise diverses poursuites d'études.</p>
+        <p class="cursus__paragraph">Ce cursus dispensé en formation initiale ou en <strong> alternance</strong> à partir de
+            la deuxième année
+            permet un accès direct à la vie <strong> professionnelle </strong>et autorise diverses poursuites d'études.</p>
         <MyCursus />
     </div>
 
