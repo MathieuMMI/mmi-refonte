@@ -1,5 +1,4 @@
-<script setup>
 
-</script>
-<template></template>
-<style lang="scss"></style>
+<template>
+    cursus
+</template>

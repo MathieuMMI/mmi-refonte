@@ -7,8 +7,8 @@
   <RouterLink to="/FAQ">FAQ</RouterLink>
   <p></p>
   <RouterLink class="home" to="/">Accueil</RouterLink>
-  <Teachers />
 
+  <Actus />
   <div class="hero">
     <h2 class="hero__title">LE DÉPARTEMENT</h2>
     <p class="hero__prargraph">Viens nous rencontrer !</p>
@@ -69,7 +69,7 @@
           l'Université de Franche-Comté.</p>
       </div>
     </div>
-    <Teachers />
+    <!--<Teachers />-->
   </div>
 
 

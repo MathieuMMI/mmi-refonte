@@ -1,4 +1,4 @@
 <template>
-    Ceci est un header
+    <!-- Ceci est un header -->
     <Menu />
 </template>
