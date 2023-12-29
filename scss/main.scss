@@ -1,0 +1,21 @@
+@import './foundations/reset';
+
+body {
+    line-height: 1.2;
+    font-family: $font-satoshi;
+}
+
+// Importez la police "Satoshi"
+@font-face {
+    font-family: 'Satoshi';
+    src: url('~@/assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('~@/assets/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
