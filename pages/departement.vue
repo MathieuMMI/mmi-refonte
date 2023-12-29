@@ -69,7 +69,7 @@
           l'Université de Franche-Comté.</p>
       </div>
     </div>
-    <!--<Teachers />-->
+    <Teachers />
   </div>
 
 

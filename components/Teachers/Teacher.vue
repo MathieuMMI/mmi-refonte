@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
     <section class="teacher">
         <figure class="teacher_figure">
-            <img class="teacher_figure-img" :src="img.url" :alt="img.alt" />
+            <a :href="link.url"><img class="teacher_figure-img" :src="img.url" :alt="img.alt" /></a>
         </figure>
         <div class="teacher_name">
             <PrismicRichText class="teacher_name-name" :field="name" />
@@ -19,7 +19,6 @@ const props = defineProps({
         </div>
 
         <PrismicRichText class="teacher_subject" :field="subject" />
-        
     </section>
 </template>
 
@@ -43,5 +42,5 @@ const props = defineProps({
 .teacher_figure-img {
     margin: auto;
 }
-/*<a class="teacher_link">{{ link.url }}</a>*/
+
 </style>

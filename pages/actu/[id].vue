@@ -1,12 +1,11 @@
 <script setup>
 const router = useRoute();
-const monId = ref('');
+const IdActu = ref('');
 const { client } = usePrismic();
-monId.value = router.params.id || '';
+IdActu.value = router.params.id || '';
 
-const { data: actupage } = await useAsyncData('news', () => client.getByID(monId.value));
+const { data: actupage } = await useAsyncData('news', () => client.getByID(IdActu.value));
 
-console.log(actupage.value.data)
 // variables pour le contenu
 const titre = actupage.value.data.news_title[0].text;
 const accroche =  actupage.value.data.news_hook[0].text ;
