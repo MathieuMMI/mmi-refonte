@@ -1,3 +1,3 @@
 <template>
-    Ceci est un footer
+    <!-- Ceci est un footer -->
 </template>
