@@ -21,14 +21,26 @@ const { data: questions } = await useAsyncData('faq', () => client.getAllByType(
       </div>
     </div>
   </div>
+
+  <div class="faq">
+    <h2 class="faq__title">FAQ</h2>
+    <p class="faq__prargraph">Vous vous posez (encore) des questions ? On a anticipé !</p>
+    <MyEllipse />
+    <div class="paragraph__arrow">
+      <svg></svg>
+      <p class="paragraph_arrow--paragraph">Par ici les réponses.</p>
+    </div>
+    <MyEllipse />
+  </div>
 </template>
 
 <style>
-  .question {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .answer {
-    margin-bottom: 20px;
-  }
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
 </style>
