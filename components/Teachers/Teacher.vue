@@ -4,7 +4,7 @@ const props = defineProps({
     firstname: Array,
     img: Object,
     subject: Array,
-    link: Array,
+    link: Object,
 });
 </script>
 
