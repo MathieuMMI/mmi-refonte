@@ -14,7 +14,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="parcour">
+    <div class="parcour" :style="{ borderColor: couleurVariable }">
         <div class="parcour__image">
             <img :src="imageSrc" :alt="imageAlt" />
         </div>

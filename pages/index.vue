@@ -63,12 +63,7 @@
             <svg></svg>
             <p class="decouvrir_arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
         </div>
-        <!-- Espace Pro -->
-        <MyDecouvrir />
-        <!-- Département -->
-        <MyDecouvrir />
-        <!-- Formation -->
-        <MyDecouvrir />
+        <MyDecouvrirs />
     </div>
 
     <div class="international">
