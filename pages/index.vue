@@ -51,14 +51,9 @@
     </div>
 
     <div class="parcours">
-        <h2 class="parcours_title"></h2>
-        <p class="parcours_body"></p>
+        <h2 class="parcours_title">3 PARCOURS</h2>
+        <p class="parcours_body">Tu es plutôt créa ? Comm ? Dev ?</p>
 
-        <!-- Design -->
-        <MyParcours />
-        <!-- Com -->
-        <MyParcours />
-        <!-- Dev -->
         <MyParcours />
     </div>
 
@@ -104,7 +99,7 @@
 
             <MyButton />
         </div>
-        <MyEllipse />
+        <MyEllipse size="big" color="tri" />
         <MyEllipse />
     </div>
 </template>
