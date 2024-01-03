@@ -36,7 +36,7 @@
         <p class="hero__paragraph">Vous former aux métiers du web : tel est l'objectif du BUT MMI. En trois ans, vous serez
             capable de concevoir et de réaliser des produits et services multimédia en ligne.
         </p>
-        <MyButton />
+        <MyButton href='/candidater' label="DÉCOUVRIR" color="border" />
         <div class="hero__blue-line"></div>
         <img src="" alt="" class="hero__img">
         <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
@@ -92,7 +92,7 @@
 
                 Les stages et les alternances sont également l'occasion de tenter la mobilité internationale.</p>
 
-            <MyButton />
+            <MyButton href='/candidater' label="DÉCOUVRIR" />
         </div>
         <MyEllipse size="big" color="tri" />
         <MyEllipse />
