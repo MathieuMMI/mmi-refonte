@@ -13,6 +13,7 @@ const className = computed(() => ({
     '-secondary': props.color === 'secondary',
     '-primary': props.color === 'primary',
     '-black': props.color === 'black',
+    '-white': props.color === 'white',
     '-border': props.color === 'border',
 }));
 </script>
@@ -53,6 +54,11 @@ const className = computed(() => ({
     &.-black {
         background: $black;
         color: $white;
+    }
+
+    &.-white {
+        background: $white;
+        color: $black;
     }
 
     &.-border {
