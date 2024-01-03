@@ -48,7 +48,7 @@ const className = computed(() => ({
 
 
     &.-tri {
-        background: radial-gradient(circle at 50% 50%, #1818BB 0%, #FFA51D 30%, transparent 50%);
+        background: radial-gradient(circle at 50% 50%, #1818BB 0%, #FFD15B 15%, #ffffff 45%);
     }
 
     &.-tiny {
