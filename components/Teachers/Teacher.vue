@@ -59,7 +59,7 @@ const props = defineProps({
 
             /* Afficher le contenu au survol */
             .teacher__content {
-                opacity: 0.5;
+                opacity: 0.75;
             }
         }
     }
