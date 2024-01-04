@@ -114,11 +114,9 @@ const closeMenu = () => {
 
         }
 
-        &--paragraph {}
 
     }
 
-    &__img {}
 
 }
 
