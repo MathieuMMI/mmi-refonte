@@ -4,6 +4,8 @@
 <template>
     <div class="hero">
         <h2 class="hero__title">LES EXTRAS</h2>
+        <!--<Students />-->
+        <Projets />
         <p class="hero__prargraph">Tes raisons de choisir MMI Montbéliard !</p>
         <div class="hero__img">
             <div class="hero__img--left">
