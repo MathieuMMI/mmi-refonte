@@ -10,38 +10,75 @@ const props = defineProps({
 
 <template>
     <section class="teacher">
-        <figure class="teacher_figure">
-            <img class="teacher_figure-img" :src="img.url" :alt="img.alt" />
-        </figure>
-        <div class="teacher_name">
-            <PrismicRichText class="teacher_name-name" :field="name" />
-            <PrismicRichText class="teacher_name-firstname" :field="firstname" />
-        </div>
+        <figure class="teacher__figure">
+            <img class="teacher__figure--img" :src="img.url" :alt="img.alt" />
+            <div class="teacher__content">
+                <div class="teacher__name">
+                    <PrismicRichText class="teacher__name--firstname" :field="firstname" />
+                    <PrismicRichText class="teacher__name--name" :field="name" />
+                </div>
 
-        <PrismicRichText class="teacher_subject" :field="subject" />
-        
+                <PrismicRichText class="teacher__subject" :field="subject" />
+            </div>
+        </figure>
+
     </section>
 </template>
 
-<style>
+<style lang="scss">
 .teacher {
-    border-radius: 20px;
-    border: 3px solid var(--ORANGE, #FFA51D);
-    width: fit-content;
-}
+    position: relative;
 
-.teacher_name {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-}
+    &__name {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        font-weight: bold;
+        font-size: $body;
+    }
 
-.teacher_subject {
-    text-align: center;
-}
+    &__subject {
+        text-align: center;
+    }
 
-.teacher_figure-img {
-    margin: auto;
+    &__figure {
+        position: relative;
+
+        &--img {
+            margin: auto;
+            width: rem(500);
+
+            /* Ajouter un effet de fondu au survol */
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+            &--img {
+                opacity: 0.75;
+            }
+
+            /* Afficher le contenu au survol */
+            .teacher__content {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, 0);
+        color: $white;
+        text-align: center;
+        background-color: $black;
+        /* Cacher le contenu par défaut */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Ajouter une transition pour une apparition en douceur */
+        padding-top: 80%;
+        padding-bottom: 60%;
+    }
 }
-/*<a class="teacher_link">{{ link.url }}</a>*/
 </style>

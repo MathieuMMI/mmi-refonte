@@ -8,7 +8,6 @@
   <p></p>
   <RouterLink class="home" to="/">Accueil</RouterLink>
 
-  <Actus />
   <div class="hero">
     <h2 class="hero__title">LE DÉPARTEMENT</h2>
     <p class="hero__prargraph">Viens nous rencontrer !</p>
@@ -69,14 +68,15 @@
           l'Université de Franche-Comté.</p>
       </div>
     </div>
-    <!--<Teachers />-->
+    <Teachers />
   </div>
 
 
   <div class="actualite">
     <MyEllipse />
     <h2 class="actualite__title">Ce qu'il se passe au département...</h2>
-    <!-- actu -->
+    <Actus />
+
     <MyButton />
   </div>
 </template>
