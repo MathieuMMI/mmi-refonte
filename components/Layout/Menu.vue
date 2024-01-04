@@ -1,63 +1,119 @@
 <template>
-    <!-- Mon menu est bg -->
-    <div class="menu">
-        <h1 class="menu_num">01</h1>
-        <div class="menu__right">
-            <div class="menu__text">
-                <p class="menu__title">La formation</p>
-                <p class="menu__paragraph">Découvrez le programme du BUT MMI </p>
-            </div>
-            <img src="" alt="" class="menu__img">
-        </div>
-        <div class="menu__line"></div>
-    </div>
-    <div class="menu">
-        <h1 class="menu_num">02</h1>
-        <div class="menu__right">
-            <div class="menu__text">
-                <p class="menu__title">Le département</p>
-                <p class="menu__paragraph">Découvrez le département où étudient les MMI</p>
-            </div>
-            <img src="" alt="" class="menu__img">
-        </div>
-        <div class="menu__line"></div>
-    </div>
-    <div class="menu">
-        <h1 class="menu_num">03</h1>
-        <div class="menu__right">
-            <div class="menu__text">
-                <p class="menu__title">Les extras</p>
-                <p class="menu__paragraph">Nous proposons de nombreuses opportunités à l'étranger</p>
-            </div>
-            <img src="" alt="" class="menu__img">
-        </div>
-        <div class="menu__line"></div>
-    </div>
-    <div class="menu">
-        <h1 class="menu_num">04</h1>
-        <div class="menu__right">
-            <div class="menu__text">
-                <p class="menu__title">Espace pro</p>
-                <p class="menu__paragraph">Vous avez un projet ? Vous cherchez
-                    Proposez vos offres aux étudiants</p>
-            </div>
-            <img src="" alt="" class="menu__img">
-        </div>
-        <div class="menu__line"></div>
-    </div>
-    <div class="menu">
-        <h1 class="menu_num">05</h1>
-        <div class="menu__right">
-            <div class="menu__text">
-                <p class="menu__title">Contact</p>
-                <p class="menu__paragraph">Contactez-nous pour plus d'informations sur le BUT MMI</p>
-            </div>
-            <img src="" alt="" class="menu__img">
-        </div>
-        <div class="menu__line"></div>
-    </div>
+    <div class="page">
 
-    <MyButton />
+        <div class="menu">
+            <h1 class="menu__num">01</h1>
+            <RouterLink to="/formation" class="menu__text">
+                <p class="menu__text--title">La Formation</p>
+                <p class="menu__text--paragraph">Découvrez le programme du BUT MMI </p>
+            </RouterLink>
+            <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
+            <MyCroix />
+        </div>
+        <div class="line"></div>
+        <div class="menu">
+            <h1 class="menu__num">02</h1>
+            <div class="menu__right">
+                <RouterLink to="/departement" class="menu__text">
+                    <p class="menu__text--title">Le Département</p>
+                    <p class="menu__text--paragraph">Découvrez le département où étudient les MMI</p>
+                </RouterLink>
+            </div>
+            <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
+        </div>
+        <div class="line"></div>
+        <div class="menu">
+            <h1 class="menu__num">03</h1>
+            <div class="menu__right">
+                <RouterLink to="/extras" class="menu__text">
+                    <p class="menu__text--title">Les Extras</p>
+                    <p class="menu__text--paragraph">Nous proposons de nombreuses opportunités à l'étranger</p>
+                </RouterLink>
+
+            </div>
+            <img src="../../assets/menu_extra.jpg" alt="extras" class="menu__img">
+        </div>
+        <div class="line"></div>
+        <div class="menu">
+            <h1 class="menu__num">04</h1>
+            <div class="menu__right">
+                <RouterLink to="/espace-pro" class="menu__text">
+                    <p class="menu__text--title">Espace pro</p>
+                    <p class="menu__text--paragraph">Vous avez un projet ? Vous cherchez
+                        Proposez vos offres aux étudiants</p>
+                </RouterLink>
+
+            </div>
+            <img src="../../assets/menu_espacepro.jpg" alt="espace pro" class="menu__img">
+        </div>
+        <div class="line"></div>
+        <div class="menu">
+            <h1 class="menu__num">05</h1>
+            <div class="menu__right">
+                <RouterLink to="/contact" class="menu__text">
+                    <p class="menu__text--title">Contact</p>
+                    <p class="menu__text--paragraph">Contactez-nous pour plus d'informations sur le BUT MMI</p>
+                </RouterLink>
+            </div>
+            <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
+        </div>
+        <div class="line"></div>
+        <RouterLink to="/candidater">
+            <MyButton color="white" label="CANDIDATURE" size="big" />
+        </RouterLink>
+    </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.page {
+    min-height: 100vh;
+    background-color: $black;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+}
+
+.menu {
+    color: $white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.2fr;
+    justify-items: start;
+    align-items: center;
+
+    &__num {
+        font-size: $h1;
+        font-weight: bold;
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+
+    }
+
+    &__text {
+        font-size: $body ;
+        text-decoration: none;
+        color: $white;
+
+        &--title {
+            font-weight: bold;
+            margin-bottom: rem(5);
+
+        }
+
+        &--paragraph {}
+
+    }
+
+    &__img {}
+
+}
+
+.line {
+    background-color: $white;
+    height: 3px;
+    width: 100%;
+}
+</style>
