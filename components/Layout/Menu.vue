@@ -1,3 +1,14 @@
+<script setup>
+import { ref, defineProps, defineEmits } from 'vue';
+
+const props = defineProps(/* ... */);
+const emits = defineEmits(/* ... */);
+
+const closeMenu = () => {
+    emits('close');
+};
+</script>
+
 <template>
     <div class="page">
 
@@ -8,7 +19,7 @@
                 <p class="menu__text--paragraph">Découvrez le programme du BUT MMI </p>
             </RouterLink>
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
-            <MyCroix />
+            <MyCroix @click="closeMenu" />
         </div>
         <div class="line"></div>
         <div class="menu">
