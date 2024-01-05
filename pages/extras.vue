@@ -84,9 +84,10 @@
                 étudiants l'occasion de prouver leur savoir-faire. Toutes les étapes, de la réflexion au déploiement, sont
                 autant d'étapes de validation pour mener les étudiants vers la réussite de leurs projets.
                 Voici quelques projets des anciens étudiants du BUT MMI.</p>
+
         </div>
         <div class="projet__right">
-            <!-- projet -->
+            <Projets />
             <MyEllipse />
         </div>
     </div>
