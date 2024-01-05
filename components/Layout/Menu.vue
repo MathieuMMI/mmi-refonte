@@ -21,7 +21,7 @@ const closeMenu = () => {
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
             <MyCroix @click="closeMenu" />
         </div>
-        <div class="line"></div>
+        <div class="menu-line"></div>
         <div class="menu">
             <h1 class="menu__num">02</h1>
             <div class="menu__right">
@@ -32,7 +32,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
         </div>
-        <div class="line"></div>
+        <div class="menu-line"></div>
         <div class="menu">
             <h1 class="menu__num">03</h1>
             <div class="menu__right">
@@ -44,7 +44,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_extra.jpg" alt="extras" class="menu__img">
         </div>
-        <div class="line"></div>
+        <div class="menu-line"></div>
         <div class="menu">
             <h1 class="menu__num">04</h1>
             <div class="menu__right">
@@ -57,7 +57,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_espacepro.jpg" alt="espace pro" class="menu__img">
         </div>
-        <div class="line"></div>
+        <div class="menu-line"></div>
         <div class="menu">
             <h1 class="menu__num">05</h1>
             <div class="menu__right">
@@ -68,7 +68,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
-        <div class="line"></div>
+        <div class="menu-line"></div>
         <RouterLink to="/candidater">
             <MyButton color="white" label="CANDIDATURE" size="big" />
         </RouterLink>
@@ -120,9 +120,9 @@ const closeMenu = () => {
 
 }
 
-.line {
+.menu-line {
     background-color: $white;
-    height: 3px;
+    height: 2px;
     width: 100%;
 }
 </style>
