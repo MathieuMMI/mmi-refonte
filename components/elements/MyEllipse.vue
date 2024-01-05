@@ -32,7 +32,7 @@ const className = computed(() => ({
 
 
     &.-primary {
-        background: radial-gradient(circle at 50% 50%, #FFA51D 20%, transparent 50%);
+        background: radial-gradient(circle at 50% 50%, #FFA51D 5%, #ffa51d8f 20%, transparent 45%);
     }
 
 
@@ -57,8 +57,8 @@ const className = computed(() => ({
     }
 
     &.-small {
-        width: rem(159);
-        height: rem(159);
+        width: rem(138);
+        height: rem(138);
     }
 
     &.-regular {

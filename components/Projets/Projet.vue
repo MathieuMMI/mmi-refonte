@@ -32,13 +32,13 @@ const props = defineProps({
 <style lang="scss">
 .project {
     &__line {
-        background-color: $black;
+        background-color: $white;
         height: 2px;
         width: 100%;
     }
 
     &__group {
-        color: $black;
+        color: $white;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -63,7 +63,6 @@ const props = defineProps({
                 margin-bottom: rem(10);
             }
 
-            &--year {}
 
             &--link {
                 text-decoration: none;
