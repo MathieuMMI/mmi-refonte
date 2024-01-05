@@ -44,6 +44,8 @@ defineProps({
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: rem(40);
+    text-align: left;
 
     &__image {
         margin-top: rem(10);
