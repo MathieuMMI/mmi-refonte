@@ -97,7 +97,9 @@
             <svg></svg>
             <p class="paragraph_arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
         </div>
-        <MyMap />
+        <Students />
+
+
     </div>
 </template>
 <style lang="scss"></style>
