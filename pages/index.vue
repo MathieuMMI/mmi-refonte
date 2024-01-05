@@ -69,22 +69,9 @@
     <div class="international">
         <h2 class="international__title--orange"> MMI À</h2>
         <h2 class="international__title">L'INTERNATIONAL</h2>
-        <MyMap />
+        <MyInternational />
 
-        <div class="international__canada">
-            <p class="international__canada--body--bold">Canada</p>
-            <p class="international__canada--body">Montréal / Matane</p>
-        </div>
-        <div class="international__canada">
-            <p class="international__canada--body--bold">Espagne</p>
-            <p class="international__canada--body">Barcelone</p>
-        </div>
-        <div class="international__canada">
-            <p class="international__canada--body--bold">Inde</p>
-        </div>
-        <div class="international__canada">
-            <p class="international__canada--body--bold">Australie</p>
-        </div>
+
         <div class="international__end">
             <p>Notre BUT offre aux étudiants la possibilité de suivre un semestre complet à l'étranger dans des CÉGEP
                 (collège
