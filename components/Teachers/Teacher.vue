@@ -22,7 +22,7 @@ const props = defineProps({
                 <PrismicRichText class="teacher__subject" :field="subject" />
             </div>
 
-
+        </figure>
     </section>
 </template>
 
@@ -82,5 +82,4 @@ const props = defineProps({
         padding-bottom: 60%;
     }
 }
-
 </style>
