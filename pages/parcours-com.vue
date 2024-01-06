@@ -155,7 +155,7 @@
         </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .top {
     font-size: $h2;
     font-family: $font-satoshi-bold;
