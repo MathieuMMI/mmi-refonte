@@ -74,7 +74,7 @@
         font-weight: bold;
         color: $secondary-color;
         margin-left: rem(77);
-
+        font-family: $font-satoshi;
     }
 
     &__paragraph {
