@@ -7,10 +7,33 @@ body {
 
 // Importez la police "Satoshi"
 @font-face {
-    font-family: 'Satoshi';
+    font-family: 'Satoshi-bold';
     src: url('/assets/fonts/satoshi-bold-webfont.woff2') format('woff2'),
-    url('/assets/fonts/satoshi-bold-webfont.woff') format('woff');
+        url('/assets/fonts/satoshi-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/assets/fonts/satoshi-regular-webfont.woff2') format('woff2'),
+        url('/assets/fonts/satoshi-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Melodrama-bold';
+    src: url('/assets/fonts/Melodrama-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Melodrama-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Melodrama';
+    src: url('/assets/fonts/Melodrama-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Melodrama-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
