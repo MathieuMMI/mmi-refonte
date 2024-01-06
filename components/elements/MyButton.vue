@@ -6,6 +6,7 @@ const props = defineProps({
     href: String,
     size: String,
     label: String,
+    font: String,
 });
 
 const className = computed(() => ({
@@ -15,6 +16,10 @@ const className = computed(() => ({
     '-black': props.color === 'black',
     '-white': props.color === 'white',
     '-border': props.color === 'border',
+    '-satoshi': props.font === 'satoshi',
+    '-satoshib': props.font === 'satoshib',
+    '-melodrama': props.font === 'melodrama',
+    '-melodramab': props.font === 'melodramab',
 }));
 </script>
 
@@ -37,7 +42,7 @@ const className = computed(() => ({
 
     &.-big {
         font-size: $body;
-        padding: rem(14) rem(29);
+        padding: rem(16) rem(32);
         font-weight: 400;
     }
 
@@ -64,7 +69,24 @@ const className = computed(() => ({
     &.-border {
         background: $white;
         color: $secondary-color;
-        border: rem(1) solid $secondary-color;
+        border: rem(3) solid $secondary-color;
+
+    }
+
+    &.-satoshi {
+        font-family: $font-satoshi;
+    }
+
+    &.-satoshib {
+        font-family: $font-satoshi-bold;
+    }
+
+    &.-melodrama {
+        font-family: $font-melodrama;
+    }
+
+    &.-melodramab {
+        font-family: $font-melodrama-bold;
     }
 }
 </style>

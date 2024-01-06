@@ -8,7 +8,7 @@
         <p class="hero__paragraph">Vous former aux métiers du web : tel est l'objectif du BUT MMI. En trois ans, vous serez
             capable de concevoir et de réaliser des produits et services multimédia en ligne.
         </p>
-        <MyButton href='/candidater' label="CANDIDATURE" color="secondary" size="big" class="hero__button" />
+        <MyButton href='/candidater' label="CANDIDATURE" color="secondary" size="big" font="satoshi" class="hero__button" />
         <div class="hero__blue-line"></div>
         <img src="" alt="" class="hero__img">
         <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
@@ -52,7 +52,7 @@
                 <p> Les stages et les alternances sont également l'occasion de tenter la mobilité internationale.</p>
             </div>
 
-            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" />
+            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" font="melodrama" size="big" />
             <MyEllipse size="regular" color="primary2" class="international__end--ellipse1" />
             <MyEllipse size="small" color="primary" class="international__end--ellipse2" />
         </div>
@@ -74,7 +74,7 @@
         font-weight: bold;
         color: $secondary-color;
         margin-left: rem(77);
-        font-family: $font-satoshi;
+        font-family: $font-satoshi-bold;
     }
 
     &__paragraph {
@@ -95,6 +95,14 @@
         height: 2px;
         width: 200%;
     }
+
+    &__h2 {
+        font-size: $h2;
+        font-weight: bold;
+        color: $black;
+        margin-left: rem(0);
+        font-family: $font-satoshi-bold;
+    }
 }
 
 .cursus {
@@ -111,6 +119,7 @@
 
         strong {
             font-weight: bold;
+            font-family: $font-satoshi-bold;
         }
     }
 }
@@ -125,6 +134,8 @@
     &__title {
         font-size: $h2;
         font-weight: bold;
+        font-family: $font-satoshi-bold;
+
     }
 
     &__body {
@@ -132,6 +143,8 @@
         font-size: $body;
         font-weight: bold;
         margin-bottom: rem(20);
+        font-family: $font-satoshi-bold;
+
     }
 }
 
@@ -141,6 +154,8 @@
     justify-items: center;
     text-align: center;
     margin-top: rem(40);
+    font-family: $font-satoshi-bold;
+
 
     &__title {
         font-size: $h2;
@@ -170,12 +185,15 @@
         text-align: left;
         color: $black;
         margin-bottom: rem(20);
+        font-family: $font-satoshi-bold;
 
         &--orange {
             color: $primary-color;
             font-size: $h2;
             font-weight: bold;
             text-align: left;
+            font-family: $font-melodrama;
+
         }
     }
 
@@ -194,6 +212,8 @@
 
             strong {
                 font-weight: bold;
+                font-family: $font-satoshi-bold;
+
             }
         }
 

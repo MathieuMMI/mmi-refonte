@@ -48,6 +48,7 @@
 
             &--bold {
                 font-weight: bold;
+                font-family: $font-satoshi-bold;
             }
         }
     }
@@ -65,6 +66,7 @@
 
             &--bold {
                 font-weight: bold;
+                font-family: $font-satoshi-bold;
             }
         }
     }
@@ -81,6 +83,7 @@
         &--body {
             &--bold {
                 font-weight: bold;
+                font-family: $font-satoshi-bold;
             }
         }
     }
@@ -97,6 +100,7 @@
         &--body {
             &--bold {
                 font-weight: bold;
+                font-family: $font-satoshi-bold;
             }
         }
     }

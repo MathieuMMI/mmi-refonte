@@ -92,6 +92,7 @@
     &__title {
         font-weight: bold;
         margin-bottom: rem(20);
+        font-family: $font-satoshi-bold;
     }
 
     &__mail {

@@ -25,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: $font-melodrama;
 }
 
 .dynamisme {
@@ -33,6 +34,7 @@
     position: absolute;
     left: rem(400);
     top: rem(100);
+
 
     &__line {
         background-color: $secondary-color;

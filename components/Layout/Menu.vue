@@ -70,7 +70,7 @@ const closeMenu = () => {
         </div>
         <div class="menu-line"></div>
         <RouterLink to="/candidater">
-            <MyButton color="white" label="CANDIDATURE" size="big" />
+            <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
         </RouterLink>
     </div>
 </template>
@@ -94,6 +94,7 @@ const closeMenu = () => {
     &__num {
         font-size: $h1;
         font-weight: bold;
+        font-family: $font-satoshi-bold;
     }
 
     &__right {
@@ -111,6 +112,7 @@ const closeMenu = () => {
         &--title {
             font-weight: bold;
             margin-bottom: rem(5);
+            font-family: $font-satoshi-bold;
 
         }
 

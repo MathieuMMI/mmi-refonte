@@ -50,7 +50,7 @@ const props = defineProps({
 
             font-size: $h1;
             font-weight: bold;
-
+            font-family: $font-satoshi-bold;
 
         }
 
@@ -61,6 +61,7 @@ const props = defineProps({
                 font-size: $body;
                 font-weight: bold;
                 margin-bottom: rem(10);
+                font-family: $font-satoshi-bold;
             }
 
 

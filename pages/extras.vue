@@ -129,6 +129,7 @@
         &--title {
             font-size: $h2;
             font-weight: bold;
+            font-family: $font-satoshi-bold;
         }
 
         &--paragraph {

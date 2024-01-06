@@ -67,6 +67,7 @@ defineProps({
             font-style: normal;
             font-weight: bold;
             line-height: normal;
+            font-family: $font-satoshi-bold;
         }
 
         &--line {

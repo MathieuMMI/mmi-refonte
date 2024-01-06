@@ -16,7 +16,7 @@
                 processus transparent et
                 équitable.</p>
             <div class="parcoursup__button">
-                <MyButton href="test" label="CANDIDATURE PARCOURSUP" color="white" />
+                <MyButton href="test" label="CANDIDATURE PARCOURSUP" color="white" font="melodrama" size="big" />
             </div>
 
         </div>
@@ -31,7 +31,7 @@
                 !
             </p>
             <div class="ecandidat__button">
-                <MyButton href="test" label="CANDIDATURE E-CANDIDAT" color="border" />
+                <MyButton href="test" label="CANDIDATURE E-CANDIDAT" color="border" font="melodrama" size="big" />
             </div>
         </div>
     </div>
@@ -56,10 +56,13 @@
         font-weight: bold;
         font-size: $h2;
         margin: rem(52);
+        font-family: $font-satoshi-bold;
     }
 
     &__text {
         margin: rem(52);
+        font-family: $font-satoshi;
+
     }
 
     &__button {
@@ -82,11 +85,15 @@
         font-weight: bold;
         font-size: $h2;
         margin: rem(52);
+        font-family: $font-satoshi-bold;
+
 
     }
 
     &__text {
         margin: rem(52);
+        font-family: $font-satoshi;
+
     }
 
     &__button {

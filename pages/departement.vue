@@ -106,6 +106,7 @@
     &--title {
       align-self: end;
       font-size: $h2;
+      font-family: $font-satoshi-bold;
 
       &--melodrama {}
 

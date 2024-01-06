@@ -35,6 +35,7 @@ defineProps({
         color: $black;
         font-size: $body;
         font-weight: bold;
+        font-family: $font-satoshi-bold;
         text-decoration: none;
         margin-top: rem(26);
     }
