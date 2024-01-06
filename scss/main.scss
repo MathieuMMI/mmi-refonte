@@ -8,14 +8,9 @@ body {
 // Importez la police "Satoshi"
 @font-face {
     font-family: 'Satoshi';
-    src: url('~@/assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/satoshi-bold-webfont.woff2') format('woff2'),
+    url('/assets/fonts/satoshi-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Satoshi';
-    src: url('~@/assets/fonts/Satoshi-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
