@@ -4,8 +4,6 @@
 <template>
     <div class="hero">
         <h2 class="hero__title">LES EXTRAS</h2>
-        <!--<Students />-->
-        <Projets />
         <p class="hero__prargraph">Tes raisons de choisir MMI Montbéliard !</p>
         <div class="hero__img">
             <div class="hero__img--left">
@@ -78,16 +76,21 @@
 
     <div class="projet">
         <div class="projet__left">
-            <MyEllipse />
-            <h2 class="projet__title">Projets et présentation de projets étudiants</h2>
-            <p class="projet__paragraph">Mise en application des connaissances acquises en cours, les projets sont pour les
-                étudiants l'occasion de prouver leur savoir-faire. Toutes les étapes, de la réflexion au déploiement, sont
-                autant d'étapes de validation pour mener les étudiants vers la réussite de leurs projets.
-                Voici quelques projets des anciens étudiants du BUT MMI.</p>
+            <MyEllipse color="primary" size="small" class="projet__left--ellipse" />
+            <h2 class="projet__left--title">Projets et </h2>
+            <h2 class="projet__left--title">présentation de </h2>
+            <h2 class="projet__left--title">projets étudiants</h2>
+            <div class="projet__left--div"></div>
+            <p class="projet__left--paragraph">Mise en application des connaissances acquises en cours, les projets sont
+                pour les étudiants l'occasion de prouver leur savoir-faire. Toutes les étapes, de la réflexion au
+                déploiement, sont autant d'étapes de validation pour mener les étudiants vers la réussite de leurs projets.
+            </p>
+            <p class="projet__left--paragraph"> Voici quelques projets des anciens étudiants du BUT MMI.</p>
+
         </div>
         <div class="projet__right">
-            <!-- projet -->
-            <MyEllipse />
+            <Projets />
+            <MyEllipse color="primary" size="regular" class="projet__right--ellipse" />
         </div>
     </div>
 
@@ -97,7 +100,58 @@
             <svg></svg>
             <p class="paragraph_arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
         </div>
-        <MyMap />
+        <Students />
+
+
     </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+.projet {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: $black;
+    color: $white;
+    height: 100vh;
+    padding: rem(30);
+
+    &__left {
+        position: relative;
+        margin-left: rem(20);
+        margin-right: rem(40);
+
+
+        &--ellipse {
+            position: absolute;
+            top: rem(-76);
+            left: rem(-92);
+        }
+
+        &--title {
+            font-size: $h2;
+            font-weight: bold;
+        }
+
+        &--paragraph {
+            font-size: $body;
+            padding-right: rem(50);
+            margin-top: rem(50);
+        }
+
+        &--div {
+            height: 20vh;
+        }
+
+    }
+
+    &__right {
+        position: relative;
+
+        &--ellipse {
+            position: absolute;
+            bottom: rem(-128);
+            left: rem(-120);
+        }
+
+    }
+}
+</style>

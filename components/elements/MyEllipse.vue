@@ -14,6 +14,7 @@ const className = computed(() => ({
     '-small': props.size === 'small',
     '-tiny': props.size === 'tiny',
     '-primary': props.color === 'primary',
+    '-primary2': props.color === 'primary2',
     '-secondary': props.color === 'secondary',
     '-black': props.color === 'black',
     '-tri': props.color === 'tri',
@@ -32,7 +33,11 @@ const className = computed(() => ({
 
 
     &.-primary {
-        background: radial-gradient(circle at 50% 50%, #FFA51D 20%, transparent 50%);
+        background: radial-gradient(circle at 50% 50%, #FFA51D 5%, #ffa51d8f 20%, transparent 45%);
+    }
+
+    &.-primary2 {
+        background: radial-gradient(circle at 50% 50%, #FFA51D 1%, #ffb951b7 10%, transparent 45%);
     }
 
 
@@ -57,8 +62,8 @@ const className = computed(() => ({
     }
 
     &.-small {
-        width: rem(159);
-        height: rem(159);
+        width: rem(138);
+        height: rem(138);
     }
 
     &.-regular {
@@ -77,8 +82,8 @@ const className = computed(() => ({
     }
 
     &.-giant {
-        width: rem(1453);
-        height: rem(1550);
+        width: rem(800);
+        height: rem(800);
     }
 
 }

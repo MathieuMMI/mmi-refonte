@@ -9,27 +9,66 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="project">
-        <router-link :to="`project/${projectid}`">
-            <div class="project_group">
-                <PrismicRichText class="project_group-number" :field="number" />
-                <PrismicRichText class="project_group-title" :field="title" />
-                <PrismicRichText class="project_group-year" :field="annee" />
+    <div class="project">
+        <router-link class="project__group" :to="`project/${projectid}`">
+            <div class="project__group">
+                <div class="project__groupe--left">
+                    <PrismicRichText class="project__group--number" :field="number" />
+                </div>
+                <div class="project__group--right">
+                    <PrismicRichText class="project__group--right--title" :field="title" />
+                    <PrismicRichText class="project__group--right--year" :field="annee" />
+                    <a href="" class="project__group--right--link">
+                        ...
+                        <PrismicRichText class="project__group--right--link" :field="link" />
+                    </a>
+                </div>
             </div>
         </router-link>
-    </section>
+    </div>
+    <div class="project__line"></div>
 </template>
 
-<style>
+<style lang="scss">
 .project {
-    border-radius: 20px;
-    border: 3px solid var(--ORANGE, #FFA51D);
-    width: fit-content;
-}
+    &__line {
+        background-color: $white;
+        height: 2px;
+        width: 100%;
+    }
 
-.project_group {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
+    &__group {
+        color: $white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        text-decoration: none;
+
+
+        &--number {
+
+            font-size: $h1;
+            font-weight: bold;
+
+
+        }
+
+        &--right {
+
+
+            &--title {
+                font-size: $body;
+                font-weight: bold;
+                margin-bottom: rem(10);
+            }
+
+
+            &--link {
+                text-decoration: none;
+            }
+
+        }
+    }
 }
 </style>

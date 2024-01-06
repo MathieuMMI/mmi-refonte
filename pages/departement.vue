@@ -54,16 +54,18 @@
   </div>
 
   <div class="equipe">
-    <MyEllipse />
-    <div class="equipe__text">
-      <div class="equipe__title">
-        <h2>L'équipe</h2>
-        <h2>PÉDAGOGIQUE</h2>
+    <MyEllipse color="primary2" size="giant" class="equipe__ellipse" />
+    <div class="equipe__content">
+      <div class="equipe__content--title">
+        <h2 class="equipe__content--title--melodrama">L'équipe</h2>
+        <h2 class="equipe__content--title--satoshi">PÉDAGOGIQUE</h2>
       </div>
-      <div class="equipe_paragraph">
-        <p>Cette formation a pour but de préparer ses étudiants aux métiers du web dans les secteurs de la programmation,
+      <div class="equipe__content--text">
+        <p class="equipe__content--paragraph">Cette formation a pour but de préparer ses étudiants aux métiers du web dans
+          les secteurs de la programmation,
           de la communication, du marketing ou du graphisme.</p>
-        <p>Cette diversité et cette complémentarité se retrouvent évidemment dans une équipe pédagogique
+        <p class="equipe__content--paragraph">Cette diversité et cette complémentarité se retrouvent évidemment dans une
+          équipe pédagogique
           pluridisciplinaire constituée d'enseignants permanents, d'intervenants professionnels et de jeunes chercheurs de
           l'Université de Franche-Comté.</p>
       </div>
@@ -80,4 +82,46 @@
     <MyButton />
   </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+.equipe {
+  background-color: $black;
+  color: $white;
+  position: relative;
+
+  &__ellipse {
+    position: absolute;
+    top: rem(-336);
+    left: rem(-336);
+  }
+
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: rem(146);
+    height: 50vh;
+    margin-left: rem(60);
+    margin-right: rem(60);
+
+    &--title {
+      align-self: end;
+      font-size: $h2;
+
+      &--melodrama {}
+
+      &--satoshi {
+        font-weight: bold;
+      }
+    }
+
+    &--text {
+      font-size: $body;
+      align-self: end;
+    }
+
+    &--paragraph {
+      margin-top: rem(62);
+    }
+  }
+}
+</style>
