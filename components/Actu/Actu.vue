@@ -11,35 +11,74 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="actu">
-        <figure class="actu_figure"><!--:to="{ name: 'basket-edit-id', params: { id: basket.id } }" :to="`/actu/${id}`"-->
-            <router-link :to="`actu/${actuid}`"><img class="actu_figure-img" :src="img.url" :alt="img.alt" /></router-link>
-        </figure>
-        <div class="actu_title">
-            <PrismicRichText class="actu_title-title" :field="title" />
+    <!-- <PrismicRichText class="date" :field="date" /> -->
+    <section>
+        <p class="date">aout</p>
+        <div class="actu">
+
+            <MyEllipse size="tiny" color="primary2" class="actu__ellipse" />
+            <router-link :to="`actu/${actuid}`" class="actu__content">
+                <!-- <img class="actu_figure-img" :src="img.url" :alt="img.alt" /> -->
+                <div class="actu__content--title">
+                    <PrismicRichText class="actu__content--title" :field="title" />
+                </div>
+                <PrismicRichText class="actu__content--desc" :field="desc" />
+            </router-link>
         </div>
-        <PrismicRichText class="actu_desc" :field="desc" />
     </section>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .actu {
     border-radius: 20px;
-    border: 3px solid var(--ORANGE, #FFA51D);
-    width: fit-content;
-}
-
-.actu_title {
+    background-color: $black;
+    width: rem(563);
+    height: rem(389);
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    position: relative;
+
+    &__ellipse {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+    }
+
+    &__content {
+        color: $white;
+        font-family: $font-satoshi;
+        text-decoration: none;
+        text-align: center;
+
+        &--title {
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(30);
+        }
+
+        &--desc {
+            text-align: center;
+        }
+    }
+
+    &__figure {
+        &--img {
+            margin: auto;
+        }
+    }
 }
 
-.actu_desc {
+
+.date {
+    font-family: $font-melodrama;
+    font-size: $button;
+    color: $secondary-color;
+    border: rem(1) solid $secondary-color;
+    border-radius: rem(32);
+    padding: rem(8);
+    width: rem(200);
     text-align: center;
-}
-
-.actu_figure-img {
-    margin: auto;
+    margin-bottom: rem(16);
 }
 </style>
