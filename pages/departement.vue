@@ -2,23 +2,17 @@
 
 </script>
 <template>
-  <RouterLink to="/Contact">Contact</RouterLink>
-  <p></p>
-  <RouterLink to="/FAQ">FAQ</RouterLink>
-  <p></p>
-  <RouterLink class="home" to="/">Accueil</RouterLink>
-
   <div class="hero">
     <h2 class="hero__title">LE DÉPARTEMENT</h2>
-    <p class="hero__prargraph">Viens nous rencontrer !</p>
+    <p class="hero__paragraph">Viens nous rencontrer !</p>
     <div class="hero__img">
       <div class="hero__img--left">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="../assets/departement1" alt="">
+        <img src="../assets/departement2" alt="">
       </div>
       <div class="hero__img--right">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="../assets/departement3" alt="">
+        <img src="../assets/departement4" alt="">
       </div>
     </div>
     <div class="paragraph">
@@ -34,10 +28,6 @@
           pédagogique s'engage à vous former en trois ans aux métiers du web à travers un enseignement pluridisciplinaire
           de qualité.
         </p>
-        <div class="paragraph__arrow">
-          <svg></svg>
-          <p class="paragraph_arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
-        </div>
       </div>
       <div class="paragraph__right">
         <p class="paragraph__right--text">En 2013, notre département se classe ainsi 5ème au palmarès Figaro des écoles du
@@ -48,13 +38,17 @@
         </p>
       </div>
     </div>
+    <div class="paragraph__arrow">
+      <MyArrow />
+      <p class="paragraph__arrow--paragraph">Découvrez notre département.</p>
+    </div>
   </div>
   <div class="departement">
     <img src="" alt="" class="departement__img">
   </div>
 
   <div class="equipe">
-    <MyEllipse color="primary2" size="giant" class="equipe__ellipse" />
+    <MyEllipse color="primary2" size="big" class="equipe__ellipse" />
     <div class="equipe__content">
       <div class="equipe__content--title">
         <h2 class="equipe__content--title--melodrama">L'équipe</h2>
@@ -75,14 +69,79 @@
 
 
   <div class="actualite">
-    <MyEllipse />
-    <h2 class="actualite__title">Ce qu'il se passe au département...</h2>
+    <MyEllipse size="giant" color="primary2" class="actualite__ellipse" />
+    <h2 class="actualite__title">Ce qu'il se passe <br /> au département...</h2>
     <Actus />
 
     <MyButton />
   </div>
 </template>
 <style lang="scss">
+.hero {
+  margin-left: rem(70);
+
+  &__title {
+    color: $black;
+    font-size: $h2;
+    font-family: $font-satoshi-bold;
+  }
+
+  &__paragraph {
+    font-family: $font-satoshi-bold;
+    font-size: $body;
+    color: #8B8BDC;
+    margin-bottom: rem(30);
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+
+}
+
+.paragraph {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: $font-satoshi;
+
+  &__left {
+    width: rem(500);
+
+    &--text {
+      margin-bottom: rem(32);
+
+      strong {
+        font-family: $font-satoshi-bold;
+      }
+    }
+  }
+
+  &__right {
+    width: rem(500);
+
+    &--text {
+      margin-bottom: rem(32);
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--paragraph {
+      width: rem(150);
+      font-weight: bold;
+      font-family: $font-satoshi-bold;
+
+    }
+  }
+}
+
+
+
 .equipe {
   background-color: $black;
   color: $white;
@@ -90,8 +149,8 @@
 
   &__ellipse {
     position: absolute;
-    top: rem(-336);
-    left: rem(-336);
+    top: rem(-236);
+    left: rem(-286);
   }
 
 
@@ -108,7 +167,9 @@
       font-size: $h2;
       font-family: $font-satoshi-bold;
 
-      &--melodrama {}
+      &--melodrama {
+        font-family: $font-melodrama;
+      }
 
       &--satoshi {
         font-weight: bold;
@@ -123,6 +184,24 @@
     &--paragraph {
       margin-top: rem(62);
     }
+  }
+}
+
+.actualite {
+  position: relative;
+
+  &__ellipse {
+    position: absolute;
+    left: rem(-400);
+    top: rem(-400);
+    z-index: -1;
+  }
+
+  &__title {
+    margin: rem(54);
+    margin-top: rem(154);
+    font-size: $h2;
+    font-family: $font-satoshi-bold;
   }
 }
 </style>
