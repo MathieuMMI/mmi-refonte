@@ -4,36 +4,36 @@
 <template>
     <div class="hero">
         <h2 class="hero__title">LES EXTRAS</h2>
-        <p class="hero__prargraph">Tes raisons de choisir MMI Montbéliard !</p>
+        <p class="hero__paragraph">Tes raisons de choisir MMI Montbéliard !</p>
         <div class="hero__img">
             <div class="hero__img--left">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="../assets/extra1.jpg" alt="image offf">
+                <img src="../assets/extra2.jpg" alt="image offf">
             </div>
             <div class="hero__img--right">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="../assets/extra3.jpg" alt="image canada">
+                <img src="../assets/extra4.jpg" alt="image oeil">
             </div>
         </div>
     </div>
 
     <div class="canada">
         <h2 class="canada__title">Semestre au Canada</h2>
-        <div class="canada__flex">
-            <div class="canada__flex--left">
-                <img src="" alt="" class="canada__img">
-                <p class="canada__text">
+        <div class="canada__grid">
+            <div class="canada__left">
+                <img src="../assets/canada1.png" alt="" class="canada__left--img">
+                <p class="canada__left--text">
                     Notre département est partenaire avec deux CEGEP canadiens. Chaque année, une dizaine d'étudiants MMI
                     effectue son troisième ou quatrième semestre dans l'une de ces formations.
                 </p>
             </div>
-            <div class="canada__flex--right">
-                <p class="canada__text">
+            <div class="canada__right">
+                <p class="canada__right--text">
                     À Montréal, Le CEGEP Vanier accueille nos étudiants pour un semestre de formation orienté vers les
                     travaux d'impression. Au CEGEP de Matane, nos étudiants peuvent intégrer le programme "techniques
                     d'intégration multimédia".
                 </p>
-                <img src="" alt="" class="canada__img">
+                <img src="../assets/canada2.png" alt="" class="canada__right--img">
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
         <div class="offf__blue-line"></div>
         <img src="" alt="" class="offf__img">
         <div class="offf__blue-line"></div>
-        <p class="offf_paragraph">
+        <p class="offf__paragraph">
             Notre département organise un déplacement à Barcelone à l'occasion du OFFF, festival
             international d'art digital.
             Nos étudiants enrichissent leur culture artistique en découvrant, d'une part, le travail des acteurs majeurs de
@@ -59,7 +59,7 @@
                 de défis "surprise" ! Les locaux du département sont à votre disposition le temps de ce véritable challenge.
                 Le défi 24h, c'est du rire, de l'émotion et des cascades !</p>
         </div>
-        <img src="" alt="" class="defi__img">
+        <img src="../assets/defi.jpg" alt="" class="defi__img">
     </div>
 
     <div class="stage">
@@ -96,16 +96,161 @@
 
     <div class="international">
         <h2 class="international__title">Tu souhaites un jour travailler à l'international ?</h2>
-        <div class="paragraph__arrow">
-            <svg></svg>
-            <p class="paragraph_arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
+        <div class="international__arrow">
+            <MyArrow />
+            <p class="international__arrow--paragraph">Découvrez nos anciens élèves.</p>
         </div>
         <Students />
 
 
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
+.hero {
+    margin-left: rem(70);
+
+    &__title {
+        color: $black;
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+    }
+
+    &__paragraph {
+        font-family: $font-satoshi-bold;
+        font-size: $body;
+        color: #8B8BDC;
+        margin-bottom: rem(30);
+    }
+
+    &__img {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        margin-bottom: rem(80);
+    }
+}
+
+
+.canada {
+    margin-left: rem(70);
+
+    &__title {
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: rem(40);
+    }
+
+    &__left {
+        position: relative;
+
+        &--img {
+            margin-left: rem(80);
+        }
+
+        &--text {
+            margin-top: rem(48);
+            font-family: $font-satoshi;
+            width: rem(524);
+        }
+    }
+
+    &__right {
+        &--text {
+            font-family: $font-satoshi;
+            width: rem(524);
+            margin-bottom: rem(48);
+
+        }
+
+        &--img {
+            margin-left: rem(-80);
+            margin-top: rem(80);
+        }
+    }
+}
+
+.offf {
+
+    &__title {
+        margin-left: rem(70);
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+    }
+
+    &__blue-line {
+        background-color: $secondary-color;
+        height: 2px;
+        width: 200%;
+    }
+
+    &__img {}
+
+    &__paragraph {
+        margin-left: rem(70);
+        max-width: rem(678);
+        margin-top: rem(40);
+    }
+}
+
+
+.defi {
+    margin-top: rem(80);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+
+    margin-left: rem(70);
+
+    &__text {
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(64);
+        }
+
+        &--paragraph {
+            max-width: rem(526);
+        }
+    }
+
+    &__img {
+        border: rem(2) solid $secondary-color;
+        border-radius: rem(20);
+    }
+}
+
+
+.stage {
+    margin-top: rem(80);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: rem(85);
+
+    &__title {
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+        margin-bottom: rem(64);
+    }
+
+    &__paragraph {
+        max-width: rem(891);
+
+        strong {
+            font-family: $font-satoshi-bold;
+        }
+    }
+}
+
+
+
 .projet {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -153,6 +298,30 @@
             left: rem(-120);
         }
 
+    }
+}
+
+.international {
+    color: $black;
+    text-align: left;
+
+    &__title {
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--paragraph {
+            width: rem(150);
+            font-weight: bold;
+            font-family: $font-satoshi-bold;
+
+        }
     }
 }
 </style>

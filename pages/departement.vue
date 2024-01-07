@@ -7,12 +7,12 @@
     <p class="hero__paragraph">Viens nous rencontrer !</p>
     <div class="hero__img">
       <div class="hero__img--left">
-        <img src="../assets/departement1.jpg" alt="">
-        <img src="../assets/departement2.jpg" alt="">
+        <img src="../assets/departement1.jpg" alt="image">
+        <img src="../assets/departement2.jpg" alt="image">
       </div>
       <div class="hero__img--right">
-        <img src="../assets/departement3.jpg" alt="">
-        <img src="../assets/departement4.jpg" alt="">
+        <img src="../assets/departement3.jpg" alt="image">
+        <img src="../assets/departement4.jpg" alt="image">
       </div>
     </div>
     <div class="paragraph">
