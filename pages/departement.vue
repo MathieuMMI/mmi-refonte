@@ -7,12 +7,12 @@
     <p class="hero__paragraph">Viens nous rencontrer !</p>
     <div class="hero__img">
       <div class="hero__img--left">
-        <img src="../assets/departement1" alt="">
-        <img src="../assets/departement2" alt="">
+        <img src="../assets/departement1.jpg" alt="">
+        <img src="../assets/departement2.jpg" alt="">
       </div>
       <div class="hero__img--right">
-        <img src="../assets/departement3" alt="">
-        <img src="../assets/departement4" alt="">
+        <img src="../assets/departement3.jpg" alt="">
+        <img src="../assets/departement4.jpg" alt="">
       </div>
     </div>
     <div class="paragraph">
@@ -96,9 +96,8 @@
   &__img {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    margin-bottom: rem(80);
   }
-
-
 }
 
 .paragraph {
@@ -158,7 +157,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-bottom: rem(146);
-    height: 50vh;
     margin-left: rem(60);
     margin-right: rem(60);
 
