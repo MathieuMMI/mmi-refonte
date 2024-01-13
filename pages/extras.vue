@@ -306,13 +306,15 @@
 .international {
     color: $black;
     text-align: left;
-    margin-left: rem(70);
     margin-top: rem(66);
+    margin-bottom: rem(66);
 
     &__title {
         font-size: $h2;
         font-family: $font-satoshi-bold;
         width: rem(987);
+        margin-left: rem(70);
+
 
     }
 
