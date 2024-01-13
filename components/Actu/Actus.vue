@@ -1,15 +1,36 @@
 <script setup>
 const { client } = usePrismic()
 const { data: news } = await useAsyncData('news', () => client.getAllByType('news'));
+
+const allActus = ref(false);
+
+const showAllActus = () => {
+    console.log('coucou')
+    allActus.value = true;
+};
+
+const showLessActus = () => {
+    allActus.value = false;
+};
 </script>
 
 <template>
     <div class="page-container">
-        <div class="actus">
-            <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.news_title"
-                :img="actu.data.news_img" :desc="actu.data.news_hook" :actuid="actu.id" />
+        <div v-if="allActus">
+            <div class="actus">
+                <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.news_title"
+                    :img="actu.data.news_img" :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
+            </div>
+            <button @click="showLessActus" class="plus">Moins d'actus</button>
         </div>
-        <button class="plus">Plus d'actus</button>
+
+        <div v-else>
+            <div class="actus">
+                <Actu class="actus__actu" v-for="(actu, index) in news.slice(-1).reverse()" :img="actu.data.news_img"
+                    :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
+            </div>
+            <button @click="showAllActus" class="plus">Plus d'actus</button>
+        </div>
     </div>
 </template>
 
