@@ -190,7 +190,6 @@
         width: 100%;
     }
 
-    &__img {}
 
     &__paragraph {
         margin-left: rem(70);
