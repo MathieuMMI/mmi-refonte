@@ -121,7 +121,9 @@
     <div class="debouche">
         <MyDebouche />
     </div>
-    <MyButton href='/candidater' label="CANDIDATURE" color="black" font="satoshi" />
+    <div class="candidature">
+        <MyButton href='/candidater' label="CANDIDATURE" color="black" font="satoshi" />
+    </div>
 </template>
 <style lang="scss" scoped>
 .hero {
@@ -309,5 +311,20 @@
         font-family: $font-melodrama;
 
     }
+}
+
+.debouche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.candidature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(64);
 }
 </style>
