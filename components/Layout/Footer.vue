@@ -1,64 +1,69 @@
 <script setup>
+import { useRoute } from 'vue-router';
 
+const route = useRoute();
+const showFooterContent = route.name !== 'contact';
 </script>
 <template>
-    <div class="container">
-        <div class="line"></div>
+    <footer v-if="showFooterContent">
+        <div class="container">
+            <div class="line"></div>
 
-        <div class="footer">
-            <div class="footer__left">
-                <p class="footer__title">DÉPARTEMENT MÉTIERS DU MULTIMÉDIA & DE L'INTERNET DE MONTBÉLIARD</p>
-                <p class="footer__mail">
-                    Mail BUT MMI :
-                    <a href="mailto:but-mmi-montbeliard@univ-fcomte.fr" class="footer__mail--to">
-                        but-mmi-montbeliard@univ-fcomte.fr</a>
-                </p>
-                <p class="footer__adresse">4 place Tharradin 25 200 Montbéliard</p>
-                <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
-                <ul class="footer__liste">
+            <div class="footer">
+                <div class="footer__left">
+                    <p class="footer__title">DÉPARTEMENT MÉTIERS DU MULTIMÉDIA & DE L'INTERNET DE MONTBÉLIARD</p>
+                    <p class="footer__mail">
+                        Mail BUT MMI :
+                        <a href="mailto:but-mmi-montbeliard@univ-fcomte.fr" class="footer__mail--to">
+                            but-mmi-montbeliard@univ-fcomte.fr</a>
+                    </p>
+                    <p class="footer__adresse">4 place Tharradin 25 200 Montbéliard</p>
+                    <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
+                    <ul class="footer__liste">
+                        <li>
+                            <MyGoogle />
+                        </li>
+                        <li>
+                            <MyFacebook />
+                        </li>
+                        <li>
+                            <MyLinkedIn />
+                        </li>
+                        <li>
+                            <MyInstagram />
+                        </li>
+                        <li>
+                            <MyX />
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer__right">
                     <li>
-                        <MyGoogle />
+                        <RouterLink class="footer__right--link" to="/">Accueil</RouterLink>
                     </li>
                     <li>
-                        <MyFacebook />
+                        <RouterLink class="footer__right--link" to="/departement">Département</RouterLink>
                     </li>
                     <li>
-                        <MyLinkedIn />
+                        <RouterLink class="footer__right--link" to="/formation">La Formation</RouterLink>
                     </li>
                     <li>
-                        <MyInstagram />
+                        <RouterLink class="footer__right--link" to="/extras">Les Extras</RouterLink>
                     </li>
                     <li>
-                        <MyX />
+                        <RouterLink class="footer__right--link" to="/contact">Contact</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink class="footer__right--link" to="/faq">FAQ</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink class="footer__right--link" to="/mentions-legales">Mentions Légales</RouterLink>
                     </li>
                 </ul>
             </div>
-
-            <ul class="footer__right">
-                <li>
-                    <RouterLink class="footer__right--link" to="/">Accueil</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/departement">Département</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/formation">La Formation</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/extras">Les Extras</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/contact">Contact</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/faq">FAQ</RouterLink>
-                </li>
-                <li>
-                    <RouterLink class="footer__right--link" to="/mentions-legales">Mentions Légales</RouterLink>
-                </li>
-            </ul>
         </div>
-    </div>
+    </footer>
 </template>
 
 

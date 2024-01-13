@@ -1,6 +1,11 @@
 <script setup>
 import { ref, onBeforeUnmount, watch } from 'vue';
 
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const showHeaderContent = route.name !== 'contact';
+
 const isMenuVisible = ref(false);
 
 const toggleMenu = () => {
@@ -23,13 +28,13 @@ watch(isMenuVisible, toggleBodyScroll);
 </script>
 
 <template>
-    <div>
+    <header v-if="showHeaderContent">
         <div class="header" v-if="!isMenuVisible">
             <MyLogo />
             <MyMenu @click="toggleMenu" />
         </div>
         <Menu v-if="isMenuVisible" @close="toggleMenu" />
-    </div>
+    </header>
 </template>
 
 <style lang="scss">
