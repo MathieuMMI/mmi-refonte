@@ -39,10 +39,7 @@ export default {
 
             // Create timeline for the first animation
             const timeline1 = gsap.timeline({
-                onComplete: () => {
-                    // Start the second animation when the first animation is complete
-                    animateLine2();
-                },
+
             });
 
             timeline1.to(linePath1.value, {
@@ -51,9 +48,6 @@ export default {
                 strokeDashoffset: 0,
             });
         });
-
-
-
 
 
         return {
@@ -133,14 +127,16 @@ export default {
 
 
 <style lang="scss" scoped>
-.anime {
-    &__0 {
-        position: absolute;
-        right: 7rem;
-        top: 11rem;
+.anime__0 {
+    position: absolute;
+    right: 7rem;
+    top: 11rem;
+
+    svg {
+        max-width: 100%; // Ensure the SVG scales with its container
+        height: auto;
     }
 }
-
 
 .hero {
     display: flex;
@@ -175,7 +171,7 @@ export default {
     &__blue-line {
         background-color: $secondary-color;
         height: 2px;
-        width: 200%;
+        width: 100%;
     }
 
     &__h2 {
@@ -291,6 +287,7 @@ export default {
 
         &--text {
             margin-bottom: rem(20);
+            margin-left: rem(70);
 
             strong {
                 font-weight: bold;
@@ -301,13 +298,13 @@ export default {
 
         &--ellipse1 {
             position: absolute;
-            right: rem(-96);
+            right: rem(-0);
             top: 0rem;
         }
 
         &--ellipse2 {
             position: absolute;
-            left: rem(-128);
+            left: rem(-40);
             top: rem(-16);
         }
     }
