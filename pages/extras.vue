@@ -100,7 +100,9 @@
             <MyArrow />
             <p class="international__arrow--paragraph">Découvrez nos anciens élèves.</p>
         </div>
-        <Students />
+        <div class="international__student">
+            <StudentMap />
+        </div>
 
 
     </div>
@@ -185,7 +187,7 @@
     &__blue-line {
         background-color: $secondary-color;
         height: 2px;
-        width: 200%;
+        width: 100%;
     }
 
     &__img {}
@@ -304,10 +306,13 @@
 .international {
     color: $black;
     text-align: left;
+    margin-left: rem(70);
+    margin-top: rem(66);
 
     &__title {
         font-size: $h2;
         font-family: $font-satoshi-bold;
+        width: rem(987);
 
     }
 
@@ -322,6 +327,15 @@
             font-family: $font-satoshi-bold;
 
         }
+    }
+
+    &__student {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: rem(200);
     }
 }
 </style>
