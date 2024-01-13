@@ -36,7 +36,7 @@
 
             <ul class="footer__right">
                 <li>
-                    <RouterLink class="footer__right--link" to="/index">Accueil</RouterLink>
+                    <RouterLink class="footer__right--link" to="/">Accueil</RouterLink>
                 </li>
                 <li>
                     <RouterLink class="footer__right--link" to="/departement">Département</RouterLink>

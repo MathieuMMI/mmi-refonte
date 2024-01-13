@@ -1,7 +1,6 @@
 <script setup>
 const { client } = usePrismic()
 const { data: projects } = await useAsyncData('project', () => client.getAllByType('project'));
-console.log(projects)
 </script>
 
 <!-- Projets.vue -->

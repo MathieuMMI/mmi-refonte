@@ -18,13 +18,11 @@ const props = defineProps({
                 <div class="project__group--right">
                     <PrismicRichText class="project__group--right--title" :field="title" />
                     <PrismicRichText class="project__group--right--year" :field="annee" />
-                    <a href="" class="project__group--right--link">
-                        ...
-                        <PrismicRichText class="project__group--right--link" :field="link" />
-                    </a>
+
                 </div>
             </div>
         </router-link>
+        <!--<a :href="link.url">Accéder au projet</a>-->
     </div>
     <div class="project__line"></div>
 </template>
