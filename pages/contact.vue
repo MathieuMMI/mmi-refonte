@@ -1,29 +1,3 @@
-<template>
-    <div class="contact">
-        <h2 class="contact__title">Une question?</h2>
-        <p class="contact__paragraph">La moindre interrogation ? Un message à nous faire passer ? C'est par ici que ça se
-            passe. </p>
-    </div>
-    <div class="contact__flex">
-        <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le samedi 19 janvier
-            2024 ou lors de notre defis 24h le 14 mars 2024.</p>
-        <MyEllipse color="primary2" size="small" class="contact__flex--ellipse" />
-    </div>
-    <div class="contact__flex">
-        <MyEllipse color="primary2" size="tiny" class="contact__flex--ellipse1" />
-        <p>En attendant, si vous avez ne serait-ce qu'une question, n'hésitez pas à nous contacter !</p>
-    </div>
-    <div class="contact__container">
-        <form @submit.prevent="sendEmail">
-            <input class="contact__container--form" type="text" id="name" v-model="name" placeholder="Nom" required>
-            <input class="contact__container--form" type="text" id="email" v-model="subject" placeholder="Sujet" required>
-            <textarea class="contact__container--form" id="message" v-model="message" placeholder="Message"
-                required></textarea>
-            <button class="contact__container--button" type="submit">Envoyer</button>
-        </form>
-    </div>
-</template>
-
 <script setup>
 const name = ref('');
 const subject = ref('');
@@ -34,11 +8,41 @@ const sendEmail = () => {
     window.location.href = `mailto:mathieubouque18@gmail.com?subject=${subject.value}&body=${body}`;
 }
 </script>
+<template>
+    <div class="contact">
+        <h2 class="contact__title">Une question?</h2>
+        <p class="contact__paragraph">La moindre interrogation ? Un message à nous faire passer ? C'est par ici que ça se
+            passe. </p>
+    </div>
+    <div class="contact__flex">
+        <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le <strong>samedi
+                27 janvier 2024</strong> ou lors de notre defis 24h le <strong>14 mars 2024</strong></p>
+        <MyEllipse color="primary2" size="small" class="contact__flex--ellipse" />
+    </div>
+    <div class="contact__flex">
+        <MyEllipse color="primary2" size="tiny" class="contact__flex--ellipse1" />
+        <p>En attendant, si vous avez ne serait-ce qu'une question, n'hésitez pas à nous contacter !</p>
+    </div>
+    <div class="contact__container">
+        <form @submit.prevent="sendEmail">
+            <input class="contact__container--form" type="text" id="name" v-model="name" placeholder="Nom" required>
+            <input class="contact__container--form" type="text" id="email" v-model="subject" placeholder="Sujet" required>
+            <textarea class="contact__container--form--message" id="message" v-model="message" placeholder="Message"
+                required></textarea>
+            <div class="contact__container--border">
+                <button class="contact__container--button" type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</template>
+
 
 <style lang="scss">
 .contact {
-    background-color: $white;
-    color: $black;
+    background-color: $black;
+    color: $white;
+    margin-left: rem(70);
+    margin-bottom: rem(64);
 
     &__title {
         font-size: $h2;
@@ -48,31 +52,50 @@ const sendEmail = () => {
     &__paragraph {
         font-size: $body;
         font-weight: bold;
+        width: rem(500);
+        color: $grey;
 
 
     }
 
     &__container {
+        background-color: $black;
+
         max-width: 600px;
         margin: 0 auto;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
+        padding: rem(20);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+
 
         &--form {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             margin-bottom: 10px;
+            width: rem(320);
+
+
+            &--message {
+                height: rem(128);
+            }
+        }
+
+        &--border {
+
+            width: 50%;
+
         }
 
         &--button {
             background-color: $white;
             color: $black;
-            border: none;
-            border-radius: rem(18);
-            padding: rem(5);
-            width: 30%;
+            border: rem(1) solid $primary-color;
+            border-radius: rem(64);
+            padding: rem(16);
+            width: 100%;
             font-size: $button;
             transition: background-color 0.3s ease;
 
@@ -82,7 +105,10 @@ const sendEmail = () => {
         }
     }
 
+
     &__flex {
+        background-color: $black;
+        color: $white;
         font-size: $body;
         align-items: center;
         text-align: center;
@@ -90,7 +116,12 @@ const sendEmail = () => {
         margin: 0 auto;
         position: relative;
 
-        margin-bottom: 20px;
+        margin-bottom: rem(70);
+
+
+        strong {
+            font-family: $font-satoshi-bold;
+        }
 
         &--ellipse {
             position: absolute;
