@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
     <section class="student">
-        <PrismicRichText class="student_country" :field="country" />
+        <!--<PrismicRichText class="student_country" :field="country" />-->
         <figure class="student_figure">
             <img class="student_figure-img" :src="img.url" :alt="img.alt" />
         </figure>

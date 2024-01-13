@@ -2,6 +2,7 @@
 
 </script>
 <template>
+  <StudentsJapon />
   <div class="hero">
     <h2 class="hero__title">LE DÉPARTEMENT</h2>
     <p class="hero__paragraph">Viens nous rencontrer !</p>

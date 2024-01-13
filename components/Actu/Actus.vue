@@ -1,7 +1,6 @@
 <script setup>
 const { client } = usePrismic()
 const { data: news } = await useAsyncData('news', () => client.getAllByType('news'));
-console.log(news);
 </script>
 
 <template>

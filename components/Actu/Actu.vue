@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
     <section>
-        <PrismicRichText class="date" :field="news_date" />
+        <PrismicRichText class="date" :field="date" />
         <div class="actu">
 
             <MyEllipse size="tiny" color="primary2" class="actu__ellipse" />
