@@ -43,8 +43,10 @@
       <p class="paragraph__arrow--paragraph">Découvrez notre département.</p>
     </div>
   </div>
-  <div class="departement">
-    <img src="" alt="" class="departement__img">
+  <div class="video">
+    <video controls width="100%" height="auto" autoplay muted>
+      <source src="../assets/mmi.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="equipe">
@@ -139,7 +141,10 @@
   }
 }
 
-
+.video {
+  max-width: 100%;
+  height: auto;
+}
 
 .equipe {
   background-color: $black;

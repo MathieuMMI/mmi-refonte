@@ -39,10 +39,7 @@ export default {
 
             // Create timeline for the first animation
             const timeline1 = gsap.timeline({
-                onComplete: () => {
-                    // Start the second animation when the first animation is complete
-                    animateLine2();
-                },
+
             });
 
             timeline1.to(linePath1.value, {
@@ -51,9 +48,6 @@ export default {
                 strokeDashoffset: 0,
             });
         });
-
-
-
 
 
         return {
@@ -80,17 +74,22 @@ export default {
         </p>
         <MyButton href='/candidater' label="CANDIDATURE" color="secondary" size="big" font="satoshi" class="hero__button" />
         <div class="hero__blue-line">
-            <!-- animation2 -->
         </div>
-        <img src="" alt="" class="hero__img">
-        <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
-        <div class="hero__blue-line"> </div>
+        <div class="hero__video">
+            <video controls width="100%" height="auto" autoplay muted>
+                <source src="../assets/mmi.mp4" type="video/mp4">
+            </video>
+            <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
+            <div class="hero__blue-line"> </div>
+        </div>
     </div>
 
     <div class="cursus">
-        <p class="cursus__paragraph">Ce cursus dispensé en formation initiale ou en <strong> alternance</strong> à partir de
+        <p class="cursus__paragraph">Ce cursus dispensé en formation initiale ou en <strong> alternance</strong> à
+            partir de
             la deuxième année
-            permet un accès direct à la vie <strong> professionnelle </strong>et autorise diverses poursuites d'études.</p>
+            permet un accès direct à la vie <strong> professionnelle </strong>et autorise diverses poursuites d'études.
+        </p>
     </div>
     <MyCursus />
 
@@ -117,7 +116,8 @@ export default {
 
         <div class="international__end">
             <div class="international__end--text">
-                <p>Notre BUT offre aux étudiants la possibilité de suivre un semestre complet à l'étranger dans des CÉGEP
+                <p>Notre BUT offre aux étudiants la possibilité de suivre un semestre complet à l'étranger dans des
+                    CÉGEP
                     (collège
                     d'enseignement général et professionnel) partenaires au <strong>Canada</strong>.
                 </p>
@@ -133,21 +133,22 @@ export default {
 
 
 <style lang="scss" scoped>
-.anime {
-    &__0 {
-        position: absolute;
-        right: 7rem;
-        top: 11rem;
+.anime__0 {
+    position: absolute;
+    right: 7rem;
+    top: 11rem;
+
+    svg {
+        max-width: 100%; // Ensure the SVG scales with its container
+        height: auto;
     }
 }
-
 
 .hero {
     display: flex;
     flex-direction: column; // Pour aligner les éléments verticalement
     align-items: flex-start; // Alignement à gauche
     justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
-    margin-right: rem(77);
     position: relative;
 
     &__title {
@@ -175,15 +176,23 @@ export default {
     &__blue-line {
         background-color: $secondary-color;
         height: 2px;
-        width: 200%;
+        width: 100%;
     }
 
     &__h2 {
         font-size: $h2;
         font-weight: bold;
-        color: $black;
+        color: $white;
         margin-left: rem(0);
         font-family: $font-satoshi-bold;
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+    }
+
+    &__video {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -291,6 +300,7 @@ export default {
 
         &--text {
             margin-bottom: rem(20);
+            margin-left: rem(70);
 
             strong {
                 font-weight: bold;
@@ -301,13 +311,13 @@ export default {
 
         &--ellipse1 {
             position: absolute;
-            right: rem(-96);
+            right: rem(-0);
             top: 0rem;
         }
 
         &--ellipse2 {
             position: absolute;
-            left: rem(-128);
+            left: rem(-40);
             top: rem(-16);
         }
     }
