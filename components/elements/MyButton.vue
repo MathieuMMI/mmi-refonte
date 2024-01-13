@@ -16,6 +16,8 @@ const className = computed(() => ({
     '-black': props.color === 'black',
     '-white': props.color === 'white',
     '-border': props.color === 'border',
+    '-borderw': props.color === 'borderw',
+    '-borderb': props.color === 'borderb',
     '-satoshi': props.font === 'satoshi',
     '-satoshib': props.font === 'satoshib',
     '-melodrama': props.font === 'melodrama',
@@ -70,6 +72,20 @@ const className = computed(() => ({
         background: $white;
         color: $secondary-color;
         border: rem(3) solid $secondary-color;
+
+    }
+
+    &.-borderw {
+
+        color: $white;
+        border: rem(3) solid $white;
+
+    }
+
+    &.-borderb {
+
+        color: $black;
+        border: rem(3) solid $black;
 
     }
 

@@ -6,14 +6,14 @@ const props = defineProps({
     hook: Array,
     desc: Array,
     date: Array,
+
 });
 
 </script>
 
 <template>
-    <!-- <PrismicRichText class="date" :field="date" /> -->
     <section>
-        <p class="date">aout</p>
+        <PrismicRichText class="date" :field="news_date" />
         <div class="actu">
 
             <MyEllipse size="tiny" color="primary2" class="actu__ellipse" />

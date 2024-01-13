@@ -4,12 +4,12 @@
 <template>
     <div class="espace">
         <h2 class="espace__title">ESPACE PRO</h2>
-        <p class="espace__prargraph">Découvrez les opportunités que la formation vous offre !</p>
+        <p class="espace__paragraph">Découvrez les opportunités que la formation vous offre !</p>
     </div>
 
     <div class="projet">
         <div class="projet__left">
-            <MyEllipse />
+            <MyEllipse color="primary" size="tiny" class="projet__left--ellipse" />
             <h2 class="projet__left--title">Proposer un projet ?</h2>
             <p class="projet__left--text"> Association, vous souhaitez densifier votre communication autour d'un site ou
                 d'une application mobile ? Vous pouvez nous proposer un sujet de projet collectif. </p>
@@ -19,19 +19,20 @@
             <p class="projet__left--text"> Proposez votre projet ! </p>
         </div>
         <div class="projet__right">
-            <svg></svg>
-            <MyButton />
+            <MyProjet />
+            <MyButton href='' label="DEPOSER UN PROJET ?" color="borderw" font="melodrama" size="big" />
+            <MyEllipse color="primary" size="tiny" class="projet__right--ellipse" />
         </div>
     </div>
 
     <div class="alternance">
-        <MyEllipse />
         <div class="alternance__left">
-            <MyButton />
-            <svg></svg>
+            <MyButton href='' label="DEPOSER UNE OFFRE ?" color="borderb" font="melodrama" size="big" />
+            <MyEllipse color="primary" size="big" class="alternance__left--ellipse" />
+            <MyCalendrier />
+
         </div>
         <div class="alternance__right">
-            <MyEllipse />
             <h2 class="alternance__right--title">Proposer une alternance ?</h2>
             <p class="alternance__right--text"> Vous pouvez également accueillir un étudiant en apprentissage à partir de la
                 deuxième année. </p>
@@ -55,10 +56,159 @@
                 offres grâce à notre formulaire. </p>
         </div>
         <div class="stage__right">
-            <MyEllipse />
-            <MyButton />
-            <svg></svg>
+            <MyButton href='' label="DEPOSER UN PROJET ?" color="borderb" font="melodrama" size="big" />
+            <MyEllipse color="secondary" size="regular" class="stage__right--ellipse" />
+            <MyOrdi />
         </div>
     </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.espace {
+    margin-left: rem(70);
+
+    &__title {
+        color: $black;
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+    }
+
+    &__paragraph {
+        font-family: $font-satoshi-bold;
+        font-size: $body;
+        color: #8B8BDC;
+        margin-bottom: rem(30);
+    }
+}
+
+.projet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    height: 100vh;
+
+    position: relative;
+
+    &__left {
+        margin-left: rem(70);
+
+        &--ellipse {
+            position: absolute;
+            left: rem(-10);
+            top: rem(-10);
+        }
+
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            right: rem(0);
+            bottom: rem(0);
+        }
+    }
+}
+
+
+.alternance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    position: relative;
+    height: 100vh;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            left: rem(-50);
+            top: rem(0);
+            z-index: -1;
+        }
+    }
+
+    &__right {
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
+    }
+}
+
+.stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    height: 100vh;
+
+    position: relative;
+
+    &__left {
+        margin-left: rem(70);
+
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            top: rem(0);
+            right: rem(0);
+        }
+    }
+}
+</style>
