@@ -10,32 +10,52 @@ const props = defineProps({
 
 <template>
     <section class="student">
-        <!--<PrismicRichText class="student_country" :field="country" />-->
-        <figure class="student_figure">
-            <img class="student_figure-img" :src="img.url" :alt="img.alt" />
+        <PrismicRichText class="student__country" :field="country" />
+        <figure class="student__figure">
+            <img class="student__figure--img" :src="img.url" :alt="img.alt" />
         </figure>
-        <div class="student_name">
-            <PrismicRichText class="student_name-name" :field="name" />
-            <PrismicRichText class="student_name-firstname" :field="firstname" />
+        <div class="student__name">
+            <PrismicRichText class="student__name--name" :field="name" />
+            <PrismicRichText class="student__name--firstname" :field="firstname" />
         </div>
-        <a :href="link.url">Voir son linkedin</a>
+        <a class="student__linkedin" :href="link.url">Voir son linkedin</a>
     </section>
 </template>
 
-<style>
+<style lang="scss">
 .student {
     border-radius: 20px;
     border: 3px solid var(--ORANGE, #FFA51D);
-    width: fit-content;
-}
-
-.student_name {
+    width: rem(200);
     display: flex;
-    gap: 5px;
-    justify-content: center;
-}
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 
-.student_figure-img {
-    margin: auto;
+
+    &__country {
+        font-family: $font-satoshi-bold;
+        color: $secondary-color;
+        font-size: $body;
+    }
+
+    &__name {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        font-family: $font-satoshi;
+        color: $secondary-color;
+        font-size: rem(18);
+    }
+
+    &__figure {
+        margin: rem(16);
+
+    }
+
+
+    &__linkedin {
+        font-size: rem(16);
+    }
 }
 </style>

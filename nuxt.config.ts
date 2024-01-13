@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxtjs/prismic',
   ],
+  plugins: [
+    '~/plugins/gsap.js',
+  ],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
   vite: {
     vue: {

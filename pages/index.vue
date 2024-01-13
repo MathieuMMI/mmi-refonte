@@ -1,18 +1,90 @@
-<script setup>
+<script>
+import { ref, onMounted, nextTick } from 'vue';
+import { gsap } from 'gsap';
 
+export default {
+    setup() {
+        const lineWrapper1 = ref(null);
+        const linePath1 = ref(null);
+        const lineLength1 = ref(0);
+
+        const animateBlueLine = (blueLineRef) => {
+            const blueLine = blueLineRef.value;
+
+            // Adjust the properties based on your animation requirements
+            gsap.to(blueLine, {
+                duration: 1,
+                ease: 'power1.inOut',
+                width: '100%', // Adjust based on your needs
+                onComplete: () => {
+                    // You can add more animations or logic here if needed
+                },
+            });
+        };
+
+
+        onMounted(async () => {
+            await nextTick();
+
+            lineWrapper1.value = document.querySelector('.anime__0');
+            linePath1.value = lineWrapper1.value?.querySelector('path');
+            if (!linePath1.value) {
+                console.error('linePath1 not found');
+                return;
+            }
+            lineLength1.value = linePath1.value.getTotalLength();
+            linePath1.value.style.strokeDasharray = lineLength1.value;
+            linePath1.value.style.strokeDashoffset = lineLength1.value;
+
+
+            // Create timeline for the first animation
+            const timeline1 = gsap.timeline({
+                onComplete: () => {
+                    // Start the second animation when the first animation is complete
+                    animateLine2();
+                },
+            });
+
+            timeline1.to(linePath1.value, {
+                duration: 1,
+                ease: 'power1.inOut',
+                strokeDashoffset: 0,
+            });
+        });
+
+
+
+
+
+        return {
+            lineWrapper1,
+            linePath1,
+            lineLength1,
+        };
+    },
+};
 </script>
 <template>
     <div class="hero">
         <h1 class="hero__title">MMI</h1>
         <h1 class="hero__title">MONTBÉLIARD</h1>
+        <div ref="lineWrapper" class="anime__0">
+            <svg width="496" height="209" viewBox="0 0 496 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path ref="linePath" d="M1 2.4239C168.333 -2.41122 503 32.1348 503 209" stroke="black" stroke-width="4" />
+            </svg>
+        </div>
+
+
         <p class="hero__paragraph">Vous former aux métiers du web : tel est l'objectif du BUT MMI. En trois ans, vous serez
             capable de concevoir et de réaliser des produits et services multimédia en ligne.
         </p>
         <MyButton href='/candidater' label="CANDIDATURE" color="secondary" size="big" font="satoshi" class="hero__button" />
-        <div class="hero__blue-line"></div>
+        <div class="hero__blue-line">
+            <!-- animation2 -->
+        </div>
         <img src="" alt="" class="hero__img">
         <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
-        <div class="hero__blue-line"></div>
+        <div class="hero__blue-line"> </div>
     </div>
 
     <div class="cursus">
@@ -61,13 +133,22 @@
 
 
 <style lang="scss" scoped>
+.anime {
+    &__0 {
+        position: absolute;
+        right: 7rem;
+        top: 11rem;
+    }
+}
+
+
 .hero {
     display: flex;
     flex-direction: column; // Pour aligner les éléments verticalement
     align-items: flex-start; // Alignement à gauche
     justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
-
     margin-right: rem(77);
+    position: relative;
 
     &__title {
         font-size: $h1;
@@ -88,6 +169,7 @@
 
     &__button {
         align-self: flex-end;
+        margin-bottom: rem(32);
     }
 
     &__blue-line {

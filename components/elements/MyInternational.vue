@@ -27,7 +27,7 @@
         </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .international {
     color: $secondary-color;
     font-size: $body;
