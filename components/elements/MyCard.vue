@@ -36,10 +36,10 @@
         </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     gap: rem(76);
 }
 

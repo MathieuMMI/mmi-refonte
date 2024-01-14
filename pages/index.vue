@@ -198,7 +198,7 @@ export default {
 
 .cursus {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     justify-items: center;
     text-align: center;
 
@@ -217,7 +217,7 @@ export default {
 
 .parcours {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     justify-items: center;
     text-align: center;
     margin-left: rem(20);
@@ -241,7 +241,7 @@ export default {
 
 .decouvrir {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     justify-items: center;
     text-align: center;
     margin-top: rem(40);

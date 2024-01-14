@@ -180,7 +180,7 @@
 
     &__body {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         margin-left: rem(100);
         margin-right: rem(100);
     }
@@ -244,7 +244,7 @@
 
     &__paragraph {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         margin-left: rem(95);
         margin-right: rem(95);
         font-family: $font-satoshi;
