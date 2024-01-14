@@ -5,7 +5,6 @@ const { data: news } = await useAsyncData('news', () => client.getAllByType('new
 const allActus = ref(false);
 
 const showAllActus = () => {
-    console.log('coucou')
     allActus.value = true;
 };
 
