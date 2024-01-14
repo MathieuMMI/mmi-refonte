@@ -20,7 +20,7 @@ defineProps({
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .decouvrir {
     text-align: center;
 

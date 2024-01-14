@@ -143,7 +143,7 @@
 
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         margin-top: rem(40);
     }
 
@@ -202,7 +202,7 @@
 .defi {
     margin-top: rem(80);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     justify-items: start;
     align-items: center;
 
@@ -254,7 +254,7 @@
 
 .projet {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: auto auto;
     background-color: $black;
     color: $white;
     height: 100vh;

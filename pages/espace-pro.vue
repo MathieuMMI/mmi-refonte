@@ -82,7 +82,7 @@
 
 .projet {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
     background-color: $black;
@@ -132,7 +132,7 @@
 
 .alternance {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     justify-content: center;
     align-items: center;
     color: $black;
@@ -172,7 +172,7 @@
 
 .stage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
     color: $black;

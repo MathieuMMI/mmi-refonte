@@ -78,7 +78,7 @@
     <MyButton />
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   margin-left: rem(70);
 
@@ -97,14 +97,14 @@
 
   &__img {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.75fr 1fr;
     margin-bottom: rem(80);
   }
 }
 
 .paragraph {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   font-family: $font-satoshi;
 
   &__left {

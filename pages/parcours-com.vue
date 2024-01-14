@@ -197,7 +197,7 @@
 
     &__paragraph {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         justify-items: center;
         margin-bottom: rem(98);
 
@@ -286,7 +286,7 @@
     &__content {
         font-size: $body;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         justify-content: space-between;
         margin-bottom: rem(32);
 

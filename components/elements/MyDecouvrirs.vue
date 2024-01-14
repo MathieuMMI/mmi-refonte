@@ -39,10 +39,10 @@ const decouvrirs = reactive(response)
 
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .mydecouvrirs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
 
 }
 </style>

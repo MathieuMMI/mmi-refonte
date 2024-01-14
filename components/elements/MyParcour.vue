@@ -34,7 +34,7 @@ defineProps({
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .parcour {
     border-radius: rem(18);
     border: rem(1) solid;
@@ -58,7 +58,7 @@ defineProps({
 
     &__top {
         display: grid;
-        grid-template-columns: 1fr 0.75fr;
+        grid-template-columns: auto 0.75fr;
         align-items: center;
 
         &--title {
