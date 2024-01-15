@@ -62,4 +62,40 @@ const showLessActus = () => {
     justify-content: center;
     gap: rem(64);
 }
+
+@media screen and (max-width: 767px) {
+
+    .actus {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .plus {
+        align-self: center;
+        font-family: $font-melodrama;
+        font-size: $mobile-body;
+        color: $secondary-color;
+        border: rem(1) solid $secondary-color;
+        border-radius: rem(32);
+        padding: rem(8);
+        width: rem(155);
+        text-align: center;
+        margin-top: rem(20);
+        margin-bottom: rem(16);
+        background-color: $white;
+
+    }
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(64);
+    }
+
+}
 </style>

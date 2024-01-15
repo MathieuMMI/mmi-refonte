@@ -74,8 +74,6 @@
     <MyEllipse size="giant" color="primary2" class="actualite__ellipse" />
     <h2 class="actualite__title">Ce qu'il se passe <br /> au département...</h2>
     <Actus />
-
-    <MyButton />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -206,5 +204,161 @@
     font-size: $h2;
     font-family: $font-satoshi-bold;
   }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .hero {
+    margin-left: rem(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+
+    &__title {
+      color: $black;
+      font-size: $mobile-h2;
+      font-family: $font-satoshi-bold;
+    }
+
+    &__paragraph {
+      font-family: $font-satoshi-bold;
+      font-size: $mobile-body;
+      color: #8B8BDC;
+      margin-bottom: rem(30);
+    }
+
+    &__img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      gap: rem(30);
+      margin-bottom: rem(0);
+
+      &--left {
+        display: none;
+      }
+    }
+  }
+
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-family: $font-satoshi;
+    margin-top: rem(60);
+
+    &__left {
+      width: rem(312);
+
+      &--text {
+        margin-bottom: rem(32);
+
+        strong {
+          font-family: $font-satoshi-bold;
+        }
+      }
+    }
+
+    &__right {
+      width: rem(312);
+
+      &--text {
+        margin-bottom: rem(32);
+      }
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      margin-left: rem(0);
+      max-width: rem(300);
+
+      &--paragraph {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .equipe {
+    background-color: $black;
+    color: $white;
+    position: relative;
+
+    &__ellipse {
+      position: absolute;
+      top: rem(-236);
+      left: rem(-286);
+    }
+
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      margin-bottom: rem(146);
+      margin-left: rem(0);
+      margin-right: rem(00);
+
+      &--title {
+        align-self: center;
+        text-align: center;
+        font-size: $mobile-h2;
+        font-family: $font-satoshi-bold;
+        margin-top: rem(20);
+
+        &--melodrama {
+          font-family: $font-melodrama;
+        }
+
+        &--satoshi {
+          font-weight: bold;
+        }
+      }
+
+      &--text {
+        font-size: $mobile-body;
+        align-self: end;
+      }
+
+      &--paragraph {
+        margin-top: rem(62);
+        margin-left: rem(40);
+        margin-right: rem(39);
+      }
+    }
+  }
+
+  .actualite {
+    position: relative;
+
+    &__ellipse {
+      position: absolute;
+      left: rem(-400);
+      top: rem(-400);
+      z-index: -1;
+    }
+
+    &__title {
+      margin: rem(54);
+      margin-top: rem(100);
+      font-size: $mobile-h2;
+      font-family: $font-satoshi-bold;
+    }
+
+
+  }
+
 }
 </style>

@@ -21,4 +21,15 @@ const { data: professeurs } = await useAsyncData('professeur', () => client.getA
     background-color: $black;
 
 }
+
+@media screen and (max-width: 767px) {
+    .professeurs {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap: 2rem;
+        background-color: $black;
+    }
+}
 </style>
