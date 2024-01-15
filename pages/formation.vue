@@ -421,9 +421,10 @@
 
     .bases {
         background-color: $black;
-        height: 120vh;
+        height: 100vh;
         color: $white;
         position: relative;
+        overflow: hidden;
 
 
         &__ellipse {
@@ -447,7 +448,6 @@
         &__left {
             margin-top: rem(0);
             margin-bottom: rem(0);
-            width: rem(250);
 
             &--title {
                 font-size: $mobile-h2;
@@ -472,7 +472,6 @@
         &__right {
             margin-top: rem(0);
             position: relative;
-            width: rem(250);
 
             &--paragraph {
                 margin-bottom: rem(30);
