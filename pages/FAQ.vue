@@ -26,7 +26,7 @@ const toggleAnswer = () => {
         <div class="content">
           <div class="content__question" @click="toggleAnswer">
             <PrismicRichText :field="question.data.faq_question" />
-            <MyChevron />
+            <MyChevron class="content__question--chevron" />
           </div>
           <div class="content__answer" v-if="isOpen">
             <PrismicRichText :field="question.data.faq_answer" />
@@ -59,7 +59,12 @@ const toggleAnswer = () => {
     font-size: $body;
     font-family: $font-satoshi-bold;
     display: flex;
+    justify-items: space-between;
     align-items: center;
+
+    &--chevron {
+      width: rem(50);
+    }
   }
 
   &__answer {
@@ -110,5 +115,89 @@ const toggleAnswer = () => {
       font-weight: bold;
     }
   }
+}
+
+
+@media screen and (max-width: 767px) {
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+
+    border: rem(3) solid $black;
+    border-radius: rem(18);
+    width: rem(312);
+    padding: rem(5);
+    margin-bottom: rem(20);
+
+    &__question {
+      margin-left: rem(0);
+      color: $secondary-color;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+      display: flex;
+      align-items: center;
+    }
+
+    &__answer {
+      margin-left: rem(0);
+      color: $black;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+    }
+  }
+
+  .faq {
+    margin-left: rem(0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__ellipse {
+      position: absolute;
+      top: rem(32);
+      left: rem(-0);
+      visibility: hidden;
+    }
+
+    &__ellipse2 {
+      position: absolute;
+      bottom: rem(-256);
+      right: rem(-400);
+      visibility: hidden;
+    }
+
+
+
+    &__title {
+      font-size: $mobile-h1;
+      font-family: $font-satoshi-bold;
+    }
+
+    &__paragraph {
+      font-family: $font-satoshi-bold;
+      font-size: $mobile-body;
+      color: #8B8BDC;
+      width: rem(272);
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      margin-left: rem(0);
+      max-width: rem(300);
+
+      &--paragraph {
+        font-weight: bold;
+      }
+    }
+  }
+
 }
 </style>
