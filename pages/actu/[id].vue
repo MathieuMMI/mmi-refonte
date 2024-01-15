@@ -68,4 +68,48 @@ const imageALT = actupage.value.data.news_img.alt;
 
   &__img {}
 }
+
+@media screen and (max-width: 767px) {
+  .actu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      color: $black;
+      font-size: $mobile-h2;
+      font-family: $font-satoshi-bold;
+
+    }
+
+    &__subtitle {
+      color: $grey;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+    }
+
+    &__date {
+      color: $grey;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+      margin-bottom: rem(90);
+    }
+
+    &__accroche {
+      color: $black;
+      font-size: $mobile-body;
+      font-family: $font-satoshi;
+      margin-bottom: rem(16);
+
+    }
+
+    &__description {
+      color: $black;
+      font-size: $mobile-body;
+      font-family: $font-satoshi;
+    }
+
+    &__img {}
+  }
+}
 </style>
