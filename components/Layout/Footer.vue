@@ -1,11 +1,5 @@
-<script setup>
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-const showFooterContent = route.name !== 'contact';
-</script>
 <template>
-    <footer v-if="showFooterContent">
+    <footer>
         <div class="container">
             <div class="line"></div>
 

@@ -1,11 +1,5 @@
 <script setup>
 import { ref, onBeforeUnmount, watch } from 'vue';
-
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-const showHeaderContent = route.name !== 'contact';
-
 const isMenuVisible = ref(false);
 
 const toggleMenu = () => {
@@ -28,7 +22,7 @@ watch(isMenuVisible, toggleBodyScroll);
 </script>
 
 <template>
-    <header v-if="showHeaderContent">
+    <header>
         <div class="header" v-if="!isMenuVisible">
             <NuxtLink to="/">
                 <MyLogo />
