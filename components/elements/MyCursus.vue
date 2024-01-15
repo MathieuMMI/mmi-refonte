@@ -20,6 +20,10 @@
     </div>
 </template>
 <style lang="scss" scoped>
+.ellipse.-medium {
+    width: 100%;
+}
+
 .relative {
     position: relative;
     display: flex;

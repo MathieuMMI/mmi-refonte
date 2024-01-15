@@ -135,7 +135,7 @@
 
     .selection {
         margin-left: rem(30);
-        width: rem(300);
+
 
         &__title {
             font-size: $mobile-h2;
@@ -159,7 +159,8 @@
 
         li {
             margin-bottom: rem(16);
-            margin-left: rem(36);
+            margin-left: rem(30);
+            margin-right: rem(30);
             text-decoration: solid;
         }
     }

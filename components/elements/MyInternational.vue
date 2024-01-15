@@ -181,6 +181,7 @@
 
             &--mobile {
                 display: block;
+                width: 100%;
             }
         }
 
