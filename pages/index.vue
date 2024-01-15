@@ -124,7 +124,7 @@ export default {
                 <p> Les stages et les alternances sont également l'occasion de tenter la mobilité internationale.</p>
             </div>
 
-            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" font="melodrama" size="big"
+            <MyButton href='/candidater' label="CANDIDATER" color="border" font="melodrama" size="big"
                 class="international__end--button" />
             <MyEllipse size="regular" color="primary2" class="international__end--ellipse1" />
             <MyEllipse size="small" color="primary" class="international__end--ellipse2" />
@@ -354,6 +354,7 @@ export default {
             max-width: rem(580);
             margin-top: 20px;
             margin-left: rem(32);
+            margin-bottom: rem(30);
 
         }
 
