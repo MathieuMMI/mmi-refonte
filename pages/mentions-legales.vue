@@ -402,4 +402,25 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .mentions {
+        margin-left: rem(30);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__text {
+            font-size: $mobile-body;
+            font-family: $font-satoshi;
+            margin: rem(20);
+
+            strong {
+                font-family: $font-satoshi-bold;
+            }
+        }
+    }
+}
 </style>
