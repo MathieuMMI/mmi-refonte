@@ -14,10 +14,10 @@ const closeMenu = () => {
 
         <div class="menu">
             <h1 class="menu__num">01</h1>
-            <RouterLink to="/formation" class="menu__text">
+            <nuxt-link to="/formation" class="menu__text">
                 <p class="menu__text--title">La Formation</p>
                 <p class="menu__text--paragraph">Découvrez le programme du BUT MMI </p>
-            </RouterLink>
+            </nuxt-link>
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
             <MyCroix @click="closeMenu" />
         </div>
@@ -25,10 +25,10 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">02</h1>
             <div class="menu__right">
-                <RouterLink to="/departement" class="menu__text">
+                <nuxt-link to="/departement" class="menu__text">
                     <p class="menu__text--title">Le Département</p>
                     <p class="menu__text--paragraph">Découvrez le département où étudient les MMI</p>
-                </RouterLink>
+                </nuxt-link>
             </div>
             <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
         </div>
@@ -36,10 +36,10 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">03</h1>
             <div class="menu__right">
-                <RouterLink to="/extras" class="menu__text">
+                <nuxt-link to="/extras" class="menu__text">
                     <p class="menu__text--title">Les Extras</p>
                     <p class="menu__text--paragraph">Nous proposons de nombreuses opportunités à l'étranger</p>
-                </RouterLink>
+                </nuxt-link>
 
             </div>
             <img src="../../assets/menu_extra.jpg" alt="extras" class="menu__img">
@@ -48,11 +48,11 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">04</h1>
             <div class="menu__right">
-                <RouterLink to="/espace-pro" class="menu__text">
+                <nuxt-link to="/espace-pro" class="menu__text">
                     <p class="menu__text--title">Espace pro</p>
                     <p class="menu__text--paragraph">Vous avez un projet ? Vous cherchez
                         Proposez vos offres aux étudiants</p>
-                </RouterLink>
+                </nuxt-link>
 
             </div>
             <img src="../../assets/menu_espacepro.jpg" alt="espace pro" class="menu__img">
@@ -61,17 +61,17 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">05</h1>
             <div class="menu__right">
-                <RouterLink to="/contact" class="menu__text">
+                <nuxt-link to="/contact" class="menu__text">
                     <p class="menu__text--title">Contact</p>
                     <p class="menu__text--paragraph">Contactez-nous pour plus d'informations sur le BUT MMI</p>
-                </RouterLink>
+                </nuxt-link>
             </div>
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
         <div class="menu-line"></div>
-        <RouterLink to="/candidater">
+        <nuxt-link to="/candidater">
             <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
-        </RouterLink>
+        </nuxt-link>
     </div>
 </template>
 
