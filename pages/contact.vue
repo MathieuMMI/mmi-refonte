@@ -69,8 +69,7 @@ const sendEmail = () => {
                 </div>
             </form>
         </div>
-    </div>
-    <footer>
+        <footer>
         <div class="container">
             <div class="line"></div>
 
@@ -133,6 +132,7 @@ const sendEmail = () => {
             </div>
         </div>
     </footer>
+    </div>
 </template>
 
 
@@ -308,7 +308,7 @@ textarea {
 
 
 .container {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -316,9 +316,9 @@ textarea {
 
 .line {
     background-color: $white; // Adjust the color as needed
-    height: 3px;
+    height: 1px;
     width: 70%;
-    margin-bottom: rem(0);
+    margin: auto;
 }
 
 .footer {
@@ -331,7 +331,7 @@ textarea {
     color: $white;
 
     &__left {
-        margin: rem(20);
+        padding: rem(20);
     }
 
     &__title {
@@ -384,6 +384,7 @@ textarea {
     .template-contact {
         background-color: $black;
         color: white;
+        overflow: hidden;
 
         &-header {
             color: $white;
