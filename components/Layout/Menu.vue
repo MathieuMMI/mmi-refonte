@@ -122,4 +122,56 @@ const closeMenu = () => {
     height: 2px;
     width: 100%;
 }
+
+@media screen and (max-width: 767px) {
+    .page {
+        min-height: 100vh;
+        background-color: $black;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1px;
+    }
+
+    .menu {
+        color: $white;
+        display: grid;
+        grid-template-columns: auto 0.75fr 0.5fr 0.2fr;
+        justify-items: start;
+        align-items: center;
+
+        &__num {
+            font-size: $mobile-h1;
+            font-weight: bold;
+            font-family: $font-satoshi-bold;
+            margin-right: rem(10);
+        }
+
+        &__right {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            justify-content: space-between;
+
+        }
+
+        &__text {
+            font-size: $mobile-body ;
+            text-decoration: none;
+            color: $white;
+
+            &--title {
+                font-weight: bold;
+                margin-bottom: rem(5);
+                font-family: $font-satoshi-bold;
+            }
+        }
+    }
+
+    .menu-line {
+        background-color: $white;
+        height: 2px;
+        width: 100%;
+    }
+
+
+}
 </style>
