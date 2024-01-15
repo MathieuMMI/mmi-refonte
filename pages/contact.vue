@@ -32,8 +32,8 @@ const sendEmail = () => {
 
 <template>
     <div class="template-contact">
-        <header class="contact-header" >
-            <div class="header" v-if="!isMenuVisible">
+        <header class="template-contact-header">
+            <div class="template-contact-header_div" v-if="!isMenuVisible">
                 <RouterLink to="/">
                     <MyLogo />
                 </RouterLink>
@@ -76,7 +76,15 @@ const sendEmail = () => {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+/*.menu {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
 .contact-header {
     color: $white;
 }
@@ -84,10 +92,22 @@ const sendEmail = () => {
 .contact-footer {
     color: $white;
     background: $black;
-}
+}*/
 
 .template-contact {
     background-color: $black;
+
+    &-header {
+        color: $white;
+
+        &_div {
+            display: flex;
+            justify-content: space-between;
+            padding: rem(30);
+            z-index: 2;
+        }
+    }
+
 }
 
 .contact {
