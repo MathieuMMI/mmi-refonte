@@ -8,11 +8,16 @@ const { data: actupage } = await useAsyncData('news', () => client.getByID(IdAct
 
 // variables pour le contenu
 const titre = actupage.value.data.news_title[0].text;
-const accroche = actupage.value.data.news_hook[0].text;
 const description = actupage.value.data.news_desc[0].text;
 const date = actupage.value.data.news_date[0].text;
 const image = actupage.value.data.news_img.url;
 const imageALT = actupage.value.data.news_img.alt;
+const image2 = actupage.value.data.news_img2.url;
+const imageALT2 = actupage.value.data.news_img2.alt;
+const image3 = actupage.value.data.news_img3.url;
+const imageALT3 = actupage.value.data.news_img3.alt;
+const image4 = actupage.value.data.news_img4.url;
+const imageALT4 = actupage.value.data.news_img4.alt;
 </script>
 
 <template>
@@ -20,9 +25,13 @@ const imageALT = actupage.value.data.news_img.alt;
     <h2 class="actu__title">Actualité</h2>
     <h3 class="actu__subtitle">{{ titre }}</h3>
     <p class="actu__date">{{ date }}</p>
-    <p class="actu__accroche">{{ accroche }}</p>
     <p class="actu__description">{{ description }}</p>
-    <img :src="image" :alt="imageALT" class="actu__img" />
+    <div class="actu__div">
+      <img :src="image" :alt="imageALT" class="actu__div--img" />
+      <img :src="image2" :alt="imageALT2" class="actu__div--img" />
+      <img :src="image3" :alt="imageALT3" class="actu__div--img" />
+      <img :src="image4" :alt="imageALT4" class="actu__div--img" />
+    </div>
   </div>
 </template>
 
@@ -49,24 +58,25 @@ const imageALT = actupage.value.data.news_img.alt;
     color: $grey;
     font-size: $h3;
     font-family: $font-satoshi-bold;
-    margin-bottom: rem(90);
-  }
-
-  &__accroche {
-    color: $black;
-    font-size: $body;
-    font-family: $font-satoshi;
-    margin-bottom: rem(16);
-
+    margin-bottom: rem(30);
   }
 
   &__description {
     color: $black;
     font-size: $body;
     font-family: $font-satoshi;
+    margin-bottom: rem(50);
+    margin-left: rem(30);
+    margin-right: rem(30);
   }
 
-  &__img {}
+  &__div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: rem(20);
+    margin-left: rem(30);
+    margin-right: rem(30);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -92,7 +102,8 @@ const imageALT = actupage.value.data.news_img.alt;
       color: $grey;
       font-size: $mobile-body;
       font-family: $font-satoshi-bold;
-      margin-bottom: rem(90);
+      margin-bottom: rem(20);
+
     }
 
     &__accroche {
@@ -107,9 +118,15 @@ const imageALT = actupage.value.data.news_img.alt;
       color: $black;
       font-size: $mobile-body;
       font-family: $font-satoshi;
+      margin-left: rem(10);
+      margin-right: rem(10);
     }
 
-    &__img {}
+    &__div {
+    gap: rem(10);
+    margin-left: rem(10);
+    margin-right: rem(10);
+  }
   }
 }
 </style>
