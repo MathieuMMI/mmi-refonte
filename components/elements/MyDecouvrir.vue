@@ -16,9 +16,9 @@ defineProps({
             <img class="decouvrir__container--mobile" :src="imageSrcM" :alt="imageAlt" />
         </div>
 
-        <RouterLink :to="href" class="decouvrir__link">
+        <NuxtLink :to="href" class="decouvrir__link">
             {{ title }}
-        </RouterLink>
+        </NuxtLink>
     </div>
 </template>
 

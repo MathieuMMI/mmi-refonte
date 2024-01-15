@@ -30,9 +30,9 @@ watch(isMenuVisible, toggleBodyScroll);
 <template>
     <header v-if="showHeaderContent">
         <div class="header" v-if="!isMenuVisible">
-            <RouterLink to="/">
+            <NuxtLink to="/">
                 <MyLogo />
-            </RouterLink>
+            </NuxtLink>
             <MyMenu @click="toggleMenu" />
         </div>
         <Menu v-if="isMenuVisible" @close="toggleMenu" />

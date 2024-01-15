@@ -34,9 +34,9 @@ const sendEmail = () => {
     <div class="template-contact">
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
-                <RouterLink to="/">
+                <NuxtLink to="/">
                     <MyLogo />
-                </RouterLink>
+                </NuxtLink>
                 <MyMenu @click="toggleMenu" />
             </div>
             <Menu v-if="isMenuVisible" @close="toggleMenu" />

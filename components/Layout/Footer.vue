@@ -40,25 +40,25 @@ const showFooterContent = route.name !== 'contact';
 
                 <ul class="footer__right">
                     <li>
-                        <RouterLink class="footer__right--link" to="/">Accueil</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/">Accueil</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/departement">Département</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/departement">Département</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/formation">La Formation</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/formation">La Formation</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/extras">Les Extras</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/extras">Les Extras</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/contact">Contact</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/contact">Contact</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/faq">FAQ</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/faq">FAQ</NuxtLink>
                     </li>
                     <li>
-                        <RouterLink class="footer__right--link" to="/mentions-legales">Mentions Légales</RouterLink>
+                        <NuxtLink class="footer__right--link" to="/mentions-legales">Mentions Légales</NuxtLink>
                     </li>
                 </ul>
             </div>

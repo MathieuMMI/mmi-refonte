@@ -27,8 +27,8 @@ defineProps({
                 <p class="parcour__text">{{ text }}</p>
             </div>
             <div class="parcour__button">
-                <RouterLink :to="href" class="parcour__button" :style="{ backgroundColor: couleurVariable }">DÉCOUVRIR
-                </RouterLink>
+                <NuxtLink :to="href" class="parcour__button" :style="{ backgroundColor: couleurVariable }">DÉCOUVRIR
+                </NuxtLink>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps(/* ... */);
 const emits = defineEmits(/* ... */);
@@ -14,10 +14,10 @@ const closeMenu = () => {
 
         <div class="menu">
             <h1 class="menu__num">01</h1>
-            <nuxt-link to="/formation" class="menu__text">
+            <NuxtLink @click="closeMenu" to="/formation" class="menu__text">
                 <p class="menu__text--title">La Formation</p>
                 <p class="menu__text--paragraph">Découvrez le programme du BUT MMI </p>
-            </nuxt-link>
+            </NuxtLink>
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
             <MyCroix @click="closeMenu" />
         </div>
@@ -25,10 +25,10 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">02</h1>
             <div class="menu__right">
-                <nuxt-link to="/departement" class="menu__text">
+                <NuxtLink @click="closeMenu" to="/departement" class="menu__text">
                     <p class="menu__text--title">Le Département</p>
                     <p class="menu__text--paragraph">Découvrez le département où étudient les MMI</p>
-                </nuxt-link>
+                </NuxtLink>
             </div>
             <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
         </div>
@@ -36,10 +36,10 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">03</h1>
             <div class="menu__right">
-                <nuxt-link to="/extras" class="menu__text">
+                <NuxtLink @click="closeMenu" to="/extras" class="menu__text">
                     <p class="menu__text--title">Les Extras</p>
                     <p class="menu__text--paragraph">Nous proposons de nombreuses opportunités à l'étranger</p>
-                </nuxt-link>
+                </NuxtLink>
 
             </div>
             <img src="../../assets/menu_extra.jpg" alt="extras" class="menu__img">
@@ -48,11 +48,11 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">04</h1>
             <div class="menu__right">
-                <nuxt-link to="/espace-pro" class="menu__text">
+                <NuxtLink @click="closeMenu" to="/espace-pro" class="menu__text">
                     <p class="menu__text--title">Espace pro</p>
                     <p class="menu__text--paragraph">Vous avez un projet ? Vous cherchez
                         Proposez vos offres aux étudiants</p>
-                </nuxt-link>
+                </NuxtLink>
 
             </div>
             <img src="../../assets/menu_espacepro.jpg" alt="espace pro" class="menu__img">
@@ -61,17 +61,17 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">05</h1>
             <div class="menu__right">
-                <nuxt-link to="/contact" class="menu__text">
+                <NuxtLink @click="closeMenu" to="/contact" class="menu__text">
                     <p class="menu__text--title">Contact</p>
                     <p class="menu__text--paragraph">Contactez-nous pour plus d'informations sur le BUT MMI</p>
-                </nuxt-link>
+                </NuxtLink>
             </div>
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
         <div class="menu-line"></div>
-        <nuxt-link to="/candidater">
+        <NuxtLink @click="closeMenu" to="/candidater">
             <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
-        </nuxt-link>
+        </NuxtLink>
     </div>
 </template>
 
@@ -113,13 +113,8 @@ const closeMenu = () => {
             font-weight: bold;
             margin-bottom: rem(5);
             font-family: $font-satoshi-bold;
-
         }
-
-
     }
-
-
 }
 
 .menu-line {
