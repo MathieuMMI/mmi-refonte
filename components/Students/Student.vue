@@ -58,4 +58,43 @@ const props = defineProps({
         font-size: rem(16);
     }
 }
+
+@media screen and (max-width: 767px) {
+    .student {
+        border-radius: 20px;
+        border: 3px solid var(--ORANGE, #FFA51D);
+        width: rem(140);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+
+        &__country {
+            font-family: $font-satoshi-bold;
+            color: $secondary-color;
+            font-size: $mobile-body;
+        }
+
+        &__name {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            font-family: $font-satoshi;
+            color: $secondary-color;
+            font-size: $mobile-body;
+        }
+
+        &__figure {
+            margin: rem(16);
+
+        }
+
+
+        &__linkedin {
+            font-size: $mobile-body;
+        }
+    }
+
+}
 </style>

@@ -220,7 +220,7 @@
 
     &__title {
       color: $black;
-      font-size: $mobile-h2;
+      font-size: $mobile-h1;
       font-family: $font-satoshi-bold;
     }
 
