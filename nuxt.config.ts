@@ -14,24 +14,18 @@ export default defineNuxtConfig({
   ],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
   vite: {
-    vue: {
-      customElement: true
-    },
-    vueJsx: {
-      mergeProps: true
-    },
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: `
-          @import "@/scss/foundations/_variables.scss";
-          @import "@/scss/foundations/_mixins.scss";
+            @import "@/scss/foundations/_variables.scss";
+            @import "@/scss/foundations/_mixins.scss";
           `
         }
       }
     }
   },
   css: [
-    '@/scss/main.scss'
+  '@/scss/main.scss'
   ],
 })
