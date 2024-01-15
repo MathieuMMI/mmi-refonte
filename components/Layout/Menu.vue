@@ -69,9 +69,15 @@ const closeMenu = () => {
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
         <div class="menu-line"></div>
-        <NuxtLink @click="closeMenu" to="/candidater">
-            <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
-        </NuxtLink>
+        <div class="menu_button">
+            <NuxtLink @click="closeMenu" to="/candidater">
+                <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
+            </NuxtLink>
+            <NuxtLink @click="closeMenu" to="/en/index">
+                <MyButton color="white" label="EN" size="big" font="satoshib" />
+            </NuxtLink>
+        </div>
+
     </div>
 </template>
 
@@ -121,6 +127,11 @@ const closeMenu = () => {
     background-color: $white;
     height: 2px;
     width: 100%;
+}
+
+.menu_button {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
