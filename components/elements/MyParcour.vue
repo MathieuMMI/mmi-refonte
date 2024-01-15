@@ -73,7 +73,7 @@ defineProps({
         &--line {
             background-color: var(--couleurVariable);
             height: 3px;
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -97,5 +97,76 @@ defineProps({
         margin-right: rem(30);
         margin-bottom: rem(20);
     }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .parcour {
+        border-radius: rem(18);
+        border: rem(1) solid;
+        border-color: var(--couleurVariable);
+        max-width: rem(300);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: rem(0);
+
+        text-align: left;
+
+        &__image {
+            margin: rem(10);
+
+        }
+
+        &__content {
+            margin-left: rem(20);
+            margin-right: rem(20);
+        }
+
+        &__top {
+            display: grid;
+            grid-template-columns: auto 0.75fr;
+            align-items: center;
+
+            &--title {
+                color: var(--couleurVariable);
+                font-size: $body;
+                font-style: normal;
+                font-weight: bold;
+                line-height: normal;
+                font-family: $font-satoshi-bold;
+            }
+
+            &--line {
+                background-color: var(--couleurVariable);
+                height: 3px;
+                width: 90%;
+            }
+        }
+
+        &__text {
+            margin-top: rem(6);
+            font-size: $body;
+            color: $black;
+        }
+
+        &__button {
+            background-color: var(--couleurVariable);
+            border-radius: rem(31);
+            color: $white;
+            font-size: $body;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            padding: rem(10);
+            margin-top: rem(20);
+            margin-left: rem(30);
+            margin-right: rem(30);
+            margin-bottom: rem(20);
+        }
+    }
+
 }
 </style>
