@@ -534,11 +534,12 @@ textarea {
     input[type="text"],
 
     textarea {
-        padding: rem(16);
+        padding: rem(5);
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 1rem;
         margin-bottom: 10px;
+        height: rem(16);
         width: 100%;
     }
 
