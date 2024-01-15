@@ -172,7 +172,7 @@
         font-size: $mobile-body;
         text-align: center;
         position: relative;
-        padding: rem(64);
+        padding: rem(0);
 
         &__map {
             &--ordi {
@@ -189,8 +189,8 @@
             border-radius: rem(10);
             padding: rem(2);
             position: absolute;
-            left: rem(50);
-            top: 0;
+            left: rem(48);
+            top: rem(-48);
 
             &--body {
 
@@ -213,7 +213,7 @@
 
             position: absolute;
             left: rem(136);
-            top: 0;
+            top: rem(-64);
 
             &--body {
 
@@ -252,8 +252,8 @@
             padding: rem(2);
             width: rem(64);
             position: absolute;
-            bottom: 0;
-            right: rem(30);
+            bottom: rem(-16);
+            right: rem(32);
 
             &--body {
                 &--bold {
@@ -268,10 +268,10 @@
             &--canada {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(100);
+                height: rem(80);
                 width: 1px;
                 left: 50%;
-                bottom: rem(-100);
+                bottom: rem(-80);
             }
 
             &--espagne {
@@ -286,19 +286,19 @@
             &--inde {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(125);
+                height: rem(64);
                 width: 1px;
                 left: 50%;
-                top: rem(-125);
+                top: rem(-64);
             }
 
             &--australie {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(80);
+                height: rem(32);
                 width: 1px;
                 left: 50%;
-                top: rem(-80);
+                top: rem(-32);
             }
 
 
