@@ -242,17 +242,17 @@
         align-items: center;
         background-color: $black;
         color: $white;
-        height: 100vh;
-
+        height: 100%;
         position: relative;
+        overflow: hidden;
 
         &__left {
             margin-left: rem(0);
 
             &--ellipse {
                 position: absolute;
-                left: rem(-10);
-                top: rem(-10);
+                left: rem(-30);
+                top: rem(-30);
             }
 
             &--title {
@@ -260,12 +260,17 @@
                 font-family: $font-satoshi-bold;
                 width: rem(232);
                 margin-bottom: rem(73);
+                margin-left: rem(30);
+                margin-top: rem(30);
+
 
             }
 
             &--text {
                 width: rem(312);
                 margin-bottom: rem(16);
+                width: 80%;
+                margin-left: rem(30);
             }
         }
 
@@ -292,7 +297,8 @@
         align-items: center;
         color: $black;
         position: relative;
-        height: 100vh;
+        height: 100%;
+        overflow: hidden;
 
         &__left {
             display: flex;
@@ -311,16 +317,20 @@
 
         &__right {
             &--title {
+                margin-top: rem(64);
                 font-size: $mobile-h2;
                 font-family: $font-satoshi-bold;
                 width: rem(292);
                 margin-bottom: rem(73);
+                margin-left: rem(30);
 
             }
 
             &--text {
                 width: rem(312);
                 margin-bottom: rem(16);
+                margin-left: rem(30);
+                width: 80%;
             }
         }
     }
@@ -331,7 +341,8 @@
         justify-content: center;
         align-items: center;
         color: $black;
-        height: 100vh;
+        height: 100%;
+        overflow: hidden;
 
         position: relative;
 
@@ -360,6 +371,7 @@
             gap: rem(25);
 
             &--ellipse {
+                display: none;
                 position: absolute;
                 top: rem(-144);
                 right: rem(-48);

@@ -79,6 +79,7 @@
         position: relative;
         padding: rem(0);
 
+
         &__map {
             &--ordi {
                 display: none;

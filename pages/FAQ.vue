@@ -127,12 +127,13 @@ const toggleAnswer = () => {
   }
 
   .content {
-
     border: rem(3) solid $black;
     border-radius: rem(18);
-    width: rem(312);
+    width: 80%;
+    height: auto;
     padding: rem(5);
     margin-bottom: rem(20);
+    overflow: hidden;
 
     &__question {
       margin-left: rem(0);
@@ -158,6 +159,7 @@ const toggleAnswer = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     &__ellipse {
       position: absolute;

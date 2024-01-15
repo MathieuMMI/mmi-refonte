@@ -217,7 +217,6 @@
     align-items: center;
     justify-items: center;
 
-
     &__title {
       color: $black;
       font-size: $mobile-h1;
@@ -294,6 +293,7 @@
     background-color: $black;
     color: $white;
     position: relative;
+    // display: none;
 
     &__ellipse {
       position: absolute;
@@ -342,6 +342,8 @@
 
   .actualite {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 
     &__ellipse {
       position: absolute;
