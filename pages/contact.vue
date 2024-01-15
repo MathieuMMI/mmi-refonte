@@ -35,9 +35,9 @@ const sendEmail = () => {
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
                 <NuxtLink to="/">
-                    <MyLogo />
+                    <MyLogoW />
                 </NuxtLink>
-                <MyMenu @click="toggleMenu" />
+                <MyMenuW @click="toggleMenu" />
             </div>
             <Menu v-if="isMenuVisible" @close="toggleMenu" />
         </header>
@@ -96,6 +96,7 @@ const sendEmail = () => {
 
 .template-contact {
     background-color: $black;
+    color: white;
 
     &-header {
         color: $white;
@@ -243,5 +244,166 @@ textarea {
     border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .template-contact {
+        background-color: $black;
+        color: white;
+
+        &-header {
+            color: $white;
+
+            &_div {
+                display: flex;
+                justify-content: space-between;
+                padding: rem(30);
+                z-index: 2;
+            }
+        }
+
+    }
+
+    .contact {
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+
+        margin-left: rem(0);
+        margin-bottom: rem(64);
+
+        &__title {
+            font-size: $mobile-h1;
+            font-weight: bold;
+        }
+
+        &__paragraph {
+            font-size: $mobile-body;
+            font-weight: bold;
+            width: rem(320);
+            color: $grey;
+            text-align: center;
+
+        }
+
+        &__container {
+            background-color: $black;
+
+            max-width: 600px;
+            margin: 0 auto;
+            padding: rem(20);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            &--form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 10px;
+                width: rem(320);
+
+
+                &--message {
+                    height: rem(128);
+                }
+            }
+
+            &--border {
+
+                width: 50%;
+
+            }
+
+            &--button {
+                background-color: $white;
+                color: $black;
+                border: rem(1) solid $primary-color;
+                border-radius: rem(64);
+                padding: rem(16);
+                width: 100%;
+                font-size: $button;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+
+        &__flex {
+            background-color: $black;
+            color: $white;
+            font-size: $body;
+            align-items: center;
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            position: relative;
+
+            margin-bottom: rem(70);
+
+
+            strong {
+                font-family: $font-satoshi-bold;
+            }
+
+            &--ellipse {
+                position: absolute;
+                top: rem(-112);
+                right: rem(-32);
+            }
+
+            &--ellipse1 {
+                position: absolute;
+                bottom: rem(-32);
+                left: rem(-64);
+            }
+
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+
+    textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
 }
 </style>
