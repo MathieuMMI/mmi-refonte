@@ -1,4 +1,25 @@
 <script setup>
+import { ref, onBeforeUnmount, watch } from 'vue';
+import { useRoute } from 'vue-router';
+const isMenuVisible = ref(false);
+
+const toggleMenu = () => {
+    isMenuVisible.value = !isMenuVisible.value;
+};
+
+// Ajoute une classe au corps lorsque le menu est visible
+const toggleBodyScroll = () => {
+    const body = document.body;
+    body.classList.toggle('no-scroll', isMenuVisible.value);
+};
+
+// Supprime la classe lors de la destruction du composant
+onBeforeUnmount(() => {
+    document.body.classList.remove('no-scroll');
+});
+
+// Utilise un watcher pour détecter les changements de isMenuVisible
+watch(isMenuVisible, toggleBodyScroll);
 const name = ref('');
 const subject = ref('');
 const message = ref('');
@@ -11,37 +32,43 @@ const sendEmail = () => {
 
 <template>
     <div class="template-contact">
-        <header class="contact-header">
-            coucou
+        <header class="contact-header" >
+            <div class="header" v-if="!isMenuVisible">
+                <RouterLink to="/">
+                    <MyLogo />
+                </RouterLink>
+                <MyMenu @click="toggleMenu" />
+            </div>
+            <Menu v-if="isMenuVisible" @close="toggleMenu" />
         </header>
-            <div class="contact">
-                <h2 class="contact__title">Une question?</h2>
-                <p class="contact__paragraph">La moindre interrogation ? Un message à nous faire passer ? C'est par ici que
-                    ça
-                    se
-                    passe. </p>
-            </div>
-            <div class="contact__flex">
-                <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le <strong>samedi
-                        27 janvier 2024</strong> ou lors de notre defis 24h le <strong>14 mars 2024</strong></p>
-                <MyEllipse color="primary2" size="small" class="contact__flex--ellipse" />
-            </div>
-            <div class="contact__flex">
-                <MyEllipse color="primary2" size="tiny" class="contact__flex--ellipse1" />
-                <p>En attendant, si vous avez ne serait-ce qu'une question, n'hésitez pas à nous contacter !</p>
-            </div>
-            <div class="contact__container">
-                <form @submit.prevent="sendEmail">
-                    <input class="contact__container--form" type="text" id="name" v-model="name" placeholder="Nom" required>
-                    <input class="contact__container--form" type="text" id="email" v-model="subject" placeholder="Sujet"
-                        required>
-                    <textarea class="contact__container--form--message" id="message" v-model="message" placeholder="Message"
-                        required></textarea>
-                    <div class="contact__container--border">
-                        <button class="contact__container--button" type="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+        <div class="contact">
+            <h2 class="contact__title">Une question?</h2>
+            <p class="contact__paragraph">La moindre interrogation ? Un message à nous faire passer ? C'est par ici que
+                ça
+                se
+                passe. </p>
+        </div>
+        <div class="contact__flex">
+            <p>Pour nous rencontrer, nous vous donnons rendez-vous lors des journées portes ouvertes le <strong>samedi
+                    27 janvier 2024</strong> ou lors de notre defis 24h le <strong>14 mars 2024</strong></p>
+            <MyEllipse color="primary2" size="small" class="contact__flex--ellipse" />
+        </div>
+        <div class="contact__flex">
+            <MyEllipse color="primary2" size="tiny" class="contact__flex--ellipse1" />
+            <p>En attendant, si vous avez ne serait-ce qu'une question, n'hésitez pas à nous contacter !</p>
+        </div>
+        <div class="contact__container">
+            <form @submit.prevent="sendEmail">
+                <input class="contact__container--form" type="text" id="name" v-model="name" placeholder="Nom" required>
+                <input class="contact__container--form" type="text" id="email" v-model="subject" placeholder="Sujet"
+                    required>
+                <textarea class="contact__container--form--message" id="message" v-model="message" placeholder="Message"
+                    required></textarea>
+                <div class="contact__container--border">
+                    <button class="contact__container--button" type="submit">Envoyer</button>
+                </div>
+            </form>
+        </div>
     </div>
     <footer class="contact-footer">
         Coucou
@@ -53,6 +80,7 @@ const sendEmail = () => {
 .contact-header {
     color: $white;
 }
+
 .contact-footer {
     color: $white;
     background: $black;
