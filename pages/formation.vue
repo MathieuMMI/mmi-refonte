@@ -584,7 +584,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 60vh;
+        height: 60%;
         flex-direction: column;
 
         &__title {
@@ -599,6 +599,7 @@
 
         &__mobile {
             display: block;
+            width: 100%;
         }
     }
 
