@@ -37,7 +37,7 @@ const toggleAnswer = () => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .faq-container {
   display: flex;
   flex-direction: column;

@@ -16,7 +16,8 @@
                 processus transparent et
                 équitable.</p>
             <div class="parcoursup__button">
-                <MyButton href="test" label="CANDIDATURE PARCOURSUP" color="white" font="melodrama" size="big" />
+                <MyButton href="https://www.parcoursup.gouv.fr/" label="CANDIDATURE PARCOURSUP" color="white"
+                    font="melodrama" size="big" />
             </div>
 
         </div>
@@ -31,7 +32,8 @@
                 !
             </p>
             <div class="ecandidat__button">
-                <MyButton href="test" label="CANDIDATURE E-CANDIDAT" color="border" font="melodrama" size="big" />
+                <MyButton href="https://admission.univ-fcomte.fr/11-ecandidat.php" label="CANDIDATURE E-CANDIDAT"
+                    color="border" font="melodrama" size="big" />
             </div>
         </div>
     </div>
@@ -101,6 +103,79 @@
         align-items: center;
         justify-content: center;
         margin-bottom: rem(40);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: rem(76);
+    }
+
+
+    .parcoursup {
+        background-color: $black;
+        border: none;
+        border-radius: rem(18);
+        color: $white;
+        font-size: $mobile-body;
+        margin-left: rem(0);
+        width: rem(312);
+
+        &__title {
+            font-weight: bold;
+            font-size: $mobile-h2;
+            margin: rem(52);
+            font-family: $font-satoshi-bold;
+        }
+
+        &__text {
+            margin: rem(52);
+            font-family: $font-satoshi;
+
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: rem(40);
+        }
+    }
+
+    .ecandidat {
+        border: rem(2) solid $secondary-color;
+        border-radius: rem(18);
+        color: $secondary-color;
+        margin-right: rem(0);
+        font-size: $mobile-body;
+        width: rem(312);
+
+
+        &__title {
+            font-weight: bold;
+            font-size: $mobile-h2;
+            margin: rem(52);
+            font-family: $font-satoshi-bold;
+
+
+        }
+
+        &__text {
+            margin: rem(52);
+            font-family: $font-satoshi;
+
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: rem(40);
+        }
     }
 }
 </style>
