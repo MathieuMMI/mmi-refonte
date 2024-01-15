@@ -319,4 +319,176 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 767px) {
+    .top {
+        font-size: $mobile-h2;
+        font-family: $font-satoshi-bold;
+        text-align: center;
+        color: $secondary-color;
+        margin-bottom: rem(128);
+
+        &__title {
+            color: $secondary-color;
+        }
+
+        &__subtitle {
+            color: #8B8BDC;
+        }
+    }
+
+    .content {
+        margin-left: rem(0);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(32);
+            margin-left: rem(30);
+
+        }
+
+        &__subtitle {
+            margin-left: rem(30);
+
+            font-size: $mobile-h2;
+            font-family: $font-melodrama;
+
+            &--margin {
+                margin-left: rem(40);
+                font-size: $mobile-h2;
+                font-family: $font-melodrama;
+
+            }
+        }
+
+        &__paragraph {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            margin-bottom: rem(98);
+
+
+            &--left {
+                width: rem(313);
+
+                &--text {
+                    margin-bottom: rem(10);
+
+                    strong {
+                        font-family: $font-satoshi-bold;
+                    }
+                }
+            }
+
+            &--right {
+                width: rem(313);
+                margin-left: rem(0);
+
+                &--text {
+                    margin-bottom: rem(10);
+                }
+            }
+        }
+    }
+
+    .competences {
+        display: flex;
+        flex-wrap: none;
+        flex-direction: column;
+        justify-content: center; // Horizontally center the content
+        align-items: center; // Vertically center the content
+        gap: 20px; // Espace entre les compétences
+        width: rem(300);
+        margin: auto;
+        margin-top: rem(36);
+        margin-bottom: rem(36);
+
+        &__competence {
+            font-size: $mobile-body;
+            color: $white;
+            background-color: $secondary-color;
+            border-radius: rem(18);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: rem(150);
+            width: rem(320);
+
+            &--title {
+                font-family: $font-satoshi-bold;
+                margin-top: rem(16);
+                margin-bottom: rem(30);
+            }
+
+            &--text {
+                width: rem(300);
+            }
+        }
+
+    }
+
+
+    .postuler {
+        margin: auto;
+        border: rem(3) solid $secondary-color;
+        border-radius: rem(18);
+        width: rem(312);
+        position: relative;
+        margin-bottom: rem(80);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            width: rem(113);
+            margin-left: rem(30);
+            margin-bottom: rem(30);
+            margin-top: rem(48);
+        }
+
+        &__content {
+            font-size: $mobile-body;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: rem(32);
+
+            &--left {
+                margin-left: rem(30);
+
+                &--title {
+                    font-family: $font-satoshi-bold;
+                }
+
+            }
+
+            &--right {
+                margin-left: rem(30);
+                margin-right: rem(0);
+                position: relative;
+
+
+
+                &--title {
+                    margin-top: rem(20);
+                    font-family: $font-satoshi-bold;
+                }
+
+
+                &--button {
+
+                    position: relative;
+                    margin-top: rem(30);
+                }
+            }
+        }
+    }
+
+}
 </style>
