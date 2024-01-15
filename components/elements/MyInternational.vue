@@ -5,16 +5,17 @@
     <div class="international">
         <div class="international__canada">
             <p class="international__canada--body--bold">Canada</p>
-            <p class="international__canada--body">Montréal / Matane</p>
+            <p class="international__canada--body--ville">Montréal / Matane</p>
             <div class="international__line--canada"></div>
         </div>
         <div class="international__espagne">
             <p class="international__espagne--body--bold">Espagne</p>
-            <p class="international__espagne--body">Barcelone</p>
+            <p class="international__espagne--body--ville">Barcelone</p>
             <div class="international__line--espagne"></div>
         </div>
         <div class="international__map">
-            <MyMap />
+            <MyMap class="international__map--ordi" />
+            <MyMapMobile class="international__map--mobile" />
         </div>
 
         <div class="international__inde">
@@ -34,6 +35,22 @@
     text-align: center;
     position: relative;
     padding: rem(64);
+
+    &__map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        &--ordi {
+            display: block;
+        }
+
+        &--mobile {
+            display: none;
+        }
+    }
+
 
     &__canada {
         border: 1px solid $primary-color;
@@ -145,5 +162,153 @@
 
 
     }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .international {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        text-align: center;
+        position: relative;
+        padding: rem(64);
+
+        &__map {
+            &--ordi {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            left: rem(50);
+            top: 0;
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+
+            position: absolute;
+            left: rem(136);
+            top: 0;
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                    // width: rem(128);
+
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            bottom: 0;
+            right: rem(100);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+            position: absolute;
+            bottom: 0;
+            right: rem(30);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__line {
+
+            &--canada {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(100);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-100);
+            }
+
+            &--espagne {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
+
+            &--inde {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(125);
+                width: 1px;
+                left: 50%;
+                top: rem(-125);
+            }
+
+            &--australie {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                top: rem(-80);
+            }
+
+
+        }
+    }
+
+
+
+
+
+
 }
 </style>

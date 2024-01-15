@@ -1,11 +1,11 @@
 <script setup>
-import MyParcour from './MyParcour.vue';
 
 import { reactive } from 'vue'
 const response = [
     {
         id: 1,
         imageSrc: 'decouvrir_espace_pro.png',
+        imageSrcM: 'decouvrir_espace_pro_mobile.png',
         imageAlt: 'decouvrir_espace_pro',
         title: 'ESPACE PRO',
         href: '/espace-pro',
@@ -13,6 +13,7 @@ const response = [
     {
         id: 2,
         imageSrc: 'decouvrir_departement.png',
+        imageSrcM: 'decouvrir_departement_mobile.png',
         imageAlt: 'decouvrir_departement',
         title: 'DÉPARTEMENT',
         href: '/departement',
@@ -21,6 +22,7 @@ const response = [
 
         id: 3,
         imageSrc: 'decouvrir_formation.png',
+        imageSrcM: 'decouvrir_formation_mobile.png  ',
         imageAlt: 'decouvrir_formation',
         title: 'FORMATION',
         href: '/formation',
@@ -44,5 +46,16 @@ const decouvrirs = reactive(response)
     display: grid;
     grid-template-columns: auto auto auto;
 
+}
+
+@media screen and (max-width: 767px) {
+    .mydecouvrirs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: rem(32);
+        margin-bottom: rem(64);
+    }
 }
 </style>

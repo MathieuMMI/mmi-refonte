@@ -3,7 +3,8 @@
 </script>
 <template>
     <div class="relative">
-        <MyEllipse size="big" color="tri" class="ellipse" />
+        <MyEllipse size="big" color="tri" class="relative__ellipse" />
+        <MyEllipse size="medium" color="tri" class="relative__ellipse2" />
         <div class="dynamisme">
             <p class="dynamisme__title">Dynamisme</p>
             <div class="dynamisme__line"></div>
@@ -26,6 +27,10 @@
     align-items: center;
     justify-content: center;
     font-family: $font-melodrama;
+
+    &__ellipse2 {
+        display: none;
+    }
 }
 
 .dynamisme {
@@ -74,6 +79,76 @@
         width: 120%;
         position: absolute;
         right: rem(-150);
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .relative {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-melodrama;
+
+        &__ellipse {
+            display: none;
+        }
+
+        &__ellipse2 {
+            display: block;
+        }
+    }
+
+    .dynamisme {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        position: absolute;
+        left: rem(80);
+        top: rem(70);
+
+
+        &__line {
+            background-color: $secondary-color;
+            height: 2px;
+            width: 120%;
+            position: absolute;
+            left: rem(-40);
+        }
+    }
+
+    .professionnalisation {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        position: absolute;
+        left: rem(80);
+        bottom: rem(50);
+
+        &__line {
+            background-color: $secondary-color;
+            height: 2px;
+            width: 120%;
+            position: absolute;
+            left: rem(-40);
+        }
+    }
+
+    .creativite {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        position: absolute;
+        right: rem(50);
+        top: rem(150);
+
+        &__line {
+            background-color: $secondary-color;
+            height: 2px;
+            width: 120%;
+            position: absolute;
+            right: rem(-40);
+        }
     }
 }
 </style>

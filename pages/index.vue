@@ -124,7 +124,8 @@ export default {
                 <p> Les stages et les alternances sont également l'occasion de tenter la mobilité internationale.</p>
             </div>
 
-            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" font="melodrama" size="big" />
+            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" font="melodrama" size="big"
+                class="international__end--button" />
             <MyEllipse size="regular" color="primary2" class="international__end--ellipse1" />
             <MyEllipse size="small" color="primary" class="international__end--ellipse2" />
         </div>
@@ -276,9 +277,11 @@ export default {
         text-align: left;
         color: $black;
         margin-bottom: rem(20);
+        margin-left: rem(30);
         font-family: $font-satoshi-bold;
 
         &--orange {
+            margin-left: rem(30);
             color: $primary-color;
             font-size: $h2;
             font-weight: bold;
@@ -321,5 +324,216 @@ export default {
             top: rem(-16);
         }
     }
+}
+
+@media screen and (max-width: 767px) {
+
+    .anime__0 {
+        visibility: hidden;
+
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column; // Pour aligner les éléments verticalement
+        align-items: flex-start; // Alignement à gauche
+        justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
+        position: relative;
+
+        &__title {
+            font-size: $mobile-h1;
+            font-weight: bold;
+            color: $secondary-color;
+            margin-left: rem(32);
+            font-family: $font-satoshi-bold;
+        }
+
+        &__paragraph {
+            font-size: $mobile-body;
+            line-height: 1.5;
+            max-width: rem(580);
+            margin-top: 20px;
+            margin-left: rem(32);
+
+        }
+
+        &__button {
+            align-self: center;
+            margin-bottom: rem(32);
+        }
+
+        &__blue-line {
+            background-color: $secondary-color;
+            height: 2px;
+            width: 100%;
+        }
+
+        &__h2 {
+            font-size: $mobile-h2;
+            font-weight: bold;
+            color: $white;
+            margin-left: rem(0);
+            font-family: $font-satoshi-bold;
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+        }
+
+        &__video {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .cursus {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        text-align: center;
+
+        &__paragraph {
+            font-size: $mobile-body;
+            line-height: 1.5;
+            max-width: rem(317);
+            margin-top: 20px;
+
+            strong {
+                font-weight: bold;
+                font-family: $font-satoshi-bold;
+            }
+        }
+    }
+
+    .parcours {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        text-align: center;
+        margin-left: rem(0);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-weight: bold;
+            font-family: $font-satoshi-bold;
+
+        }
+
+        &__body {
+            color: $secondary-color;
+            font-size: $mobile-body;
+            font-weight: bold;
+            margin-bottom: rem(20);
+            font-family: $font-satoshi-bold;
+
+        }
+    }
+
+    .decouvrir {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        text-align: center;
+        margin-top: rem(40);
+        font-family: $font-satoshi-bold;
+
+
+        &__title {
+            font-size: $mobile-h1;
+            font-weight: bold;
+            max-width: rem(300);
+
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            margin-left: rem(0);
+            max-width: rem(300);
+
+            &--paragraph {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .international {
+
+        &__title {
+            font-size: $mobile-h1;
+            font-weight: bold;
+            text-align: left;
+            color: $black;
+            margin-left: rem(30);
+            margin-bottom: rem(20);
+            font-family: $font-satoshi-bold;
+
+            &--orange {
+                margin-left: rem(30);
+
+                color: $primary-color;
+                font-size: $mobile-h2;
+                font-weight: bold;
+                text-align: left;
+                font-family: $font-melodrama;
+
+            }
+        }
+
+        &__end {
+            margin-top: rem(40);
+            color: $black;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            &--text {
+                margin-left: rem(0);
+                margin-bottom: rem(20);
+                max-width: rem(273);
+
+                strong {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+
+                }
+            }
+
+            &--button {
+                margin-bottom: rem(30);
+            }
+
+            &--ellipse1 {
+                visibility: hidden;
+            }
+
+            &--ellipse2 {
+                visibility: hidden;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 </style>

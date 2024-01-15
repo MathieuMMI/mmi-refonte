@@ -50,4 +50,15 @@ const parcours = reactive(response)
     grid-template-columns: auto auto auto;
 
 }
+
+@media screen and (max-width: 767px) {
+
+    .myparcours {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: rem(20);
+    }
+}
 </style>
