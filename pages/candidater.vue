@@ -100,4 +100,73 @@
     margin-top: rem(100);
     margin-bottom: rem(48);
 }
+
+@media screen and (max-width: 767px) {
+    .candidater {
+        margin-left: rem(0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            font-size: $mobile-h1;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__paragraph {
+            font-family: $font-satoshi-bold;
+            font-size: $mobile-body;
+            color: #8B8BDC;
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            margin-left: rem(0);
+            max-width: rem(300);
+
+            &--paragraph {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .selection {
+        margin-left: rem(30);
+        width: rem(300);
+
+        &__title {
+            font-size: $mobile-h2;
+            color: $secondary-color;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__paragraph {
+            font-family: $font-satoshi-bold;
+            font-size: $mobile-body;
+            color: #8B8BDC;
+        }
+
+        &__bold {
+            font-size: $mobile-body;
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(20);
+            margin-top: rem(32);
+
+        }
+
+        li {
+            margin-bottom: rem(16);
+            margin-left: rem(36);
+            text-decoration: solid;
+        }
+    }
+
+    .card {
+        margin-top: rem(100);
+        margin-bottom: rem(48);
+    }
+}
 </style>
