@@ -30,6 +30,7 @@ const { data: professeurs } = await useAsyncData('professeur', () => client.getA
         justify-content: center;
         gap: 2rem;
         background-color: $black;
+        overflow: hidden;
     }
 }
 </style>
