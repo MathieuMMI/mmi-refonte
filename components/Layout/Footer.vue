@@ -68,7 +68,7 @@ const showFooterContent = route.name !== 'contact';
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
     display: flex;
     flex-direction: column;
