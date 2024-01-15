@@ -7,17 +7,19 @@
         <p class="hero__paragraph">Passionne(é) par les métiers du web ?</p>
         <div class="hero__grid">
             <div class="hero__left">
-                <img src="../assets/foramtion1.jpg" alt="image formation">
-                <img src="../assets/formation2.jpg" alt="image formation">
-                <h2 class="hero__left--title">Programme pédagogique</h2>
-                <p class="hero__left--paragraph">Le BUT MMI est une formation pluridisciplinaire qui s'articule autour de
+                <img class="hero__left--img" src="../assets/foramtion1.jpg" alt="image formation">
+                <img class="hero__left--img" src="../assets/formation2.jpg" alt="image formation">
+            </div>
+            <div class="hero__right">
+                <img class="hero__right--img" src="../assets/formation3.jpg" alt="image formation">
+                <img class="hero__right--img" src="../assets/formation4.jpg" alt="image formation">
+            </div>
+            <div>
+                <h2 class="hero__content--title">Programme pédagogique</h2>
+                <p class="hero__content--paragraph">Le BUT MMI est une formation pluridisciplinaire qui s'articule autour de
                     trois axes fondamentaux : le design, le développement et la communication. Inspirés par les pratiques
                     professionnelles, nous formons des étudiants polyvalents sur l'ensemble des corps de métier du web.
                 </p>
-            </div>
-            <div class="hero__right">
-                <img src="../assets/formation3.jpg" alt="image formation">
-                <img src="../assets/formation4.jpg" alt="image formation">
             </div>
         </div>
     </div>
@@ -119,7 +121,9 @@
     </div>
 
     <div class="debouche">
-        <MyDebouche />
+        <h2 class="debouche__title">Les débouchées</h2>
+        <MyDebouche class="debouche__ordi" />
+        <MyDeboucheMobile class="debouche__mobile" />
     </div>
     <div class="candidature">
         <MyButton href='/candidater' label="CANDIDATURE" color="black" font="satoshi" />
@@ -147,8 +151,8 @@
         grid-template-columns: 1.5fr 1fr;
     }
 
-    &__left {
 
+    &__content {
         &--title {
             font-size: $h2;
             font-family: $font-satoshi-bold;
@@ -315,9 +319,24 @@
 
 .debouche {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+
+    &__title {
+        font-size: $h2;
+        font-family: $font-satoshi-bold;
+    }
+
+    &__ordi {
+        display: block;
+    }
+
+    &__mobile {
+        display: none;
+    }
 }
 
 
@@ -326,5 +345,271 @@
     justify-content: center;
     align-items: center;
     margin-bottom: rem(64);
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .hero {
+        margin-left: rem(0);
+
+        &__title {
+            color: $black;
+            font-size: $mobile-h1;
+            font-family: $font-satoshi-bold;
+            text-align: center;
+        }
+
+        &__paragraph {
+            font-family: $font-satoshi-bold;
+            font-size: $mobile-body;
+            color: #8B8BDC;
+            margin-bottom: rem(30);
+            text-align: center;
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: rem(32);
+
+        }
+
+        &__left {
+
+
+            &--img {
+                display: none;
+            }
+        }
+
+        &__right {
+            &--img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            gap: rem(32);
+
+            &--title {
+
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                width: rem(271);
+                text-align: center;
+
+            }
+
+            &--paragraph {
+                margin-top: rem(32);
+                max-width: rem(315);
+                margin-bottom: rem(50);
+
+            }
+        }
+
+    }
+
+    .bases {
+        background-color: $black;
+        height: 100vh;
+        color: $white;
+        position: relative;
+
+
+        &__ellipse {
+            position: absolute;
+            left: rem(-125);
+            top: rem(-25);
+        }
+
+        &__body {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-left: rem(24);
+            margin-right: rem(0);
+            max-width: rem(342);
+
+        }
+
+        &__left {
+            margin-top: rem(0);
+            margin-bottom: rem(0);
+
+            &--title {
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                width: rem(308);
+                margin-top: rem(52);
+
+                margin-bottom: rem(73);
+            }
+
+            &--paragraph {
+                font-size: $mobile-body;
+                font-family: $font-satoshi;
+                margin-bottom: rem(30);
+
+                strong {
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__right {
+            margin-top: rem(0);
+            position: relative;
+
+            &--paragraph {
+                margin-bottom: rem(30);
+                margin-left: rem(0);
+                font-size: $mobile-body;
+                font-family: $font-satoshi;
+
+                strong {
+                    font-family: $font-satoshi-bold;
+                }
+
+            }
+
+            &--ellipse {
+                position: absolute;
+                right: rem(-100);
+                bottom: rem(-130);
+            }
+        }
+    }
+
+    .fondamentaux {
+        margin-top: rem(80);
+        margin-left: rem(0);
+
+        &__title {
+            color: $black;
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            text-align: center;
+            margin-bottom: rem(50);
+        }
+
+        &__paragraph {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: rem(39);
+            font-family: $font-satoshi;
+            margin-left: rem(39);
+
+
+            &--left {
+                margin-right: rem(0);
+            }
+
+            &--right {
+                margin-left: rem(0);
+            }
+
+            &--text {
+                margin-top: rem(16);
+            }
+        }
+    }
+
+
+    .parcours {
+        margin-top: rem(48);
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+
+        &__title {
+            color: $black;
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(48);
+        }
+
+        &__flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+        }
+
+        &__cn {
+            color: $secondary-color;
+            width: rem(256);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        &__ceu {
+            color: $primary-color;
+            width: rem(256);
+            text-align: center;
+            text-decoration: none;
+            margin-top: rem(0);
+        }
+
+        &__dw {
+            color: $black;
+            width: rem(256);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        &__text {
+            font-family: $font-melodrama;
+
+        }
+    }
+
+    .debouche {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        flex-direction: column;
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+        }
+
+
+        &__ordi {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+
+
+    .candidature {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: rem(64);
+    }
+
+
+
 }
 </style>
