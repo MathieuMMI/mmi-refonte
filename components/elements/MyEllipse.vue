@@ -82,8 +82,8 @@ const className = computed(() => ({
     }
 
     &.-giant {
-        width: rem(900);
-        height: rem(900);
+        width: 100%;
+        height: auto;
     }
 
 }
