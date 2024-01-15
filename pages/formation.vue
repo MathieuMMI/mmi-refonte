@@ -421,7 +421,7 @@
 
     .bases {
         background-color: $black;
-        height: 100vh;
+        height: 100%;
         color: $white;
         position: relative;
         overflow: hidden;
