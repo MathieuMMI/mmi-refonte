@@ -70,4 +70,50 @@ const props = defineProps({
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .project {
+        &__line {
+            background-color: $white;
+            height: 2px;
+            width: 100%;
+        }
+
+        &__group {
+            color: $white;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            justify-items: center;
+            align-items: center;
+            text-decoration: none;
+            margin-top: rem(10);
+
+            &--number {
+
+                font-size: $mobile-h1;
+                font-weight: bold;
+                font-family: $font-satoshi-bold;
+                margin-right: rem(20);
+
+            }
+
+            &--right {
+
+
+                &--title {
+                    font-size: $mobile-body;
+                    font-weight: bold;
+                    margin-bottom: rem(10);
+                    font-family: $font-satoshi-bold;
+                }
+
+
+                &--link {
+                    text-decoration: none;
+                }
+
+            }
+        }
+    }
+}
 </style>
