@@ -427,9 +427,9 @@ textarea {
         &__container {
             background-color: $black;
 
-            max-width: 600px;
+            max-width: 80%;
             margin: 0 auto;
-            padding: rem(20);
+            padding: rem(0);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -440,6 +440,7 @@ textarea {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: center;
                 margin-bottom: 10px;
                 width: rem(320);
 
@@ -451,7 +452,8 @@ textarea {
 
             &--border {
 
-                width: 50%;
+                width: 100%;
+                margin-bottom: rem(64);
 
             }
 
@@ -532,11 +534,12 @@ textarea {
     input[type="text"],
 
     textarea {
-        padding: 10px;
+        padding: rem(16);
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 1rem;
         margin-bottom: 10px;
+        width: 100%;
     }
 
 
