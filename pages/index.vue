@@ -465,7 +465,7 @@ export default {
             text-align: left;
             color: $black;
             margin-left: rem(30);
-            margin-bottom: rem(20);
+            margin-bottom: rem(80);
             font-family: $font-satoshi-bold;
 
             &--orange {

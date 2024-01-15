@@ -77,7 +77,7 @@
         font-size: $mobile-body;
         text-align: center;
         position: relative;
-        padding: rem(64);
+        padding: rem(0);
 
         &__map {
             &--ordi {
@@ -92,32 +92,32 @@
 
         &__portugal {
             position: absolute;
-            right: rem(184);
-            top: rem(-192);
+            right: rem(216);
+            top: rem(-224);
 
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(115);
+                height: rem(76.8);
                 width: 1px;
                 left: 50%;
-                bottom: rem(-115);
+                bottom: rem(-76.8);
             }
 
         }
 
         &__japon {
             position: absolute;
-            right: rem(64);
-            bottom: rem(-128);
+            right: rem(0);
+            bottom: rem(-192);
 
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(102);
+                height: rem(112);
                 width: 1px;
                 left: 60%;
-                top: rem(-68);
+                top: rem(-80);
             }
 
         }

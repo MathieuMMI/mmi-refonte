@@ -73,7 +73,7 @@ const closeMenu = () => {
             <NuxtLink @click="closeMenu" to="/candidater">
                 <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
             </NuxtLink>
-            <NuxtLink @click="closeMenu" to="/en/index">
+            <NuxtLink @click="closeMenu" to="/en/home">
                 <MyButton color="white" label="EN" size="big" font="satoshib" />
             </NuxtLink>
         </div>
