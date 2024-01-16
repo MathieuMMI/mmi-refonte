@@ -114,6 +114,7 @@
         <MyButton href='/en/candidater' label="CANDIDACY" color="black" font="satoshi" />
     </div>
 </template>
+
 <style lang="scss" scoped>
 .hero {
     margin-left: rem(70);
@@ -140,13 +141,12 @@
 
     &__content {
         &--divMarg {
-            margin-top: rem(-200);
+            margin-top: rem(-150);
         }
         &--title {
             font-size: $h2;
             font-family: $font-satoshi-bold;
             width: rem(461);
-
         }
 
         &--paragraph {
@@ -268,7 +268,6 @@
         color: $black;
         font-size: $h2;
         font-family: $font-satoshi-bold;
-        margin-bottom: rem(48);
     }
 
     &__flex {
@@ -318,6 +317,7 @@
     &__title {
         font-size: $h2;
         font-family: $font-satoshi-bold;
+        margin-bottom: rem(100);
     }
 
     &__ordi {
