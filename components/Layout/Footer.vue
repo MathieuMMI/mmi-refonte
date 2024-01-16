@@ -13,54 +13,57 @@
                     </p>
                     <p class="footer__adresse">4 place Tharradin 25 200 Montbéliard</p>
                     <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
+                    <ul class="footer__liste">
+                        <li>
+                            <MyGoogle />
+                        </li>
+                        <li>
+                            <MyFacebook />
+                        </li>
+                        <li>
+                            <MyLinkedIn />
+                        </li>
+                        <li>
+                            <MyInstagram />
+                        </li>
+                        <li>
+                            <MyX />
+                        </li>
+                    </ul>
                 </div>
+                <div class="footer__right">
 
-                <ul class="footer__right">
-                    <div>
+                    <ul class="footer__right--menu">
+                        <div>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/">Accueil</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/departement">Département</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/formation">La Formation</NuxtLink>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/extras">Les Extras</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/contact">Contact</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/faq">FAQ</NuxtLink>
+                            </li>
+                        </div>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/">Accueil</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/mentions-legales">Mentions Légales</NuxtLink>
                         </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/departement">Département</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/formation">La Formation</NuxtLink>
-                        </li>
-                    </div>
-                    <div>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/extras">Les Extras</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/contact">Contact</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/faq">FAQ</NuxtLink>
-                        </li>
-                    </div>
-                    <li>
-                        <NuxtLink class="footer__right--link" to="/mentions-legales">Mentions Légales</NuxtLink>
-                    </li>
-                </ul>
-                <ul class="footer__liste">
-                    <li>
-                        <MyGoogle />
-                    </li>
-                    <li>
-                        <MyFacebook />
-                    </li>
-                    <li>
-                        <MyLinkedIn />
-                    </li>
-                    <li>
-                        <MyInstagram />
-                    </li>
-                    <li>
-                        <MyX />
-                    </li>
-                </ul>
-                <MyLogo class="footer__logo" />
+                    </ul>
+                    <MyLogo class="footer__logo" />
+                </div>
             </div>
+
         </div>
     </footer>
 </template>
@@ -83,21 +86,25 @@
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-items: space-between;
+    align-items: space-between;
+    margin-left: 20%;
+    gap: 30%;
     font-size: $body;
+    width: 100%;
 
     &__left {
-        margin: rem(20);
-        margin-left: rem(256);
+        margin: rem(0);
+        margin-left: rem(0);
     }
 
     &__title {
         font-weight: bold;
         margin-bottom: rem(20);
         font-family: $font-satoshi-bold;
+        width: rem(500);
+
     }
 
     &__mail {
@@ -141,6 +148,7 @@
 
     &__logo {
         margin-bottom: rem(64);
+        width: 65%;
     }
 }
 
@@ -166,16 +174,20 @@
         justify-items: center;
         align-items: center;
         font-size: $mobile-body;
+        width: 100%;
+        margin-left: 10%;
 
         &__left {
-            margin-left: rem(20);
+            margin-left: 0;
             margin-bottom: rem(0);
+            width: auto;
         }
 
         &__title {
             font-weight: bold;
             margin-bottom: rem(20);
             font-family: $font-satoshi-bold;
+            width: 80%;
         }
 
         &__mail {
@@ -206,8 +218,17 @@
 
         &__right {
             display: flex;
+            flex-direction: column;
             gap: rem(32);
             margin-bottom: rem(16);
+
+
+            &--menu {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                gap: 10%;
+            }
 
             li {
                 margin-top: rem(16);
