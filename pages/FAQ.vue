@@ -175,8 +175,6 @@ const toggleAnswer = () => {
       visibility: hidden;
     }
 
-
-
     &__title {
       font-size: $mobile-h1;
       font-family: $font-satoshi-bold;

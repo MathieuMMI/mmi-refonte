@@ -274,7 +274,6 @@ export default {
         right: 7rem;
         top: 11rem;
         z-index: -1;
-
     }
 
     &__2 {
@@ -331,8 +330,8 @@ export default {
     &__button {
         align-self: flex-end;
         margin-bottom: rem(32);
-        opacity: 0;
-        pointer-events: none;
+        opacity: 0; // Set initial opacity to 0
+        pointer-events: none; // Initially disable pointer events
         margin-right: 3rem;
     }
 
@@ -659,7 +658,7 @@ export default {
             font-size: $mobile-h1;
             font-weight: bold;
             max-width: rem(300);
-
+            margin-top: rem(50);
         }
 
         &__arrow {

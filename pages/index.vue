@@ -662,7 +662,7 @@ export default {
             font-size: $mobile-h1;
             font-weight: bold;
             max-width: rem(300);
-
+            margin-top: rem(50);
         }
 
         &__arrow {
