@@ -243,6 +243,8 @@ const sendEmail = () => {
             color: $black;
             border-radius: rem(64);
             padding: rem(16);
+            padding-top: rem(8);
+            padding-bottom: rem(8);
             width: rem(200);
             font-size: $button;
             transition: background-color 0.3s ease;
@@ -489,6 +491,8 @@ textarea {
                 padding: rem(16);
                 font-size: rem(20);
                 transition: background-color 0.3s ease;
+                padding-top: rem(8);
+                padding-bottom: rem(8);
 
                 &:hover {
                     background-color: $primary-color;

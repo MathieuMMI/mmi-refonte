@@ -72,7 +72,7 @@
 
   <div class="actualite">
     <MyEllipse size="giant" color="primary2" class="actualite__ellipse" />
-    <h2 class="actualite__title">Ce qu'il se passe <br /> au département...</h2>
+    <h2 class="actualite__title">Ce qui se passe <br /> au département...</h2>
     <Actus />
   </div>
 </template>
@@ -201,6 +201,7 @@
 
   &__title {
     margin-top: rem(25);
+    margin-left: rem(100);
     font-size: $h2;
     font-family: $font-satoshi-bold;
   }

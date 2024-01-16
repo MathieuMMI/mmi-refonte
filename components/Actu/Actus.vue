@@ -20,7 +20,7 @@ const showLessActus = () => {
                 <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.news_title"
                     :img="actu.data.news_img" :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
             </div>
-            <button @click="showLessActus" class="plus">Moins d'actus</button>
+            <div class="button"><button @click="showLessActus" class="button-plus">Moins d'actus</button></div>
         </div>
 
         <div v-else>

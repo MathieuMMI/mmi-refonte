@@ -19,15 +19,15 @@ const showLessActus = () => {
                 <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.newsen_title"
                     :img="actu.data.news_img" :desc="actu.data.newsen_hook" :date="actu.data.newsen_date" :actuid="actu.id" />
             </div>
-            <button @click="showLessActus" class="plus">Less news</button>
+            <div class="button"><button @click="showLessActus" class="button-plus">Less news</button></div>
         </div>
 
         <div v-else>
             <div class="actus">
-                <ActuEN class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.newsen_title"
+                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.newsen_title"
                     :img="actu.data.news_img" :desc="actu.data.newsen_hook" :date="actu.data.newsen_date" :actuid="actu.id" />
             </div>
-            <button @click="showAllActus" class="plus">More news</button>
+            <div class="button"><button @click="showAllActus" class="button-plus">More news</button></div>
         </div>
     </div>
 </template>

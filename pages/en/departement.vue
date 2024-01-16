@@ -195,6 +195,7 @@
 
   &__title {
     margin-top: rem(25);
+    margin-left: rem(100);
     font-size: $h2;
     font-family: $font-satoshi-bold;
   }

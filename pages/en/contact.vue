@@ -132,518 +132,84 @@ const sendEmail = () => {
     </div>
 </template>
 
-
 <style lang="scss" scoped>
-/*.menu {
-    flex: 1;
-    overflow-y: auto;
+.actus {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.no-scroll {
-    overflow: hidden;
-}
-.contact-header {
-    color: $white;
-}
+.button {
+    width: 100%;
+    display: flex;
 
-.contact-footer {
-    color: $white;
-    background: $black;
-}*/
-
-.template-contact {
-    background-color: $black;
-    color: white;
-
-    &-header {
-        color: $white;
-
-        &_div {
-            display: flex;
-            justify-content: space-between;
-            padding: rem(30);
-            z-index: 2;
-        }
-    }
-
-}
-
-
-.header {
-
-    &__accueil {
-        text-decoration: none;
-        border: rem(1) solid $white;
+    &-plus {
+        font-family: $font-melodrama;
+        font-size: $button;
+        color: $secondary-color;
+        border: rem(1) solid $secondary-color;
         border-radius: rem(32);
-        padding: rem(16);
-
-        &--content {
-            color: $white;
-            font-family: $font-satoshi-bold;
-        }
-    }
-}
-
-.contact {
-    background-color: $black;
-    color: $white;
-    margin-left: rem(70);
-    margin-bottom: rem(64);
-
-    &__title {
-        font-size: $h2;
-        font-weight: bold;
-    }
-
-    &__paragraph {
-        font-size: $body;
-        font-weight: bold;
-        width: rem(500);
-        color: $grey;
-
-
-    }
-
-    &__container {
-        background-color: $black;
-
-        max-width: 600px;
-        margin: 0 auto;
-        padding: rem(20);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-
-        &--form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 10px;
-            width: rem(544);
-
-
-            &--message {
-                height: rem(128);
-            }
-        }
-
-        &--border {
-            margin: auto;
-            width: 50%;
-            align-items: center;
-            display: flex;
-        }
-
-        &--button {
-            background-color: $white;
-            color: $black;
-            border-radius: rem(64);
-            padding: rem(16);
-            width: rem(200);
-            font-size: $button;
-            transition: background-color 0.3s ease;
-            margin: auto auto rem(50) auto;
-            border: none;
-
-            &:hover {
-                background-color: $primary-color;
-            }
-        }
-    }
-
-
-    &__flex {
-        background-color: $black;
-        color: $white;
-        font-size: $body;
-        align-items: center;
+        padding: rem(8);
+        width: rem(200);
+        margin: auto;
         text-align: center;
-        max-width: 588px;
-        margin: 0 auto;
-        position: relative;
-
-        margin-bottom: rem(70);
-
-
-        strong {
-            font-family: $font-satoshi-bold;
-        }
-
-        &--ellipse {
-            position: absolute;
-            top: rem(-32);
-            right: rem(-80);
-        }
-
-        &--ellipse1 {
-            position: absolute;
-            bottom: rem(-32);
-            left: rem(-64);
-        }
-
+        margin-bottom: rem(16);
+        margin-top: rem(16);
+        background-color: $white;
     }
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-form {
+.page-container {
     display: flex;
-    flex-direction: column;
-    gap: rem(20);
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-
-textarea {
-    padding: rem(10);
-    border: rem(1) solid #ccc;
-    border-radius: rem(20);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    background-color: $black;
-    color: #FEFEFE;
-}
-
-
-.container {
-    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: rem(64);
 }
 
-.line {
-    background-color: $white; // Adjust the color as needed
-    height: 1px;
-    width: 70%;
-    margin: auto;
-}
-
-.footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    font-size: $body;
-    background-color: $black;
-    color: $white;
-
-    &__left {
-        padding: rem(20);
-        margin-left: rem(256);
-    }
-
-    &__title {
-        font-weight: bold;
-        margin-bottom: rem(20);
-        font-family: $font-satoshi-bold;
-    }
-
-    &__mail {
-        margin-bottom: rem(10);
-
-        &--to {
-            text-decoration: none;
-            color: $white;
-
-            &:hover {
-                color: $primary-color; // Change to your desired hover color
-            }
-        }
-    }
-
-    &__adresse {
-        margin-bottom: rem(10);
-    }
-
-    &__tel {
-        margin-bottom: rem(20);
-    }
-
-    &__liste {
-        display: flex;
-        gap: rem(20); // Adjust the gap as needed
-        margin-bottom: rem(64);
-    }
-
-    &__right {
-
-        &--link {
-            text-decoration: none;
-            color: $white;
-
-            &:hover {
-                color: $primary-color; // Change to your desired hover color
-            }
-        }
-    }
+.actu__content--desc p {
+    padding-left: rem(50);
+    padding-right: rem(50);
 }
 
 @media screen and (max-width: 767px) {
-
-    .template-contact {
-        background-color: $black;
-        color: white;
-        overflow: hidden;
-
-        &-header {
-            color: $white;
-
-            &_div {
-                display: flex;
-                justify-content: space-between;
-                padding: rem(30);
-                z-index: 2;
-            }
-        }
-
+    .actu__content--desc p {
+        padding-left: rem(0);
+        padding-right: rem(0);
     }
 
-    .contact {
-        background-color: $black;
-        color: $white;
+    .actus {
+        margin-top: 2rem;
         display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-
-
-        margin-left: rem(0);
-        margin-bottom: rem(64);
-
-        &__title {
-            font-size: $mobile-h1;
-            font-weight: bold;
-        }
-
-        &__paragraph {
-            font-size: $mobile-body;
-            font-weight: bold;
-            width: rem(320);
-            color: $grey;
-            text-align: center;
-
-        }
-
-        &__container {
-            background-color: $black;
-
-            max-width: 80%;
-            margin: 0 auto;
-            padding: rem(0);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
-            &--form {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 10px;
-                width: rem(320);
-
-
-                &--message {
-                    height: rem(128);
-                }
-            }
-
-            &--border {
-
-                margin: auto;
-                width: 50%;
-                margin-bottom: rem(64);
-
-            }
-
-            &--button {
-                background-color: $white;
-                color: $black;
-                border: none;
-                border-radius: rem(64);
-                padding: rem(16);
-                font-size: rem(20);
-                transition: background-color 0.3s ease;
-
-                &:hover {
-                    background-color: $primary-color;
-                }
-            }
-        }
-
-
-        &__flex {
-            background-color: $black;
-            color: $white;
-            font-size: $body;
-            align-items: center;
-            text-align: center;
-            max-width: 300px;
-            margin: 0 auto;
-            position: relative;
-
-            margin-bottom: rem(70);
-
-
-            strong {
-                font-family: $font-satoshi-bold;
-            }
-
-            &--ellipse {
-                position: absolute;
-                top: rem(-112);
-                right: rem(-32);
-            }
-
-            &--ellipse1 {
-                position: absolute;
-                bottom: rem(-32);
-                left: rem(-64);
-            }
-
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
+    .plus {
+        align-self: center;
+        font-family: $font-melodrama;
+        font-size: $mobile-body;
+        color: $secondary-color;
+        border: rem(1) solid $secondary-color;
+        border-radius: rem(32);
+        padding: rem(8);
+        width: rem(155);
+        text-align: center;
+        margin-top: rem(20);
+        margin-bottom: rem(16);
+        background-color: $white;
+
     }
 
-    p {
-        margin-bottom: 10px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
-    label {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    input[type="text"],
-
-    textarea {
-        padding: rem(5);
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-        height: rem(16);
-        width: 100%;
-    }
-
-
-    .container {
+    .page-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: rem(64);
     }
 
-    .line {
-        background-color: $white; // Adjust the color as needed
-        height: 1px;
-        width: 70%;
-        margin-bottom: rem(0);
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        font-size: $mobile-body;
-        background-color: $black;
-        color: $white;
-
-        &__left {
-            margin-left: rem(20);
-            margin-bottom: rem(0);
-        }
-
-        &__title {
-            font-weight: bold;
-            margin-bottom: rem(20);
-            font-family: $font-satoshi-bold;
-        }
-
-        &__mail {
-            margin-bottom: rem(10);
-
-            &--to {
-                text-decoration: none;
-                color: $white;
-
-                &:hover {
-                    color: $primary-color; // Change to your desired hover color
-                }
-            }
-        }
-
-        &__adresse {
-            margin-bottom: rem(10);
-        }
-
-        &__tel {
-            margin-bottom: rem(20);
-        }
-
-        &__liste {
-            display: flex;
-            gap: rem(20); // Adjust the gap as needed
-        }
-
-        &__right {
-            display: flex;
-            gap: rem(32);
-            margin-bottom: rem(16);
-
-            li {
-                margin-top: rem(16);
-            }
-
-            &--link {
-                text-decoration: none;
-                color: $white;
-
-
-                &:hover {
-                    color: $primary-color; // Change to your desired hover color
-                }
-            }
-        }
-    }
-}
-</style>
+}</style>
