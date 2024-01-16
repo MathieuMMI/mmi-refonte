@@ -58,7 +58,7 @@
         padding: rem(2);
         width: 15%;
         position: absolute;
-        left: 20%;
+        left: 22%;
         top: 0;
 
         &--body {
@@ -76,7 +76,7 @@
         padding: rem(2);
         width: 10%;
         position: absolute;
-        left: 42%;
+        left: 43%;
         top: 0;
 
         &--body {
@@ -95,7 +95,7 @@
         width: 10%;
         position: absolute;
         bottom: 10%;
-        right: 31%;
+        right: 33%;
 
         &--body {
             &--bold {
@@ -112,7 +112,7 @@
         width: 10%;
         position: absolute;
         bottom: 0;
-        right: 20%;
+        right: 25%;
 
         &--body {
             &--bold {
