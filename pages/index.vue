@@ -15,8 +15,12 @@ export default {
         const lineWrapper3 = ref(null);
         const linePath3 = ref(null);
         const lineLength3 = ref(0);
-
         const parcoursComponent = ref(null);
+
+        const lineWrapper4 = ref(null);
+        const linePath4 = ref(null);
+        const lineLength4 = ref(0);
+        const decouvrirComponent = ref(null);
 
         onMounted(async () => {
             await nextTick();
@@ -51,9 +55,24 @@ export default {
             lineLength3.value = linePath3.value.getTotalLength();
             linePath3.value.style.strokeDasharray = lineLength3.value;
             linePath3.value.style.strokeDashoffset = lineLength3.value;
+
+            lineWrapper4.value = document.querySelector('.anime__4');
+            linePath4.value = lineWrapper4.value?.querySelector('path');
+            if (!linePath4.value) {
+                console.error('linePath4 not found');
+                return;
+            }
+            lineLength4.value = linePath4.value.getTotalLength();
+            linePath4.value.style.strokeDasharray = lineLength4.value;
+            linePath4.value.style.strokeDashoffset = lineLength4.value;
             parcoursComponent.value = document.querySelector('.parcours__parcours');
             if (!linePath3.value) {
                 console.error('linePath3 not found');
+                return;
+            }
+            decouvrirComponent.value = document.querySelector('.decouvrir__decouvrir');
+            if (!linePath4.value) {
+                console.error('linePath4 not found');
                 return;
             }
 
@@ -105,12 +124,33 @@ export default {
                             opacity: 1,
                             pointerEvents: 'auto',
                             onComplete: () => {
+                                animateLine4();
                             },
                         });
                     },
                 });
 
                 timeline3.to(linePath3.value, {
+                    duration: 1,
+                    ease: 'power1.inOut',
+                    strokeDashoffset: 0,
+                });
+            };
+            const animateLine4 = () => {
+                const timeline4 = gsap.timeline({
+                    delay: 2,
+                    onComplete: () => {
+                        gsap.to(decouvrirComponent.value, {
+                            duration: 0.5,
+                            opacity: 1,
+                            pointerEvents: 'auto',
+                            onComplete: () => {
+                            },
+                        });
+                    },
+                });
+
+                timeline4.to(linePath4.value, {
                     duration: 1,
                     ease: 'power1.inOut',
                     strokeDashoffset: 0,
@@ -131,6 +171,10 @@ export default {
             linePath3,
             lineLength3,
             parcoursComponent,
+            lineWrapper4,
+            linePath4,
+            lineLength4,
+            decouvrirComponent,
         };
     },
 };
@@ -151,10 +195,9 @@ export default {
         </p>
         <MyButton ref="candidatureButton" href='/candidater' label="CANDIDATURE" color="secondary" size="big" font="satoshi"
             class="hero__button" />
-        <div class="hero__blue-line">
-        </div>
+
         <div class="hero__video">
-            <video controls width="100%" height="auto" autoplay muted>
+            <video width="100%" height="auto" autoplay muted>
                 <source src="../assets/mmi.mp4" type="video/mp4">
             </video>
             <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
@@ -179,12 +222,9 @@ export default {
 
     <div class="parcours">
         <div ref="lineWrapper3" class="anime__3">
-            <svg width="397" height="188" viewBox="0 0 397 188" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path ref="linePath3" d="M2 1C20.6085 62.6667 152.682 186 397 186" stroke="black" stroke-width="3" />
+            <svg width="397" height="288" viewBox="0 0 397 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path ref="linePath3" d="M2 1C20.6085 96 152.682 286 397 286" stroke="black" stroke-width="3" />
             </svg>
-
-
-
         </div>
 
         <h2 class="parcours__title">3 PARCOURS</h2>
@@ -193,18 +233,24 @@ export default {
     </div>
 
     <div class="decouvrir">
+        <div ref="lineWrapper4" class="anime__4">
+            <svg width="357" height="331" viewBox="0 0 357 331" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path ref="linePath4" d="M354.935 1C357.408 110.333 289.882 329 0 329" stroke="black" stroke-width="3" />
+            </svg>
+        </div>
+
         <h2 class="decouvrir__title">EN DÉCOUVRIR DAVANTAGE</h2>
         <div class="decouvrir__arrow">
             <MyArrow />
             <p class="decouvrir__arrow--paragraph">Découvrez toutes les facettes de la formation.</p>
         </div>
     </div>
-    <MyDecouvrirs />
+    <MyDecouvrirs ref="decouvrirComponent" class="decouvrir__decouvrir" />
 
     <div class="international">
         <h2 class="international__title--orange"> MMI À</h2>
         <h2 class="international__title">L'INTERNATIONAL</h2>
-        <MyInternational />
+        <MyInternational class="international__map" />
 
 
         <div class="international__end">
@@ -244,6 +290,12 @@ export default {
         position: absolute;
         left: 8rem;
         top: -9.5rem;
+    }
+
+    &__4 {
+        position: absolute;
+        right: 8rem;
+        top: -2.5rem;
     }
 
     svg {
@@ -341,7 +393,7 @@ export default {
         font-size: $h2;
         font-weight: bold;
         font-family: $font-satoshi-bold;
-
+        margin-top: rem(106);
     }
 
     &__body {
@@ -360,6 +412,7 @@ export default {
 }
 
 .decouvrir {
+    position: relative;
     display: grid;
     grid-template-columns: auto;
     justify-items: center;
@@ -372,6 +425,7 @@ export default {
         font-size: $h2;
         font-weight: bold;
         max-width: rem(700);
+        margin-top: rem(233);
 
     }
 
@@ -386,6 +440,11 @@ export default {
             font-weight: bold;
         }
     }
+
+    &__decouvrir {
+        opacity: 0; // Set initial opacity to 0
+        pointer-events: none; // Initially disable pointer events
+    }
 }
 
 .international {
@@ -396,11 +455,12 @@ export default {
         text-align: left;
         color: $black;
         margin-bottom: rem(20);
-        margin-left: rem(30);
+        margin-left: rem(141);
         font-family: $font-satoshi-bold;
 
         &--orange {
-            margin-left: rem(30);
+            margin-top: rem(269);
+            margin-left: rem(141);
             color: $primary-color;
             font-size: $h2;
             font-weight: bold;
@@ -408,6 +468,11 @@ export default {
             font-family: $font-melodrama;
 
         }
+    }
+
+    &__map {
+        margin-top: rem(111);
+        margin-bottom: rem(24);
     }
 
     &__end {

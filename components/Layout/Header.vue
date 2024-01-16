@@ -34,8 +34,8 @@ watchEffect(() => {
     <header>
         <div v-if="!indexEN">
             <div class="header" v-if="!isMenuVisible">
-                <NuxtLink to="/">
-                    <MyLogo />
+                <NuxtLink to="/" class="header__accueil">
+                    <p class="header__accueil--content">Accueil</p>
                 </NuxtLink>
                 <MyMenu @click="toggleMenu" />
             </div>
@@ -43,8 +43,8 @@ watchEffect(() => {
         </div>
         <div v-else>
             <div class="header" v-if="!isMenuVisible">
-                <NuxtLink to="/en">
-                    <MyLogo />
+                <NuxtLink to="/en" class="header__accueil">
+                    <p class="header__accueil--content">Home</p>
                 </NuxtLink>
                 <MyMenu @click="toggleMenu" />
             </div>
@@ -59,6 +59,18 @@ watchEffect(() => {
     justify-content: space-between;
     margin: rem(30);
     z-index: 2;
+
+
+    &__accueil {
+        text-decoration: none;
+        border: rem(1) solid $secondary-color;
+        border-radius: rem(32);
+        padding: rem(16);
+
+        &--content {
+            font-family: $font-satoshi-bold;
+        }
+    }
 }
 
 .menu {
