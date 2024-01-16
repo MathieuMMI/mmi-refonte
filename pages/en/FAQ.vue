@@ -37,7 +37,8 @@ const toggleAnswer = () => {
   </div>
 </template>
 
-<style lang="scss">
+
+<style lang="scss" scoped>
 .faq-container {
   display: flex;
   flex-direction: column;
@@ -59,7 +60,12 @@ const toggleAnswer = () => {
     font-size: $body;
     font-family: $font-satoshi-bold;
     display: flex;
+    justify-items: space-between;
     align-items: center;
+
+    &--chevron {
+      width: rem(50);
+    }
   }
 
   &__answer {
@@ -110,5 +116,91 @@ const toggleAnswer = () => {
       font-weight: bold;
     }
   }
+}
+
+
+@media screen and (max-width: 767px) {
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    border: rem(3) solid $black;
+    border-radius: rem(18);
+    width: 80%;
+    height: auto;
+    padding: rem(5);
+    margin-bottom: rem(20);
+    overflow: hidden;
+
+    &__question {
+      margin-left: rem(0);
+      color: $secondary-color;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+      display: flex;
+      align-items: center;
+    }
+
+    &__answer {
+      margin-left: rem(0);
+      color: $black;
+      font-size: $mobile-body;
+      font-family: $font-satoshi-bold;
+    }
+  }
+
+  .faq {
+    margin-left: rem(0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &__ellipse {
+      position: absolute;
+      top: rem(32);
+      left: rem(-0);
+      visibility: hidden;
+    }
+
+    &__ellipse2 {
+      position: absolute;
+      bottom: rem(-256);
+      right: rem(-400);
+      visibility: hidden;
+    }
+
+
+
+    &__title {
+      font-size: $mobile-h1;
+      font-family: $font-satoshi-bold;
+    }
+
+    &__paragraph {
+      font-family: $font-satoshi-bold;
+      font-size: $mobile-body;
+      color: #8B8BDC;
+      width: rem(272);
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      margin-left: rem(0);
+      max-width: rem(300);
+
+      &--paragraph {
+        font-weight: bold;
+      }
+    }
+  }
+
 }
 </style>

@@ -23,11 +23,12 @@ const name = aStudent.data.student_name;
 const firstname = aStudent.data.student_firstname;
 const image = aStudent.data.student_img;
 const link = aStudent.data.student_link;
+const country = aStudent.data.student_country;
 </script>
 
 <template>
     <div class="students">
-        <Student class="students-student" :name="name" :firstname="firstname" :img="image" :link="link" />
+        <Student class="students-student" :name="name" :firstname="firstname" :img="image" :link="link" :country="country" />
     </div>
 </template>
 

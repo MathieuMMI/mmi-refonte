@@ -511,7 +511,7 @@
         align-items: center;
         background-color: $black;
         color: $white;
-        height: 80vh;
+        height: 100%;
         padding: rem(0);
 
         &__left {
@@ -549,6 +549,7 @@
 
         &__right {
             position: relative;
+            margin-bottom: rem(16);
 
             &--ellipse {
                 position: absolute;
@@ -569,6 +570,7 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
+        height: 100%;
 
         &__title {
             font-size: $mobile-h2;
@@ -600,4 +602,5 @@
             margin-top: rem(80);
         }
     }
-}</style>
+}
+</style>

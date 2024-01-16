@@ -409,9 +409,10 @@
 
     .bases {
         background-color: $black;
-        height: 100vh;
+        height: 100%;
         color: $white;
         position: relative;
+        overflow: hidden;
 
 
         &__ellipse {
@@ -571,7 +572,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 60vh;
+        height: 60%;
         flex-direction: column;
 
         &__title {
@@ -586,6 +587,7 @@
 
         &__mobile {
             display: block;
+            width: 100%;
         }
     }
 
@@ -599,4 +601,5 @@
 
 
 
-}</style>
+}
+</style>
