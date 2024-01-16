@@ -20,14 +20,14 @@
         </div>
         <div class="projet__right">
             <MyProjet />
-            <MyButton href='' label="DEPOSER UN PROJET ?" color="borderw" font="melodrama" size="big" />
+            <MyButton border="pro" href='' label="DEPOSER UN PROJET ?" color="borderw" font="melodrama" size="big" />
             <MyEllipse color="primary" size="tiny" class="projet__right--ellipse" />
         </div>
     </div>
 
     <div class="alternance">
         <div class="alternance__left">
-            <MyButton href='' label="DEPOSER UNE OFFRE ?" color="borderb" font="melodrama" size="big" />
+            <MyButton border="pro" href='' label="DEPOSER UNE OFFRE ?" color="borderb" font="melodrama" size="big" />
             <MyEllipse color="primary" size="big" class="alternance__left--ellipse" />
             <MyCalendrier />
 
@@ -56,7 +56,7 @@
                 offres grâce à notre formulaire. </p>
         </div>
         <div class="stage__right">
-            <MyButton href='' label="DEPOSER UN PROJET ?" color="borderb" font="melodrama" size="big" />
+            <MyButton border="pro" href='' label="DEPOSER UN PROJET ?" color="borderb" font="melodrama" size="big" />
             <MyEllipse color="secondary" size="regular" class="stage__right--ellipse" />
             <MyOrdi />
         </div>
@@ -87,7 +87,8 @@
     align-items: center;
     background-color: $black;
     color: $white;
-    height: 100vh;
+    height: 100%;
+    padding: rem(50);
 
     position: relative;
 
@@ -136,7 +137,8 @@
     align-items: center;
     color: $black;
     position: relative;
-    height: 100vh;
+    height: 100%;
+    padding: rem(100);
 
     &__left {
         display: flex;
@@ -175,7 +177,8 @@
     justify-content: center;
     align-items: center;
     color: $black;
-    height: 100vh;
+    height: 100%;
+    padding: rem(50);
 
     position: relative;
 

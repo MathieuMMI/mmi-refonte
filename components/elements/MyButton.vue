@@ -5,12 +5,14 @@ const props = defineProps({
     color: String,
     href: String,
     size: String,
+    border: String,
     label: String,
     font: String,
 });
 
 const className = computed(() => ({
     '-big': props.size === 'big',
+    '-pro': props.border === 'pro',
     '-candidater': props.size === 'candidater',
     '-secondary': props.color === 'secondary',
     '-primary': props.color === 'primary',
@@ -48,6 +50,15 @@ const className = computed(() => ({
         padding: rem(16) rem(32);
         font-weight: 400;
     }
+
+    &.-pro {
+        border: solid 1px !important;
+
+        &:hover {
+            background-color: #FFA51D;
+        }
+    }
+
     &.-candidater {
         font-size: $body;
         padding: rem(10);
@@ -55,6 +66,15 @@ const className = computed(() => ({
         padding-left: rem(70);
         font-weight: 400;
     }
+
+    &.-candidater {
+        font-size: $body;
+        padding: rem(10);
+        padding-right: rem(70);
+        padding-left: rem(70);
+        font-weight: 400;
+    }
+
 
     &.-secondary {
         background: $secondary-color;
