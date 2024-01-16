@@ -335,6 +335,7 @@ export default {
         margin-bottom: rem(32);
         opacity: 0; // Set initial opacity to 0
         pointer-events: none; // Initially disable pointer events
+        margin-right: 3rem;
     }
 
     &__blue-line {

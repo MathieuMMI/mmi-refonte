@@ -329,8 +329,9 @@ export default {
     &__button {
         align-self: flex-end;
         margin-bottom: rem(32);
-        opacity: 0; // Set initial opacity to 0
-        pointer-events: none; // Initially disable pointer events
+        opacity: 0;
+        pointer-events: none; 
+        margin-right: 3rem;
     }
 
     &__blue-line {

@@ -35,7 +35,7 @@ const sendEmail = () => {
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
                 <NuxtLink to="/en" class="header__accueil">
-                    <p class="header__accueil--content">Accueil</p>
+                    <p class="header__accueil--content">Home</p>
                 </NuxtLink>
                 <MyMenuW @click="toggleMenu" />
             </div>
@@ -62,7 +62,7 @@ const sendEmail = () => {
                 <textarea class="contact__container--form--message" id="message" v-model="message" placeholder="Message"
                     required></textarea>
                 <div class="contact__container--border">
-                    <button class="contact__container--button" type="submit">Envoyer</button>
+                    <button class="contact__container--button" type="submit">Submit</button>
                 </div>
             </form>
         </div>
