@@ -5,10 +5,10 @@ const { data: students } = await useAsyncData('student', () => client.getAllByTy
 
 let studentUIDs = [];
 
-// chercher ceux avec un pays ayant "Japon"
+// chercher ceux avec un pays ayant "Canada"
 Object.values(students.value).forEach((student, index) => {
     const countryText = student.data.student_country[0]?.text || '';
-    if (countryText.includes('Japon')) {
+    if (countryText.includes('Canada')) {
         studentUIDs.push(student.uid);
     }
 });

@@ -166,7 +166,7 @@
         &--text {
             font-family: $font-satoshi;
             width: rem(524);
-            margin-bottom: rem(48);
+            margin-bottom: rem(0);
 
         }
 
