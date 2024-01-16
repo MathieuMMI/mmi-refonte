@@ -214,7 +214,7 @@ const sendEmail = () => {
         }
 
         &--border {
-
+            margin: auto;
             width: 50%;
 
         }
@@ -228,6 +228,7 @@ const sendEmail = () => {
             width: 100%;
             font-size: $button;
             transition: background-color 0.3s ease;
+            margin: auto auto rem(50) auto;
 
             &:hover {
                 background-color: $primary-color;
@@ -280,6 +281,7 @@ p {
 form {
     display: flex;
     flex-direction: column;
+    gap: rem(20);
 }
 
 .form-group {
@@ -296,11 +298,13 @@ label {
 input[type="text"],
 
 textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: rem(10);
+    border: rem(1) solid #ccc;
+    border-radius: rem(20);
     font-size: 1rem;
     margin-bottom: 10px;
+    background-color: $black;
+    color: #FEFEFE;
 }
 
 
@@ -450,7 +454,8 @@ textarea {
 
             &--border {
 
-                width: 100%;
+                margin: auto;
+                width: 50%;
                 margin-bottom: rem(64);
 
             }
@@ -461,8 +466,7 @@ textarea {
                 border: rem(1) solid $primary-color;
                 border-radius: rem(64);
                 padding: rem(16);
-                width: 100%;
-                font-size: $button;
+                font-size: rem(20);
                 transition: background-color 0.3s ease;
 
                 &:hover {
