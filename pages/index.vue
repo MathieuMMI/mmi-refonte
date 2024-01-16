@@ -102,7 +102,7 @@ export default {
 
             const animateLine2 = () => {
                 const timeline2 = gsap.timeline({
-                    delay: 2,
+                    delay: 1,
                     onComplete: () => {
                         animateLine3();
                     },
@@ -117,7 +117,7 @@ export default {
 
             const animateLine3 = () => {
                 const timeline3 = gsap.timeline({
-                    delay: 2,
+                    delay: 1,
                     onComplete: () => {
                         gsap.to(parcoursComponent.value, {
                             duration: 0.5,
@@ -277,6 +277,7 @@ export default {
         position: absolute;
         right: 7rem;
         top: 11rem;
+        z-index: -1;
     }
 
     &__2 {
@@ -484,6 +485,7 @@ export default {
         justify-items: center;
         align-items: center;
         position: relative;
+        margin-bottom: rem(64);
 
         &--text {
             margin-bottom: rem(20);
@@ -535,6 +537,14 @@ export default {
             top: -9.5rem;
             display: none;
         }
+
+        &__4 {
+            position: absolute;
+            right: 8rem;
+            top: -2.5rem;
+            display: none;
+        }
+
 
         svg {
             max-width: 100%; // Ensure the SVG scales with its container

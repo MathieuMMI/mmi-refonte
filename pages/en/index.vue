@@ -273,6 +273,8 @@ export default {
         position: absolute;
         right: 7rem;
         top: 11rem;
+        z-index: -1;
+
     }
 
     &__2 {
@@ -330,7 +332,7 @@ export default {
         align-self: flex-end;
         margin-bottom: rem(32);
         opacity: 0;
-        pointer-events: none; 
+        pointer-events: none;
         margin-right: 3rem;
     }
 
@@ -480,6 +482,7 @@ export default {
         justify-items: center;
         align-items: center;
         position: relative;
+        margin-bottom: rem(64);
 
         &--text {
             margin-bottom: rem(20);
@@ -531,6 +534,14 @@ export default {
             top: -9.5rem;
             display: none;
         }
+
+        &__4 {
+            position: absolute;
+            right: 8rem;
+            top: -2.5rem;
+            display: none;
+        }
+
 
         svg {
             max-width: 100%; // Ensure the SVG scales with its container
