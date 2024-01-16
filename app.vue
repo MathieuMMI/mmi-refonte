@@ -17,5 +17,6 @@ watchEffect(() => {
     <Header v-if="isHeaderVisible" />
     <NuxtPage />
     <Footer v-if="!isFooterHidden" />
+    <FooterEN v-if="isFooterHidden" />
   </div>
 </template>

@@ -34,7 +34,7 @@ const sendEmail = () => {
     <div class="template-contact">
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
-                <NuxtLink to="/">
+                <NuxtLink to="/en">
                     <MyLogoW />
                 </NuxtLink>
                 <MyMenuW @click="toggleMenu" />
@@ -72,41 +72,41 @@ const sendEmail = () => {
 
             <div class="footer">
                 <div class="footer__left">
-                    <p class="footer__title">DÉPARTEMENT MÉTIERS DU MULTIMÉDIA & DE L'INTERNET DE MONTBÉLIARD</p>
+                    <p class="footer__title">MONTBELIARD MULTIMEDIA & INTERNET PROFESSIONS DEPARTMENT</p>
                     <p class="footer__mail">
                         Mail BUT MMI :
                         <a href="mailto:but-mmi-montbeliard@univ-fcomte.fr" class="footer__mail--to">
                             but-mmi-montbeliard@univ-fcomte.fr</a>
                     </p>
-                    <p class="footer__adresse">4 place Tharradin 25 200 Montbéliard</p>
+                    <p class="footer__adresse">4 place Tharradin 25 200 Montbeliard</p>
                     <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
                 </div>
 
                 <ul class="footer__right">
                     <div>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/">Accueil</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/">Home</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/departement">Département</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/departement">Department</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/formation">La Formation</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/formation">Formation</NuxtLink>
                         </li>
                     </div>
                     <div>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/extras">Les Extras</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/extras">The extras</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/contact">Contact</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/contact">Contact</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink class="footer__right--link" to="/faq">FAQ</NuxtLink>
+                            <NuxtLink class="footer__right--link" to="/en/faq">FAQ</NuxtLink>
                         </li>
                     </div>
                     <li>
-                        <NuxtLink class="footer__right--link" to="/mentions-legales">Mentions Légales</NuxtLink>
+                        <NuxtLink class="footer__right--link" to="/en/mentions-legales">Legals mentions</NuxtLink>
                     </li>
                 </ul>
                 <ul class="footer__liste">
