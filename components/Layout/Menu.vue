@@ -82,6 +82,9 @@ const closeMenu = () => {
 </template>
 
 <style lang="scss">
+.no-scroll {
+    overflow:hidden;
+}
 .page {
     min-height: 100vh;
     background-color: $black;
