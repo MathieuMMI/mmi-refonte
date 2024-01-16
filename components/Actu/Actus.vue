@@ -25,10 +25,10 @@ const showLessActus = () => {
 
         <div v-else>
             <div class="actus">
-                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.news_title" :img="actu.data.news_img"
-                    :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
+                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.news_title"
+                    :img="actu.data.news_img" :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
             </div>
-            <button @click="showAllActus" class="plus">Plus d'actus</button>
+            <div class="button"><button @click="showAllActus" class="button-plus">Plus d'actus</button></div>
         </div>
     </div>
 </template>
@@ -42,17 +42,24 @@ const showLessActus = () => {
     gap: 2rem;
 }
 
-.plus {
-    font-family: $font-melodrama;
-    font-size: $button;
-    color: $secondary-color;
-    border: rem(1) solid $secondary-color;
-    border-radius: rem(32);
-    padding: rem(8);
-    width: rem(200);
-    text-align: center;
-    margin-bottom: rem(16);
-    background-color: $white;
+.button {
+    width: 100%;
+    display: flex;
+
+    &-plus {
+        font-family: $font-melodrama;
+        font-size: $button;
+        color: $secondary-color;
+        border: rem(1) solid $secondary-color;
+        border-radius: rem(32);
+        padding: rem(8);
+        width: rem(200);
+        margin: auto;
+        text-align: center;
+        margin-bottom: rem(16);
+        margin-top: rem(16);
+        background-color: $white;
+    }
 }
 
 .page-container {
@@ -63,7 +70,16 @@ const showLessActus = () => {
     gap: rem(64);
 }
 
+.actu__content--desc p {
+    padding-left: rem(50);
+    padding-right: rem(50);
+}
+
 @media screen and (max-width: 767px) {
+    .actu__content--desc p {
+        padding-left: rem(0);
+        padding-right: rem(0);
+    }
 
     .actus {
         margin-top: 2rem;
@@ -97,5 +113,4 @@ const showLessActus = () => {
         gap: rem(64);
     }
 
-}
-</style>
+}</style>

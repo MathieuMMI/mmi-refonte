@@ -76,6 +76,7 @@
     <Actus />
   </div>
 </template>
+
 <style lang="scss" scoped>
 .hero {
   margin-left: rem(70);
@@ -105,7 +106,7 @@
   grid-template-columns: auto auto;
   font-family: $font-satoshi;
   justify-content: center; /* Center the content horizontally */
-  gap: rem(500);
+  gap: 20%;
 
   &__left,
   &__right {
@@ -130,6 +131,12 @@
       font-weight: bold;
       font-family: $font-satoshi-bold;
     }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .paragraph {
+  gap: 0%;
   }
 }
 
@@ -193,8 +200,7 @@
   }
 
   &__title {
-    margin: rem(54);
-    margin-top: rem(154);
+    margin-top: rem(25);
     font-size: $h2;
     font-family: $font-satoshi-bold;
   }
