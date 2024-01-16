@@ -33,7 +33,7 @@ const showLessActus = () => {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .actus {
     margin-top: 2rem;
     display: flex;

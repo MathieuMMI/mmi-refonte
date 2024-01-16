@@ -26,7 +26,7 @@ const sortedProjects = sort.map(item => item.project);
 </template>
   
 
-<style>
+<style lang="scss" scoped>
 .projects {
   margin-top: 2rem;
   white-space: nowrap;

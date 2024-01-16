@@ -8,11 +8,13 @@ const props = defineProps({
     border: String,
     label: String,
     font: String,
+    menu: String,
 });
 
 const className = computed(() => ({
     '-big': props.size === 'big',
     '-pro': props.border === 'pro',
+    '-menu': props.menu === 'menu',
     '-candidater': props.size === 'candidater',
     '-secondary': props.color === 'secondary',
     '-primary': props.color === 'primary',
@@ -57,6 +59,10 @@ const className = computed(() => ({
         &:hover {
             background-color: #FFA51D;
         }
+    }
+
+    &.-menu {
+        
     }
 
     &.-candidater {

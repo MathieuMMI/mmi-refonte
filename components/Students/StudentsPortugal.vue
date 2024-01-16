@@ -32,7 +32,7 @@ const country = aStudent.data.student_country;
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .students {
     margin-top: 2rem;
     display: flex;

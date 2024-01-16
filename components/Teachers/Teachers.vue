@@ -11,7 +11,7 @@ const { data: professeurs } = await useAsyncData('professeur', () => client.getA
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .professeurs {
     margin-top: 2rem;
     display: grid;

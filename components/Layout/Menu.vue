@@ -71,10 +71,10 @@ const closeMenu = () => {
         <div class="menu-line"></div>
         <div class="menu_button">
             <NuxtLink @click="closeMenu" to="/candidater">
-                <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
+                <MyButton class="menu_button--left" color="white" label="CANDIDATURE" size="big" font="satoshib" />
             </NuxtLink>
             <NuxtLink @click="closeMenu" to="/en">
-                <MyButton color="white" label="EN" size="big" font="satoshib" />
+                <MyButton class="menu_button--right" color="white" label="EN" size="big" font="satoshib" />
             </NuxtLink>
         </div>
 

@@ -12,7 +12,7 @@ console.log(students)
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .students {
     margin-top: 2rem;
     display: flex;
