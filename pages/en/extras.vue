@@ -72,7 +72,6 @@
                 partners</strong>.
             For example, we offer our students the opportunity to do their internships and work-study programs
             <strong>abroad</strong>.
-            Cette expérience unique et enrichissante leur permet d'améliorer leurs compétences
             This unique and enriching experience enables them to improve their <strong>language</strong> skills while
             deepening their technical <strong>knowledge</strong>.
         </p>
@@ -82,28 +81,25 @@
     <div class="projet">
         <div class="projet__left">
             <MyEllipse color="primary" size="small" class="projet__left--ellipse" />
-            <h2 class="projet__left--title">Projets et </h2>
-            <h2 class="projet__left--title">présentation de </h2>
-            <h2 class="projet__left--title">projets étudiants</h2>
+            <h2 class="projet__left--title">Projects and</h2>
+            <h2 class="projet__left--title">presentation of</h2>
+            <h2 class="projet__left--title">student's projects</h2>
             <div class="projet__left--div"></div>
-            <p class="projet__left--paragraph">Mise en application des connaissances acquises en cours, les projets sont
-                pour les étudiants l'occasion de prouver leur savoir-faire. Toutes les étapes, de la réflexion au
-                déploiement, sont autant d'étapes de validation pour mener les étudiants vers la réussite de leurs projets.
-            </p>
-            <p class="projet__left--paragraph"> Voici quelques projets des anciens étudiants du BUT MMI.</p>
+            <p class="projet__left--paragraph">Applying the knowledge acquired in class, the projects are an opportunity for students to prove their know-how. All stages, from reflection to deployment, are validation stages to lead students towards the success of their projects.</p>
+            <p class="projet__left--paragraph">Here are some projects from former BUT MMI students.</p>
 
         </div>
         <div class="projet__right">
-            <Projets />
+            <ProjetsEN />
             <MyEllipse color="primary" size="regular" class="projet__right--ellipse" />
         </div>
     </div>
 
     <div class="international">
-        <h2 class="international__title">Tu souhaites un jour travailler à l'international ?</h2>
+        <h2 class="international__title">Do you want to work internationally one day ?</h2>
         <div class="international__arrow">
             <MyArrow />
-            <p class="international__arrow--paragraph">Découvrez nos anciens élèves.</p>
+            <p class="international__arrow--paragraph">Discover our former students.</p>
         </div>
         <div class="international__student">
             <StudentMap />

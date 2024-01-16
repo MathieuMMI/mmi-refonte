@@ -1,7 +1,6 @@
 <script setup>
 const { client } = usePrismic()
 const { data: news } = await useAsyncData('news', () => client.getAllByType('news'));
-console.log(news)
 const allActus = ref(false);
 
 const showAllActus = () => {
@@ -25,7 +24,7 @@ const showLessActus = () => {
 
         <div v-else>
             <div class="actus">
-                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.newsen_title"
+                <ActuEN class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.newsen_title"
                     :img="actu.data.news_img" :desc="actu.data.newsen_hook" :date="actu.data.newsen_date" :actuid="actu.id" />
             </div>
             <button @click="showAllActus" class="plus">More news</button>

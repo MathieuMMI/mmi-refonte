@@ -8,8 +8,8 @@ const { data: projectpage } = await useAsyncData('project', () => client.getByID
 console.log(projectpage)
 // variables pour le contenu
 const titre = projectpage.value.data.project_title[0].text;
-const description = projectpage.value.data.project_descEN[0].text;
-const annee = projectpage.value.data.project_anneeEN[0].text;
+const description = projectpage.value.data.projecten_desc[0].text;
+const annee = projectpage.value.data.projecten_annee[0].text;
 const image = projectpage.value.data.project_img.url;
 const imageALT = projectpage.value.data.project_img.alt;
 </script>

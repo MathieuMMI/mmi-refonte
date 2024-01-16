@@ -16,7 +16,7 @@ const props = defineProps({
         <PrismicRichText class="date" :field="date" />
         <div class="actu">
             <MyEllipse size="tiny" color="primary2" class="actu__ellipse" />
-            <NuxtLink :to="`en/actu/${actuid}`" class="actu__content">
+            <NuxtLink :to="`actu/${actuid}`" class="actu__content">
                 <!-- <img class="actu_figure-img" :src="img.url" :alt="img.alt" /> -->
                 <div class="actu__content--title">
                     <PrismicRichText class="actu__content--title" :field="title" />
