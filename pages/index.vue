@@ -271,7 +271,6 @@ export default {
     </div>
 </template>
 
-
 <style lang="scss" scoped>
 .anime {
     &__1 {
@@ -727,3 +726,4 @@ export default {
 
 }
 </style>
+

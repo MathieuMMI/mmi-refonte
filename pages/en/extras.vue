@@ -102,7 +102,7 @@
             <p class="international__arrow--paragraph">Discover our former students.</p>
         </div>
         <div class="international__student">
-            <StudentMap />
+            <StudentMapEN />
         </div>
 
 
@@ -332,12 +332,13 @@
     }
 
     &__student {
-        height: 120vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-items: center;
         margin-top: rem(200);
+        margin-bottom: rem(200);
     }
 }
 

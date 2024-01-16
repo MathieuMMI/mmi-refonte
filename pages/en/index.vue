@@ -247,7 +247,7 @@ export default {
     <div class="international">
         <h2 class="international__title--orange">MMI</h2>
         <h2 class="international__title">Abroad</h2>
-        <MyInternational class="international__map" />
+        <MyInternationalEN class="international__map" />
 
 
         <div class="international__end">

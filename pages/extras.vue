@@ -184,7 +184,6 @@
 .offf {
 
     &__title {
-        margin-top: rem(250);
         margin-left: rem(70);
         font-size: $h2;
         font-family: $font-satoshi-bold;
@@ -263,7 +262,8 @@
     grid-template-columns: auto auto;
     background-color: $black;
     color: $white;
-    height: 100auto;
+    height: 100vh;
+    padding: rem(30);
 
     &__left {
         position: relative;
@@ -287,7 +287,6 @@
             font-size: $body;
             padding-right: rem(50);
             margin-top: rem(50);
-            margin-bottom: rem(45);
         }
 
         &--div {
@@ -337,12 +336,13 @@
     }
 
     &__student {
-        height: 120vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-items: center;
         margin-top: rem(200);
+        margin-bottom: rem(200);
     }
 }
 
@@ -446,7 +446,6 @@
                 font-size: $mobile-body;
                 padding-right: rem(0);
                 margin-top: rem(45);
-                margin-bottom: rem(0);
             }
 
             &--div {
