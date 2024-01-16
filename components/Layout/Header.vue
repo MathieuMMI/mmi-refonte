@@ -31,7 +31,7 @@ watchEffect(() => {
 </script>
 
 <template>
-    <header>
+    <header class="stickyheader">
         <div v-if="!indexEN">
             <div class="header" v-if="!isMenuVisible">
                 <NuxtLink to="/" class="header__accueil">
@@ -54,14 +54,19 @@ watchEffect(() => {
 </template>
 
 <style lang="scss" scoped>
+
+.stickyheader {
+    position: sticky; top: 0;
+    z-index: 2;
+    background-color: $white;
+    padding: rem(10);
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: rem(30);
-    z-index: 2;
-
-
     &__accueil {
         text-decoration: none;
         border: rem(1) solid $secondary-color;
