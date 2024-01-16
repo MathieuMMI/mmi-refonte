@@ -163,6 +163,7 @@ const sendEmail = () => {
         &_div {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: rem(30);
             z-index: 2;
         }
@@ -182,6 +183,7 @@ const sendEmail = () => {
         &--content {
             color: $white;
             font-family: $font-satoshi-bold;
+            margin-bottom: 0;
         }
     }
 }
@@ -405,6 +407,24 @@ textarea {
 
 @media screen and (max-width: 767px) {
 
+
+
+    .header {
+
+        &__accueil {
+            text-decoration: none;
+            border: rem(1) solid $white;
+            border-radius: rem(32);
+            padding: rem(16);
+
+            &--content {
+                color: $white;
+                font-family: $font-satoshi-bold;
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .template-contact {
         background-color: $black;
         color: white;
@@ -416,6 +436,7 @@ textarea {
             &_div {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 padding: rem(30);
                 z-index: 2;
             }

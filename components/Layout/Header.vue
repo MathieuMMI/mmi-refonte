@@ -57,6 +57,7 @@ watchEffect(() => {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: rem(30);
     z-index: 2;
 
