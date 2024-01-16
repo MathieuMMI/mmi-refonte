@@ -75,6 +75,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
 }
 
 .line {
@@ -82,6 +84,8 @@
     height: 1px;
     width: 70%;
     margin-bottom: rem(40);
+    overflow: hidden;
+
 }
 
 .footer {
@@ -92,6 +96,8 @@
     gap: 30%;
     font-size: $body;
     width: 100%;
+    overflow: hidden;
+
 
     &__left {
         margin: rem(0);
@@ -159,6 +165,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+
     }
 
     .line {
@@ -166,6 +174,8 @@
         height: 3px;
         width: 70%;
         margin-bottom: rem(40);
+        overflow: hidden;
+
     }
 
     .footer {
@@ -176,6 +186,8 @@
         font-size: $mobile-body;
         width: 100%;
         margin-left: 10%;
+        overflow: hidden;
+
 
         &__left {
             margin-left: 0;
