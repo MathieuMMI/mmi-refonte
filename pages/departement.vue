@@ -104,8 +104,11 @@
   display: grid;
   grid-template-columns: auto auto;
   font-family: $font-satoshi;
+  justify-content: center; /* Center the content horizontally */
+  gap: rem(500);
 
-  &__left {
+  &__left,
+  &__right {
     width: rem(500);
 
     &--text {
@@ -114,14 +117,6 @@
       strong {
         font-family: $font-satoshi-bold;
       }
-    }
-  }
-
-  &__right {
-    width: rem(500);
-
-    &--text {
-      margin-bottom: rem(32);
     }
   }
 
@@ -134,7 +129,6 @@
       width: rem(150);
       font-weight: bold;
       font-family: $font-satoshi-bold;
-
     }
   }
 }
@@ -206,9 +200,7 @@
   }
 
 }
-
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
 
   .hero {
     margin-left: rem(0);
@@ -235,6 +227,7 @@
       flex-direction: column;
       align-items: center;
       justify-items: center;
+      text-align: center;
       gap: rem(30);
       margin-bottom: rem(0);
 
