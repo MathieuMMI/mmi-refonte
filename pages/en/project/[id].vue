@@ -47,7 +47,7 @@ const imageALT = projectpage.value.data.project_img.alt;
     color: $grey;
     font-size: $h3;
     font-family: $font-satoshi-bold;
-    margin-bottom: rem(90);
+    margin-bottom: rem(40);
   }
 
   &__accroche {
@@ -62,6 +62,9 @@ const imageALT = projectpage.value.data.project_img.alt;
     color: $black;
     font-size: $body;
     font-family: $font-satoshi;
+    margin-bottom: rem(30);
+    margin-left: rem(20);
+    margin-right: rem(20);
   }
 
   &__img {}
@@ -90,7 +93,7 @@ const imageALT = projectpage.value.data.project_img.alt;
       color: $grey;
       font-size: $mobile-body;
       font-family: $font-satoshi-bold;
-      margin-bottom: rem(90);
+      margin-bottom: rem(20);
     }
 
     &__accroche {
@@ -105,6 +108,9 @@ const imageALT = projectpage.value.data.project_img.alt;
       color: $black;
       font-size: $mobile-body;
       font-family: $font-satoshi;
+      margin-left: rem(20);
+    margin-right: rem(20);
+    margin-bottom: rem(30);
     }
 
     &__img {}
