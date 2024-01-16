@@ -48,7 +48,7 @@ const toggleAnswer = () => {
 
 .content {
 
-  border: rem(3) solid $black;
+  border: rem(2) solid $black;
   border-radius: rem(18);
   width: rem(1042);
   padding: rem(5);
@@ -128,7 +128,7 @@ const toggleAnswer = () => {
   }
 
   .content {
-    border: rem(3) solid $black;
+    border: rem(2) solid $black;
     border-radius: rem(18);
     width: 80%;
     height: auto;
