@@ -144,6 +144,7 @@
   color: $white;
   position: relative;
 
+
   &__ellipse {
     position: absolute;
     top: rem(-236);
@@ -287,7 +288,7 @@
     background-color: $black;
     color: $white;
     position: relative;
-    // display: none;
+    overflow: hidden;
 
     &__ellipse {
       position: absolute;
