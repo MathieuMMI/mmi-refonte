@@ -12,6 +12,8 @@ const closeMenu = () => {
 <template>
     <div class="page">
 
+        <MyCroix @click="closeMenu" class="page__croix" />
+
         <div class="menu">
             <h1 class="menu__num">01</h1>
             <NuxtLink @click="closeMenu" to="/en/formation" class="menu__text">
@@ -19,9 +21,8 @@ const closeMenu = () => {
                 <p class="menu__text--paragraph">Discover the BUT MMI program</p>
             </NuxtLink>
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
-            <MyCroix @click="closeMenu" />
         </div>
-        <div class="menu-line"></div>
+        <div class="menu--line"></div>
         <div class="menu">
             <h1 class="menu__num">02</h1>
             <div class="menu__right">
@@ -32,7 +33,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
         </div>
-        <div class="menu-line"></div>
+        <div class="menu--line"></div>
         <div class="menu">
             <h1 class="menu__num">03</h1>
             <div class="menu__right">
@@ -44,7 +45,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_extra.jpg" alt="extras" class="menu__img">
         </div>
-        <div class="menu-line"></div>
+        <div class="menu--line"></div>
         <div class="menu">
             <h1 class="menu__num">04</h1>
             <div class="menu__right">
@@ -57,7 +58,7 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/menu_espacepro.jpg" alt="espace pro" class="menu__img">
         </div>
-        <div class="menu-line"></div>
+        <div class="menu--line"></div>
         <div class="menu">
             <h1 class="menu__num">05</h1>
             <div class="menu__right">
@@ -68,35 +69,42 @@ const closeMenu = () => {
             </div>
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
-        <div class="menu-line"></div>
-        <div class="menu_button">
+        <div class="menu--line"></div>
+        <div class="menu__button">
             <NuxtLink @click="closeMenu" to="/en/candidater">
-                <MyButton color="white" label="CANDIDACY" size="big" font="satoshib" />
+                <MyButton color="white" label="CANDIDACY" size="small" font="satoshib" />
             </NuxtLink>
             <NuxtLink @click="closeMenu" to="/">
-                <MyButton color="white" label="FR" size="big" font="satoshib" />
+                <MyButton color="white" label="FR" size="small" font="satoshib" />
             </NuxtLink>
         </div>
 
     </div>
 </template>
-
 <style lang="scss">
 .no-scroll {
-    overflow:hidden;
+    overflow: hidden;
 }
+
 .page {
     min-height: 100vh;
     background-color: $black;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1px;
+    position: relative;
+
+    &__croix {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
 }
 
 .menu {
     color: $white;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 0.2fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     justify-items: start;
     align-items: center;
 
@@ -124,18 +132,21 @@ const closeMenu = () => {
             font-family: $font-satoshi-bold;
         }
     }
+
+    &--line {
+        background-color: $white;
+        height: 2px;
+        width: 100%;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
-.menu-line {
-    background-color: $white;
-    height: 2px;
-    width: 100%;
-}
-
-.menu_button {
-    display: flex;
-    justify-content: space-between;
-}
 
 @media screen and (max-width: 767px) {
     .page {
@@ -144,12 +155,21 @@ const closeMenu = () => {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1px;
+        position: relative;
+
+        &__croix {
+            position: block;
+            right: rem(-4);
+            top: 0;
+            margin-left: auto;
+            padding: rem(5);
+        }
     }
 
     .menu {
         color: $white;
         display: grid;
-        grid-template-columns: auto 0.75fr 0.5fr 0.2fr;
+        grid-template-columns: 0.5fr 1fr 1fr;
         justify-items: start;
         align-items: center;
 
@@ -158,6 +178,7 @@ const closeMenu = () => {
             font-weight: bold;
             font-family: $font-satoshi-bold;
             margin-right: rem(10);
+            margin-left: rem(16);
         }
 
         &__right {
@@ -178,13 +199,24 @@ const closeMenu = () => {
                 font-family: $font-satoshi-bold;
             }
         }
+
+        &--line {
+            background-color: $white;
+            height: 2px;
+            width: 100%;
+        }
+
+        &__button {
+            display: flex;
+            justify-content: space-between;
+
+            margin-left: 2%;
+            margin-right: 2%;
+
+
+        }
     }
 
-    .menu-line {
-        background-color: $white;
-        height: 2px;
-        width: 100%;
-    }
 
 
 }
