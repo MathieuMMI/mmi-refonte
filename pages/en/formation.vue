@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 <template>
     <div class="hero">
         <h2 class="hero__title">The FORMATION</h2>
@@ -137,10 +134,14 @@
     &__grid {
         display: grid;
         grid-template-columns: 1.5fr 1fr;
+        margin-top: rem(70);
     }
 
 
     &__content {
+        &--divMarg {
+            margin-top: rem(-200);
+        }
         &--title {
             font-size: $h2;
             font-family: $font-satoshi-bold;
@@ -160,14 +161,14 @@
 
 .bases {
     background-color: $black;
-    height: 100vh;
+    height: auto;
     color: $white;
     position: relative;
 
     &__ellipse {
         position: absolute;
-        left: rem(-80);
-        top: rem(-64);
+        left: 0;
+        top: -4rem;
     }
 
     &__body {
@@ -310,7 +311,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    margin-top: rem(150);
 
 
     &__title {
@@ -320,6 +322,7 @@
 
     &__ordi {
         display: block;
+        width: 100%;
     }
 
     &__mobile {
@@ -333,11 +336,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: rem(64);
+    margin-top: rem(64);
 }
 
 @media screen and (max-width: 767px) {
-
-
     .hero {
         margin-left: rem(0);
 
@@ -366,8 +368,6 @@
         }
 
         &__left {
-
-
             &--img {
                 display: none;
             }
@@ -386,22 +386,20 @@
             flex-direction: column;
             align-items: center;
             justify-items: center;
+            
             gap: rem(32);
 
             &--title {
-
                 font-size: $mobile-h2;
                 font-family: $font-satoshi-bold;
                 width: rem(271);
                 text-align: center;
-
             }
 
             &--paragraph {
                 margin-top: rem(32);
                 max-width: rem(315);
                 margin-bottom: rem(50);
-
             }
         }
 
@@ -413,12 +411,14 @@
         color: $white;
         position: relative;
         overflow: hidden;
-
+        padding-bottom: 8rem;
+        display: flex;
+        justify-content: center;
 
         &__ellipse {
             position: absolute;
-            left: rem(-125);
-            top: rem(-25);
+            left: -6.8rem;
+            top: -6.6rem;
         }
 
         &__body {
@@ -427,8 +427,7 @@
             flex-direction: column;
             align-items: center;
             justify-items: center;
-            margin-left: rem(24);
-            margin-right: rem(0);
+            margin: 2rem;
             max-width: rem(342);
 
         }
@@ -475,8 +474,8 @@
 
             &--ellipse {
                 position: absolute;
-                right: rem(-100);
-                bottom: rem(-130);
+                right: -5rem;
+                bottom: -13rem;
             }
         }
     }
@@ -598,8 +597,14 @@
         align-items: center;
         margin-bottom: rem(64);
     }
+}
 
-
-
+@media screen and (max-width: 900px) {
+    .hero {
+        &__content {
+        &--divMarg {
+            margin-top: 0;
+        }
+    }}
 }
 </style>

@@ -345,6 +345,129 @@
     }
 }
 
+@media screen and (max-width: 1500px) {
+    .canada {
+        margin-left: rem(0);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            text-align: center;
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-top: rem(40);
+        }
+
+        &__left {
+            position: relative;
+
+            &--img {
+                margin-left: rem(0);
+                width: rem(314);
+            }
+
+            &--text {
+                margin-top: rem(0);
+                font-family: $font-satoshi;
+                width: rem(314);
+                margin-bottom: rem(60);
+
+            }
+        }
+
+        &__right {
+            &--text {
+                font-family: $font-satoshi;
+                width: rem(314);
+                margin-bottom: rem(0);
+
+            }
+
+            &--img {
+                margin-left: rem(0);
+                width: rem(314);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .international {
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            width: rem(306);
+            text-align: center;
+            margin-left: rem(0);
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .projet {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: $black;
+        color: $white;
+        height: 100%;
+        padding: rem(0);
+
+        &__left {
+            position: relative;
+            margin-left: rem(0);
+            margin-right: rem(0);
+            margin-top: rem(32);
+            width: rem(312);
+
+
+            &--ellipse {
+                position: absolute;
+                top: rem(-76);
+                left: rem(-92);
+            }
+
+            &--title {
+                font-size: $mobile-h2;
+                font-weight: bold;
+                font-family: $font-satoshi-bold;
+
+            }
+
+            &--paragraph {
+                font-size: $mobile-body;
+                padding-right: rem(0);
+                margin-top: rem(45);
+            }
+
+            &--div {
+                height: 0vh;
+            }
+
+        }
+
+        &__right {
+            position: relative;
+            margin-bottom: rem(16);
+
+            &--ellipse {
+                position: absolute;
+                bottom: rem(-0);
+                right: rem(-0);
+                display: none;
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .hero {
         margin-left: rem(0);
@@ -499,107 +622,6 @@
             strong {
                 font-family: $font-satoshi-bold;
             }
-        }
-    }
-
-
-
-    .projet {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        background-color: $black;
-        color: $white;
-        height: 100%;
-        padding: rem(0);
-
-        &__left {
-            position: relative;
-            margin-left: rem(0);
-            margin-right: rem(0);
-            margin-top: rem(32);
-            width: rem(312);
-
-
-            &--ellipse {
-                position: absolute;
-                top: rem(-76);
-                left: rem(-92);
-            }
-
-            &--title {
-                font-size: $mobile-h2;
-                font-weight: bold;
-                font-family: $font-satoshi-bold;
-
-            }
-
-            &--paragraph {
-                font-size: $mobile-body;
-                padding-right: rem(0);
-                margin-top: rem(45);
-            }
-
-            &--div {
-                height: 0vh;
-            }
-
-        }
-
-        &__right {
-            position: relative;
-            margin-bottom: rem(16);
-
-            &--ellipse {
-                position: absolute;
-                bottom: rem(-0);
-                right: rem(-0);
-                display: none;
-            }
-
-        }
-    }
-
-    .international {
-        color: $black;
-        text-align: left;
-        margin-top: rem(66);
-        margin-bottom: rem(0);
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        height: 100%;
-
-        &__title {
-            font-size: $mobile-h2;
-            font-family: $font-satoshi-bold;
-            width: rem(306);
-            text-align: center;
-            margin-left: rem(0);
-
-
-        }
-
-        &__arrow {
-            display: flex;
-            align-items: center;
-            margin-left: rem(0);
-            max-width: rem(300);
-
-            &--paragraph {
-                font-weight: bold;
-            }
-        }
-
-        &__student {
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
-            margin-top: rem(80);
         }
     }
 }

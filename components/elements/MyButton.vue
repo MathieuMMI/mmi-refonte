@@ -11,6 +11,7 @@ const props = defineProps({
 
 const className = computed(() => ({
     '-big': props.size === 'big',
+    '-candidater': props.size === 'candidater',
     '-secondary': props.color === 'secondary',
     '-primary': props.color === 'primary',
     '-black': props.color === 'black',
@@ -45,6 +46,13 @@ const className = computed(() => ({
     &.-big {
         font-size: $body;
         padding: rem(16) rem(32);
+        font-weight: 400;
+    }
+    &.-candidater {
+        font-size: $body;
+        padding: rem(10);
+        padding-right: rem(70);
+        padding-left: rem(70);
         font-weight: 400;
     }
 
