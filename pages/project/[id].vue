@@ -5,7 +5,6 @@ const { client } = usePrismic();
 IdProjet.value = router.params.id || '';
 
 const { data: projectpage } = await useAsyncData('project', () => client.getByID(IdProjet.value));
-console.log(projectpage)
 // variables pour le contenu
 const titre = projectpage.value.data.project_title[0].text;
 const description = projectpage.value.data.project_desc[0].text;
