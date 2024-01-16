@@ -39,7 +39,7 @@ const sendEmail = () => {
                 </NuxtLink>
                 <MyMenuW @click="toggleMenu" />
             </div>
-            <Menu v-if="isMenuVisible" @close="toggleMenu" />
+            <MenuEN v-if="isMenuVisible" @close="toggleMenu" />
         </header>
         <div class="contact">
             <h2 class="contact__title">A question ?</h2>

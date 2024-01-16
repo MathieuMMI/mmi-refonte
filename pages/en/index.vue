@@ -100,7 +100,7 @@ export default {
             <p class="decouvrir__arrow--paragraph">Discover all the facets of training.</p>
         </div>
     </div>
-    <MyDecouvrirs />
+    <MyDecouvrirsEN />
 
     <div class="international">
         <h2 class="international__title--orange">MMI</h2>

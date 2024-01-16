@@ -60,14 +60,14 @@
           Université de Franche-Comté.</p>
       </div>
     </div>
-    <Teachers />
+    <TeachersEN />
   </div>
 
 
   <div class="actualite">
     <MyEllipse size="giant" color="primary2" class="actualite__ellipse" />
     <h2 class="actualite__title">What's happening in the department…</h2>
-    <Actus />
+    <ActusEN />
   </div>
 </template>
 <style lang="scss" scoped>

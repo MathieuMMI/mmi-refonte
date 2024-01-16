@@ -148,7 +148,7 @@
                 <p class="postuler__content--right--text">Pour s'inscrire, il est indispensable de constituer un dossier de
                     candidature et de valider toutes les étapes du processus d'inscription préalable sur parcoursup.fr. </p>
 
-                <MyButton href='/candidater' label="POSTULER !" color="secondary" font="melodrama" size="big"
+                <MyButton href='/en/candidater' label="POSTULER !" color="secondary" font="melodrama" size="big"
                     class="postuler__content--right--button" />
 
             </div>
@@ -418,7 +418,7 @@
             justify-content: flex-start;
             align-items: center;
             height: rem(150);
-            width: rem(320);
+            width: 100%;
 
             &--title {
                 font-family: $font-satoshi-bold;

@@ -417,7 +417,7 @@
             justify-content: flex-start;
             align-items: center;
             height: rem(150);
-            width: rem(320);
+            width: 100%;;
 
             &--title {
                 font-family: $font-satoshi-bold;

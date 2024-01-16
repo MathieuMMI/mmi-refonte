@@ -3,18 +3,19 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const isComponentHidden = ref(route.name === 'contact' || (route.name.startsWith('en') && route.name !== 'en/'));
+const isFooterHidden = ref(route.name === 'contact' || (route.name.startsWith('en') && route.name !== 'en/'));
+const isHeaderVisible = ref(!route.fullPath.startsWith('/contact') && !route.fullPath.startsWith('/en/contact'));
 
-// Utiliser un watcher pour mettre à jour isComponentHidden en fonction des changements de route
 watchEffect(() => {
-  isComponentHidden.value = route.name === 'contact' || (route.name.startsWith('en') && route.name !== 'en/');
-});
+  isFooterHidden.value = route.name === 'contact' || (route.name.startsWith('en') && route.name !== 'en/');
+  isHeaderVisible.value = !route.fullPath.startsWith('/contact') && !route.fullPath.startsWith('/en/contact');
+  });
 </script>
 
 <template>
   <div>
-    <Header v-if="route.name !== 'contact'"/>
+    <Header v-if="isHeaderVisible" />
     <NuxtPage />
-    <Footer v-if="!isComponentHidden" />
+    <Footer v-if="!isFooterHidden" />
   </div>
 </template>

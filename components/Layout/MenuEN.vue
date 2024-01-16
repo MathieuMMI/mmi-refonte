@@ -14,9 +14,9 @@ const closeMenu = () => {
 
         <div class="menu">
             <h1 class="menu__num">01</h1>
-            <NuxtLink @click="closeMenu" to="/formation" class="menu__text">
-                <p class="menu__text--title">La Formation</p>
-                <p class="menu__text--paragraph">Découvrez le programme du BUT MMI </p>
+            <NuxtLink @click="closeMenu" to="/en/formation" class="menu__text">
+                <p class="menu__text--title">Formation</p>
+                <p class="menu__text--paragraph">Discover the BUT MMI program</p>
             </NuxtLink>
             <img src="../../assets/menu_formation.jpg" alt="formation" class="menu__img">
             <MyCroix @click="closeMenu" />
@@ -25,9 +25,9 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">02</h1>
             <div class="menu__right">
-                <NuxtLink @click="closeMenu" to="/departement" class="menu__text">
-                    <p class="menu__text--title">Le Département</p>
-                    <p class="menu__text--paragraph">Découvrez le département où étudient les MMI</p>
+                <NuxtLink @click="closeMenu" to="/en/departement" class="menu__text">
+                    <p class="menu__text--title">Department</p>
+                    <p class="menu__text--paragraph">Discover the department where MMI students study</p>
                 </NuxtLink>
             </div>
             <img src="../../assets/menu_departement.jpg" alt="departement" class="menu__img">
@@ -36,9 +36,9 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">03</h1>
             <div class="menu__right">
-                <NuxtLink @click="closeMenu" to="/extras" class="menu__text">
-                    <p class="menu__text--title">Les Extras</p>
-                    <p class="menu__text--paragraph">Nous proposons de nombreuses opportunités à l'étranger</p>
+                <NuxtLink @click="closeMenu" to="/en/extras" class="menu__text">
+                    <p class="menu__text--title">The extras</p>
+                    <p class="menu__text--paragraph">We offer a wide range of opportunities abroad</p>
                 </NuxtLink>
 
             </div>
@@ -48,10 +48,10 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">04</h1>
             <div class="menu__right">
-                <NuxtLink @click="closeMenu" to="/espace-pro" class="menu__text">
-                    <p class="menu__text--title">Espace pro</p>
-                    <p class="menu__text--paragraph">Vous avez un projet ? Vous cherchez
-                        Proposez vos offres aux étudiants</p>
+                <NuxtLink @click="closeMenu" to="/en/espace-pro" class="menu__text">
+                    <p class="menu__text--title">Professional space</p>
+                    <p class="menu__text--paragraph">Do you have a project? Are you looking for
+                        Submit your offers to students</p>
                 </NuxtLink>
 
             </div>
@@ -61,20 +61,20 @@ const closeMenu = () => {
         <div class="menu">
             <h1 class="menu__num">05</h1>
             <div class="menu__right">
-                <NuxtLink @click="closeMenu" to="/contact" class="menu__text">
+                <NuxtLink @click="closeMenu" to="/en/contact" class="menu__text">
                     <p class="menu__text--title">Contact</p>
-                    <p class="menu__text--paragraph">Contactez-nous pour plus d'informations sur le BUT MMI</p>
+                    <p class="menu__text--paragraph">Contact us for more information about BUT MMI</p>
                 </NuxtLink>
             </div>
             <img src="../../assets/meun_contact.jpg" alt="contact" class="menu__img">
         </div>
         <div class="menu-line"></div>
         <div class="menu_button">
-            <NuxtLink @click="closeMenu" to="/candidater">
-                <MyButton color="white" label="CANDIDATURE" size="big" font="satoshib" />
+            <NuxtLink @click="closeMenu" to="/en/candidater">
+                <MyButton color="white" label="CANDIDACY" size="big" font="satoshib" />
             </NuxtLink>
-            <NuxtLink @click="closeMenu" to="/en">
-                <MyButton color="white" label="EN" size="big" font="satoshib" />
+            <NuxtLink @click="closeMenu" to="/">
+                <MyButton color="white" label="FR" size="big" font="satoshib" />
             </NuxtLink>
         </div>
 

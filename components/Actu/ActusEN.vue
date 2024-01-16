@@ -1,7 +1,7 @@
 <script setup>
 const { client } = usePrismic()
 const { data: news } = await useAsyncData('news', () => client.getAllByType('news'));
-
+console.log(news)
 const allActus = ref(false);
 
 const showAllActus = () => {
@@ -17,18 +17,18 @@ const showLessActus = () => {
     <div class="page-container">
         <div v-if="allActus">
             <div class="actus">
-                <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.news_title"
-                    :img="actu.data.news_img" :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
+                <Actu class="actus__actu" v-for="actu in news" :key="actu.news_id" :title="actu.data.newsen_title"
+                    :img="actu.data.news_img" :desc="actu.data.newsen_hook" :date="actu.data.newsen_date" :actuid="actu.id" />
             </div>
-            <button @click="showLessActus" class="plus">Moins d'actus</button>
+            <button @click="showLessActus" class="plus">Less news</button>
         </div>
 
         <div v-else>
             <div class="actus">
-                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.news_title" :img="actu.data.news_img"
-                    :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
+                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.newsen_title"
+                    :img="actu.data.news_img" :desc="actu.data.newsen_hook" :date="actu.data.newsen_date" :actuid="actu.id" />
             </div>
-            <button @click="showAllActus" class="plus">Plus d'actus</button>
+            <button @click="showAllActus" class="plus">More news</button>
         </div>
     </div>
 </template>

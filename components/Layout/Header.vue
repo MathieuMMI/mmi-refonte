@@ -1,5 +1,9 @@
 <script setup>
 import { ref, onBeforeUnmount, watch } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
 const isMenuVisible = ref(false);
 
 const toggleMenu = () => {
@@ -19,17 +23,33 @@ onBeforeUnmount(() => {
 
 // Utilise un watcher pour détecter les changements de isMenuVisible
 watch(isMenuVisible, toggleBodyScroll);
+
+const indexEN = ref(route.name.startsWith('en') && route.name !== 'en/')
+watchEffect(() => {
+    indexEN.value = route.name.startsWith('en') && route.name !== 'en/';
+});
 </script>
 
 <template>
     <header>
-        <div class="header" v-if="!isMenuVisible">
-            <NuxtLink to="/">
-                <MyLogo />
-            </NuxtLink>
-            <MyMenu @click="toggleMenu" />
+        <div v-if="!indexEN">
+            <div class="header" v-if="!isMenuVisible">
+                <NuxtLink to="/">
+                    <MyLogo />
+                </NuxtLink>
+                <MyMenu @click="toggleMenu" />
+            </div>
+            <Menu v-if="isMenuVisible" @close="toggleMenu" />
         </div>
-        <Menu v-if="isMenuVisible" @close="toggleMenu" />
+        <div v-else>
+            <div class="header" v-if="!isMenuVisible">
+                <NuxtLink to="/en">
+                    <MyLogo />
+                </NuxtLink>
+                <MyMenu @click="toggleMenu" />
+            </div>
+            <MenuEN v-if="isMenuVisible" @close="toggleMenu" />
+        </div>
     </header>
 </template>
 
