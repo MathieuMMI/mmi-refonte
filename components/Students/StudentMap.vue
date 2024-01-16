@@ -3,6 +3,10 @@
 </script>
 <template>
     <div class="international">
+        <div class="international__canada">
+            <StudentsCanada />
+            <div class="international__canada--line"></div>
+        </div>
         <div class="international__portugal">
             <StudentsPortugal />
             <div class="international__portugal--line"></div>
@@ -37,6 +41,22 @@
     }
 
 
+    &__canada {
+        position: absolute;
+        left: 10rem;
+        top: -15rem;
+
+        &--line {
+            position: absolute;
+            background-color: $primary-color;
+            height: rem(166);
+            width: 1px;
+            left: 50%;
+            bottom: rem(-166);
+        }
+
+    }
+
     &__portugal {
         position: absolute;
         right: 32rem;
@@ -45,10 +65,10 @@
         &--line {
             position: absolute;
             background-color: $primary-color;
-            height: rem(230);
+            height: rem(214);
             width: 1px;
             left: 50%;
-            bottom: rem(-230);
+            bottom: rem(-214);
         }
 
     }
@@ -61,10 +81,10 @@
         &--line {
             position: absolute;
             background-color: $primary-color;
-            height: rem(275);
+            height: rem(243);
             width: 1px;
             left: 50%;
-            top: rem(-242);
+            top: rem(-210);
         }
 
     }
