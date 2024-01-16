@@ -34,8 +34,8 @@ const sendEmail = () => {
     <div class="template-contact">
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
-                <NuxtLink to="/en">
-                    <MyLogoW />
+                <NuxtLink to="/en" class="header__accueil">
+                    <p class="header__accueil--content">Accueil</p>
                 </NuxtLink>
                 <MyMenuW @click="toggleMenu" />
             </div>
@@ -47,7 +47,7 @@ const sendEmail = () => {
         </div>
         <div class="contact__flex">
             <p>We look forward to seeing you at our open house on <strong>Saturday
-                January 19 2024</strong> or at our 24-hour challenge on <strong>March 14, 2024</strong>.</p>
+                    January 19 2024</strong> or at our 24-hour challenge on <strong>March 14, 2024</strong>.</p>
             <MyEllipse color="primary2" size="small" class="contact__flex--ellipse" />
         </div>
         <div class="contact__flex">
@@ -67,68 +67,68 @@ const sendEmail = () => {
             </form>
         </div>
         <footer>
-        <div class="container">
-            <div class="line"></div>
+            <div class="container">
+                <div class="line"></div>
 
-            <div class="footer">
-                <div class="footer__left">
-                    <p class="footer__title">MONTBELIARD MULTIMEDIA & INTERNET PROFESSIONS DEPARTMENT</p>
-                    <p class="footer__mail">
-                        Mail BUT MMI :
-                        <a href="mailto:but-mmi-montbeliard@univ-fcomte.fr" class="footer__mail--to">
-                            but-mmi-montbeliard@univ-fcomte.fr</a>
-                    </p>
-                    <p class="footer__adresse">4 place Tharradin 25 200 Montbeliard</p>
-                    <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
+                <div class="footer">
+                    <div class="footer__left">
+                        <p class="footer__title">MONTBELIARD MULTIMEDIA & INTERNET PROFESSIONS DEPARTMENT</p>
+                        <p class="footer__mail">
+                            Mail BUT MMI :
+                            <a href="mailto:but-mmi-montbeliard@univ-fcomte.fr" class="footer__mail--to">
+                                but-mmi-montbeliard@univ-fcomte.fr</a>
+                        </p>
+                        <p class="footer__adresse">4 place Tharradin 25 200 Montbeliard</p>
+                        <p class="footer__tel">Tél : +33 (0)3 81 99 47 34 </p>
+                    </div>
+
+                    <ul class="footer__right">
+                        <div>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/">Home</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/departement">Department</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/formation">Formation</NuxtLink>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/extras">The extras</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/contact">Contact</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink class="footer__right--link" to="/en/faq">FAQ</NuxtLink>
+                            </li>
+                        </div>
+                        <li>
+                            <NuxtLink class="footer__right--link" to="/en/mentions-legales">Legals mentions</NuxtLink>
+                        </li>
+                    </ul>
+                    <ul class="footer__liste">
+                        <li>
+                            <MyGoogleW />
+                        </li>
+                        <li>
+                            <MyFacebookW />
+                        </li>
+                        <li>
+                            <MyLinkedInW />
+                        </li>
+                        <li>
+                            <MyInstagramW />
+                        </li>
+                        <li>
+                            <MyXW />
+                        </li>
+                    </ul>
                 </div>
-
-                <ul class="footer__right">
-                    <div>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/">Home</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/departement">Department</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/formation">Formation</NuxtLink>
-                        </li>
-                    </div>
-                    <div>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/extras">The extras</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/contact">Contact</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink class="footer__right--link" to="/en/faq">FAQ</NuxtLink>
-                        </li>
-                    </div>
-                    <li>
-                        <NuxtLink class="footer__right--link" to="/en/mentions-legales">Legals mentions</NuxtLink>
-                    </li>
-                </ul>
-                <ul class="footer__liste">
-                    <li>
-                        <MyGoogleW />
-                    </li>
-                    <li>
-                        <MyFacebookW />
-                    </li>
-                    <li>
-                        <MyLinkedInW />
-                    </li>
-                    <li>
-                        <MyInstagramW />
-                    </li>
-                    <li>
-                        <MyXW />
-                    </li>
-                </ul>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
 </template>
 
@@ -168,6 +168,22 @@ const sendEmail = () => {
 
 }
 
+
+.header {
+
+    &__accueil {
+        text-decoration: none;
+        border: rem(1) solid $white;
+        border-radius: rem(32);
+        padding: rem(16);
+
+        &--content {
+            color: $white;
+            font-family: $font-satoshi-bold;
+        }
+    }
+}
+
 .contact {
     background-color: $black;
     color: $white;
@@ -205,7 +221,7 @@ const sendEmail = () => {
             flex-direction: column;
             justify-content: center;
             margin-bottom: 10px;
-            width: rem(320);
+            width: rem(544);
 
 
             &--message {
@@ -216,19 +232,20 @@ const sendEmail = () => {
         &--border {
             margin: auto;
             width: 50%;
-
+            align-items: center;
+            display: flex;
         }
 
         &--button {
             background-color: $white;
             color: $black;
-            border: rem(1) solid $primary-color;
             border-radius: rem(64);
             padding: rem(16);
-            width: 100%;
+            width: rem(200);
             font-size: $button;
             transition: background-color 0.3s ease;
             margin: auto auto rem(50) auto;
+            border: none;
 
             &:hover {
                 background-color: $primary-color;
@@ -333,6 +350,7 @@ textarea {
 
     &__left {
         padding: rem(20);
+        margin-left: rem(256);
     }
 
     &__title {
@@ -365,6 +383,7 @@ textarea {
     &__liste {
         display: flex;
         gap: rem(20); // Adjust the gap as needed
+        margin-bottom: rem(64);
     }
 
     &__right {
@@ -463,7 +482,7 @@ textarea {
             &--button {
                 background-color: $white;
                 color: $black;
-                border: rem(1) solid $primary-color;
+                border: none;
                 border-radius: rem(64);
                 padding: rem(16);
                 font-size: rem(20);
@@ -555,7 +574,7 @@ textarea {
 
     .line {
         background-color: $white; // Adjust the color as needed
-        height: 3px;
+        height: 1px;
         width: 70%;
         margin-bottom: rem(0);
     }
