@@ -59,6 +59,7 @@
                         <MyX />
                     </li>
                 </ul>
+                <MyLogo class="footer__logo" />
             </div>
         </div>
     </footer>
@@ -76,7 +77,7 @@
 
 .line {
     background-color: $secondary-color; // Adjust the color as needed
-    height: 3px;
+    height: 1px;
     width: 70%;
     margin-bottom: rem(40);
 }
@@ -90,6 +91,7 @@
 
     &__left {
         margin: rem(20);
+        margin-left: rem(256);
     }
 
     &__title {
@@ -122,6 +124,7 @@
     &__liste {
         display: flex;
         gap: rem(20); // Adjust the gap as needed
+        margin-bottom: rem(32);
     }
 
     &__right {
@@ -134,6 +137,10 @@
                 color: $primary-color; // Change to your desired hover color
             }
         }
+    }
+
+    &__logo {
+        margin-bottom: rem(64);
     }
 }
 

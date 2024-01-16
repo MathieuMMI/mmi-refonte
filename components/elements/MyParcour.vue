@@ -60,6 +60,8 @@ defineProps({
         display: grid;
         grid-template-columns: auto 0.75fr;
         align-items: center;
+        margin-top: rem(14);
+        margin-bottom: rem(14);
 
         &--title {
             color: var(--couleurVariable);
@@ -92,10 +94,10 @@ defineProps({
         text-decoration: none;
         text-align: center;
         padding: rem(10);
-        margin-top: rem(20);
+        margin-top: rem(30);
         margin-left: rem(30);
         margin-right: rem(30);
-        margin-bottom: rem(20);
+        margin-bottom: rem(30);
     }
 }
 
