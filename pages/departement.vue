@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="video">
-    <video controls width="100%" height="auto" autoplay muted>
+    <video width="100%" height="auto" autoplay muted>
       <source src="../assets/mmi.mp4" type="video/mp4">
     </video>
   </div>
@@ -105,7 +105,8 @@
   display: grid;
   grid-template-columns: auto auto;
   font-family: $font-satoshi;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
+  /* Center the content horizontally */
   gap: 20%;
 
   &__left,
@@ -136,7 +137,7 @@
 
 @media screen and (max-width: 1330px) {
   .paragraph {
-  gap: 0%;
+    gap: 0%;
   }
 }
 
@@ -208,6 +209,7 @@
   }
 
 }
+
 @media screen and (max-width: 1000px) {
 
   .hero {
