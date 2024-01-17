@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
     <section class="teacher">
-
+        <a :href="link.url">
         <figure class="teacher__figure">
             <img class="teacher__figure--img" :src="img.url" :alt="img.alt" />
             <div class="teacher__content">
@@ -18,11 +18,11 @@ const props = defineProps({
                     <PrismicRichText class="teacher__name--firstname" :field="firstname" />
                     <PrismicRichText class="teacher__name--name" :field="name" />
                 </div>
-
                 <PrismicRichText class="teacher__subject" :field="subject" />
             </div>
 
         </figure>
+        </a>
     </section>
 </template>
 
