@@ -93,7 +93,7 @@ defineProps({
         font-weight: bold;
         text-decoration: none;
         text-align: center;
-        padding: rem(10);
+        padding: rem(20);
         margin-top: rem(30);
         margin-left: rem(30);
         margin-right: rem(30);
@@ -162,10 +162,10 @@ defineProps({
             font-weight: bold;
             text-decoration: none;
             text-align: center;
-            padding: rem(10);
+            padding: rem(16);
             margin-top: rem(20);
-            margin-left: rem(30);
-            margin-right: rem(30);
+            margin-left: rem(0);
+            margin-right: rem(0);
             margin-bottom: rem(20);
         }
     }

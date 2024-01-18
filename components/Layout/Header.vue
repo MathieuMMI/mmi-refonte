@@ -54,12 +54,11 @@ watchEffect(() => {
 </template>
 
 <style lang="scss" scoped>
-
 .stickyheader {
-    position: sticky; top: 0;
+    position: sticky;
+    top: 0;
     z-index: 2;
     background-color: $white;
-    padding: rem(10);
 }
 
 .header {
@@ -67,6 +66,7 @@ watchEffect(() => {
     justify-content: space-between;
     align-items: center;
     margin: rem(30);
+
     &__accueil {
         text-decoration: none;
         border: rem(1) solid $secondary-color;
