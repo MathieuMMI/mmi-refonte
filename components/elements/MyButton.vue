@@ -105,7 +105,7 @@ const className = computed(() => ({
     &.-border {
         background: $white;
         color: $secondary-color;
-        border: rem(3) solid $secondary-color;
+        border: rem(2) solid $secondary-color;
 
     }
 

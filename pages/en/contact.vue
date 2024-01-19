@@ -133,22 +133,13 @@ const sendEmail = () => {
 </template>
 
 <style lang="scss" scoped>
-/*.menu {
-    flex: 1;
-    overflow-y: auto;
+@media screen and (max-width: 767px) {
+    .header {
+        &__accueil {
+            margin-left: rem(-20);
+        }
+    }
 }
-
-.no-scroll {
-    overflow: hidden;
-}
-.contact-header {
-    color: $white;
-}
-
-.contact-footer {
-    color: $white;
-    background: $black;
-}*/
 
 .template-contact {
     background-color: $black;
@@ -156,6 +147,7 @@ const sendEmail = () => {
 
     &-header {
         color: $white;
+        margin-left: rem(30);
 
         &_div {
             display: flex;

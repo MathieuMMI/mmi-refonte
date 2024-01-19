@@ -73,6 +73,7 @@ watchEffect(() => {
         border: rem(1) solid $secondary-color;
         border-radius: rem(32);
         padding: rem(16);
+        margin-left: rem(30);
 
         &--content {
             font-family: $font-satoshi-bold;
@@ -87,5 +88,13 @@ watchEffect(() => {
 
 .no-scroll {
     overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        &__accueil {
+            margin-left: rem(-20);
+        }
+    }
 }
 </style>

@@ -43,12 +43,19 @@ const decouvrirs = reactive(response)
 </template>
 <style lang="scss" scoped>
 .mydecouvrirs {
+    width: 70%;
+    margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
-
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1400px) {
+    .mydecouvrirs {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
     .mydecouvrirs {
         display: flex;
         flex-direction: column;

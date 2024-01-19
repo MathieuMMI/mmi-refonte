@@ -263,7 +263,7 @@ export default {
                 <p> Les stages et les alternances sont également l'occasion de tenter la mobilité internationale.</p>
             </div>
 
-            <MyButton href='/candidater' label="CANDIDATER" color="border" font="melodrama" size="big"
+            <MyButton href='/candidater' label="DÉCOUVRIR" color="border" font="melodrama" size="big"
                 class="international__end--button" />
             <MyEllipse size="regular" color="primary2" class="international__end--ellipse1" />
             <MyEllipse size="small" color="primary" class="international__end--ellipse2" />
@@ -654,7 +654,7 @@ export default {
         grid-template-columns: auto;
         justify-items: center;
         text-align: center;
-        margin-top: rem(40);
+        //margin-top: rem(40);
         font-family: $font-satoshi-bold;
 
 
@@ -662,7 +662,7 @@ export default {
             font-size: $mobile-h1;
             font-weight: bold;
             max-width: rem(300);
-            margin-top: rem(50);
+            margin-top: rem(100);
         }
 
         &__arrow {
@@ -684,13 +684,14 @@ export default {
             font-weight: bold;
             text-align: left;
             color: $black;
+            margin-top: rem(0); 
             margin-left: rem(30);
             margin-bottom: rem(80);
             font-family: $font-satoshi-bold;
 
             &--orange {
                 margin-left: rem(30);
-
+                margin-top: rem(0); 
                 color: $primary-color;
                 font-size: $mobile-h2;
                 font-weight: bold;

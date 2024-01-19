@@ -266,7 +266,6 @@ export default {
     </div>
 </template>
 
-
 <style lang="scss" scoped>
 .anime {
     &__1 {
@@ -650,7 +649,7 @@ export default {
         grid-template-columns: auto;
         justify-items: center;
         text-align: center;
-        margin-top: rem(40);
+        //margin-top: rem(40);
         font-family: $font-satoshi-bold;
 
 
@@ -658,7 +657,7 @@ export default {
             font-size: $mobile-h1;
             font-weight: bold;
             max-width: rem(300);
-            margin-top: rem(50);
+            margin-top: rem(100);
         }
 
         &__arrow {
@@ -680,13 +679,14 @@ export default {
             font-weight: bold;
             text-align: left;
             color: $black;
+            margin-top: rem(0); 
             margin-left: rem(30);
             margin-bottom: rem(80);
             font-family: $font-satoshi-bold;
 
             &--orange {
                 margin-left: rem(30);
-
+                margin-top: rem(0); 
                 color: $primary-color;
                 font-size: $mobile-h2;
                 font-weight: bold;

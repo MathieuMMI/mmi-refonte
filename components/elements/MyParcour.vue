@@ -93,7 +93,7 @@ defineProps({
         font-weight: bold;
         text-decoration: none;
         text-align: center;
-        padding: rem(20);
+        padding: rem(10) rem(40) rem(10) rem(40);
         margin-top: rem(30);
         margin-left: rem(30);
         margin-right: rem(30);
@@ -102,7 +102,7 @@ defineProps({
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1215px) {
 
     .parcour {
         border-radius: rem(18);
