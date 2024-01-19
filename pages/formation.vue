@@ -248,6 +248,7 @@
         font-family: $font-satoshi-bold;
         text-align: center;
         margin-bottom: rem(80);
+        margin-top: rem(160);
     }
 
     &__paragraph {
@@ -283,6 +284,7 @@
         color: $black;
         font-size: $h2;
         font-family: $font-satoshi-bold;
+        margin-top: rem(160);
     }
 
     &__flex {
@@ -592,6 +594,7 @@
         &__title {
             font-size: $mobile-h2;
             font-family: $font-satoshi-bold;
+            margin-bottom: rem(10);
         }
 
 

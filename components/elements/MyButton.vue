@@ -75,7 +75,7 @@ const className = computed(() => ({
 
     &.-candidater {
         font-size: $body;
-        padding: rem(10);
+        padding: rem(12);
         padding-right: rem(70);
         padding-left: rem(70);
         font-weight: 400;
