@@ -50,102 +50,326 @@
 </template>
 
 <style lang="scss" scoped>
-.button {
-    align-items: center;
-    border: none;
-    border-radius: rem(30);
-    color: $white;
-    display: inline-flex;
-    font-size: $body;
-    text-decoration: none;
-    padding: rem(10);
+.espace {
+    margin-left: rem(70);
 
-    &.-big {
-        font-size: $body;
-        padding: rem(16) rem(32);
-        font-weight: 400;
-    }
-
-    &.-pro {
-        border: solid 1px !important;
-
-        &:hover {
-            background-color: #FFA51D;
-        }
-    }
-
-    &.-candidater {
-        font-size: $body;
-        padding: rem(10);
-        padding-right: rem(70);
-        padding-left: rem(70);
-        font-weight: 400;
-    }
-
-    &.-candidater {
-        font-size: $body;
-        padding: rem(10);
-        padding-right: rem(70);
-        padding-left: rem(70);
-        font-weight: 400;
-    }
-
-
-    &.-secondary {
-        background: $secondary-color;
-        color: $white;
-    }
-
-    &.-primary {
-        background: $primary-color;
+    &__title {
         color: $black;
-    }
-
-    &.-black {
-        background: $black;
-        color: $white;
-    }
-
-    &.-white {
-        background: $white;
-        color: $black;
-    }
-
-    &.-border {
-        background: $white;
-        color: $secondary-color;
-        border: rem(3) solid $secondary-color;
-
-    }
-
-    &.-borderw {
-
-        color: $white;
-        border: rem(3) solid $white;
-
-    }
-
-    &.-borderb {
-
-        color: $black;
-        border: rem(3) solid $black;
-
-    }
-
-    &.-satoshi {
-        font-family: $font-satoshi;
-    }
-
-    &.-satoshib {
+        font-size: $h2;
         font-family: $font-satoshi-bold;
     }
 
-    &.-melodrama {
-        font-family: $font-melodrama;
+    &__paragraph {
+        font-family: $font-satoshi-bold;
+        font-size: $body;
+        color: #8B8BDC;
+        margin-bottom: rem(30);
+    }
+}
+
+.projet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    height: 100%;
+    padding: rem(50);
+
+    position: relative;
+
+    &__left {
+        margin-left: rem(70);
+
+        &--ellipse {
+            position: absolute;
+            left: rem(-10);
+            top: rem(-10);
+        }
+
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
     }
 
-    &.-melodramab {
-        font-family: $font-melodrama-bold;
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            right: rem(0);
+            bottom: rem(0);
+        }
     }
+}
+
+.alternance {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    position: relative;
+    height: 100%;
+    padding: rem(100);
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            left: rem(-50);
+            top: rem(0);
+            z-index: -1;
+        }
+    }
+
+    &__right {
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
+    }
+}
+
+.stage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    height: 100%;
+    padding: rem(50);
+
+    position: relative;
+
+    &__left {
+        margin-left: rem(70);
+
+        &--title {
+            font-size: $h2;
+            font-family: $font-satoshi-bold;
+            width: rem(569);
+            margin-bottom: rem(73);
+
+        }
+
+        &--text {
+            width: rem(487);
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+
+        &--ellipse {
+            position: absolute;
+            top: rem(0);
+            right: rem(0);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .espace {
+        margin-left: rem(0);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+        &__title {
+            color: $black;
+            font-size: $mobile-h1;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__paragraph {
+            font-family: $font-satoshi-bold;
+            font-size: $mobile-body;
+            color: #8B8BDC;
+            margin-bottom: rem(30);
+            width: rem(281);
+        }
+    }
+
+    .projet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $black;
+        color: $white;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &__left {
+            margin-left: rem(0);
+
+            &--ellipse {
+                position: absolute;
+                left: rem(-30);
+                top: rem(-30);
+            }
+
+            &--title {
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                width: rem(232);
+                margin-bottom: rem(73);
+                margin-left: rem(30);
+                margin-top: rem(30);
+
+
+            }
+
+            &--text {
+                width: rem(312);
+                margin-bottom: rem(16);
+                width: 80%;
+                margin-left: rem(30);
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: rem(25);
+
+            &--ellipse {
+                position: absolute;
+                right: rem(0);
+                bottom: rem(0);
+            }
+        }
+    }
+
+
+    .alternance {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: rem(25);
+
+            &--ellipse {
+                position: absolute;
+                left: rem(-272);
+                top: rem(0);
+                z-index: -1;
+            }
+        }
+
+        &__right {
+            &--title {
+                margin-top: rem(64);
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                width: rem(292);
+                margin-bottom: rem(73);
+                margin-left: rem(30);
+
+            }
+
+            &--text {
+                width: rem(312);
+                margin-bottom: rem(16);
+                margin-left: rem(30);
+                width: 80%;
+            }
+        }
+    }
+
+    .stage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        height: 100%;
+        overflow: hidden;
+
+        position: relative;
+
+        &__left {
+            margin-left: rem(0);
+
+            &--title {
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                width: rem(292);
+                margin-bottom: rem(73);
+
+            }
+
+            &--text {
+                width: rem(292);
+                margin-bottom: rem(16);
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: rem(25);
+
+            &--ellipse {
+                display: none;
+                position: absolute;
+                top: rem(-144);
+                right: rem(-48);
+            }
+        }
+    }
+
+
+
 }
 </style>
