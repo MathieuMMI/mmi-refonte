@@ -66,6 +66,7 @@ watchEffect(() => {
     justify-content: space-between;
     align-items: center;
     margin: rem(30);
+    padding: rem(15);
 
     &__accueil {
         text-decoration: none;
