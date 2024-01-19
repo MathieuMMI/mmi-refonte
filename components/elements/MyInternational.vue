@@ -76,7 +76,7 @@
         padding: rem(2);
         width: 10%;
         position: absolute;
-        left: 43%;
+        left: rem(640);
         top: 0;
 
         &--body {
@@ -94,8 +94,8 @@
         padding: rem(2);
         width: 10%;
         position: absolute;
-        bottom: 10%;
-        right: 33%;
+        bottom: rem(64);
+        right: rem(480);
 
         &--body {
             &--bold {
@@ -112,7 +112,7 @@
         width: 10%;
         position: absolute;
         bottom: 0;
-        right: 25%;
+        right: rem(320);
 
         &--body {
             &--bold {
@@ -188,9 +188,9 @@
         &__canada {
             border: 1px solid $primary-color;
             border-radius: rem(10);
-            padding: rem(2);
+            padding: rem(3);
             position: absolute;
-            left: rem(48);
+            left: rem(32);
             top: rem(-48);
 
             &--body {
@@ -213,7 +213,7 @@
             width: rem(64);
 
             position: absolute;
-            left: rem(136);
+            left: rem(137.6);
             top: rem(-64);
 
             &--body {
@@ -255,6 +255,149 @@
             position: absolute;
             bottom: rem(-16);
             right: rem(32);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__line {
+
+            &--canada {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
+
+            &--espagne {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
+
+            &--inde {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
+            }
+
+            &--australie {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(32);
+                width: 1px;
+                left: 50%;
+                top: rem(-32);
+            }
+
+
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 330px) {
+    .international {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        text-align: center;
+        position: relative;
+        padding: rem(0);
+
+        &__map {
+            &--ordi {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(3);
+            position: absolute;
+            left: rem(32);
+            top: rem(-48);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+
+            position: absolute;
+            left: rem(112);
+            top: rem(-60.8);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                    // width: rem(128);
+
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            bottom: 0;
+            right: rem(84);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+            position: absolute;
+            bottom: rem(-16);
+            right: rem(16);
 
             &--body {
                 &--bold {
