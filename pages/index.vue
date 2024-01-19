@@ -198,7 +198,7 @@ export default {
 
         <div class="hero__video">
             <video width="100%" height="auto" autoplay muted>
-                <source src="../assets/mmi.mp4" type="video/mp4">
+                <source src="https://bouque.fr/medias/mmi.mp4" type="video/mp4">
             </video>
             <h2 class="hero__h2">Métiers du Multimédia & de l'Internet</h2>
             <div class="hero__blue-line"> </div>
