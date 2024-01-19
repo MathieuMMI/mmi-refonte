@@ -88,6 +88,8 @@ const props = defineProps({
         &__figure {
             margin: rem(16);
 
+            display: none;
+
         }
 
 
