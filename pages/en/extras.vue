@@ -85,7 +85,9 @@
             <h2 class="projet__left--title">presentation of</h2>
             <h2 class="projet__left--title">student's projects</h2>
             <div class="projet__left--div"></div>
-            <p class="projet__left--paragraph">Applying the knowledge acquired in class, the projects are an opportunity for students to prove their know-how. All stages, from reflection to deployment, are validation stages to lead students towards the success of their projects.</p>
+            <p class="projet__left--paragraph">Applying the knowledge acquired in class, the projects are an opportunity for
+                students to prove their know-how. All stages, from reflection to deployment, are validation stages to lead
+                students towards the success of their projects.</p>
             <p class="projet__left--paragraph">Here are some projects from former BUT MMI students.</p>
 
         </div>
@@ -116,6 +118,7 @@
         color: $black;
         font-size: $h2;
         font-family: $font-satoshi-bold;
+
     }
 
     &__paragraph {
@@ -159,6 +162,10 @@
             margin-top: rem(48);
             font-family: $font-satoshi;
             width: rem(524);
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
         }
     }
 
@@ -167,6 +174,10 @@
             font-family: $font-satoshi;
             width: rem(524);
             margin-bottom: rem(0);
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
 
         }
 
@@ -180,6 +191,8 @@
 .offf {
 
     &__title {
+        margin-top: rem(182);
+        margin-bottom: rem(26);
         margin-left: rem(70);
         font-size: $h2;
         font-family: $font-satoshi-bold;
@@ -193,7 +206,9 @@
 
 
     &__paragraph {
-        margin-left: rem(70);
+
+        margin-left: rem(32);
+        margin-right: rem(32);
         max-width: rem(678);
         margin-top: rem(40);
     }
@@ -204,20 +219,27 @@
     margin-top: rem(80);
     display: grid;
     grid-template-columns: auto auto;
-    justify-items: start;
+    justify-items: center;
     align-items: center;
 
-    margin-left: rem(70);
 
     &__text {
         &--title {
             font-size: $h2;
             font-family: $font-satoshi-bold;
             margin-bottom: rem(64);
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
         }
 
         &--paragraph {
             max-width: rem(526);
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
         }
     }
 
@@ -240,10 +262,16 @@
         font-size: $h2;
         font-family: $font-satoshi-bold;
         margin-bottom: rem(64);
+        margin-left: rem(32);
+        margin-right: rem(32);
+
     }
 
     &__paragraph {
         max-width: rem(891);
+        margin-left: rem(32);
+        margin-right: rem(32);
+
 
         strong {
             font-family: $font-satoshi-bold;
@@ -258,7 +286,7 @@
     grid-template-columns: auto auto;
     background-color: $black;
     color: $white;
-    height: 100vh;
+    height: 100%;
     padding: rem(30);
 
     &__left {
@@ -277,12 +305,21 @@
             font-size: $h2;
             font-weight: bold;
             font-family: $font-satoshi-bold;
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
+
         }
 
         &--paragraph {
             font-size: $body;
             padding-right: rem(50);
             margin-top: rem(50);
+
+            margin-left: rem(32);
+            margin-right: rem(32);
+
         }
 
         &--div {
