@@ -18,16 +18,16 @@
                             <MyGoogle />
                         </li>
                         <li>
-                            <MyFacebook />
+                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><MyFacebook /></a>
                         </li>
                         <li>
-                            <MyLinkedIn />
+                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr"><MyLinkedIn /></a>
                         </li>
                         <li>
-                            <MyInstagram />
+                            <a href="https://www.instagram.com/mmi_montbeliard/"><MyInstagram /></a>
                         </li>
                         <li>
-                            <MyX />
+                            <a href="https://x.com/MMImontbeliard?s=20"><MyX /></a>
                         </li>
                     </ul>
                 </div>

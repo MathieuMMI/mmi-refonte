@@ -114,16 +114,16 @@ const sendEmail = () => {
                             <MyGoogleW />
                         </li>
                         <li>
-                            <MyFacebookW />
+                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><MyFacebookW /></a>
                         </li>
                         <li>
-                            <MyLinkedInW />
+                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr"><MyLinkedInW /></a>
                         </li>
                         <li>
-                            <MyInstagramW />
+                            <a href="https://www.instagram.com/mmi_montbeliard/"><MyInstagramW /></a>
                         </li>
                         <li>
-                            <MyXW />
+                            <a href="https://x.com/MMImontbeliard?s=20"><MyXW /></a>
                         </li>
                     </ul>
                 </div>
