@@ -18,16 +18,24 @@
                             <MyGoogle />
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><MyFacebook /></a>
+                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR">
+                                <MyFacebook />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr"><MyLinkedIn /></a>
+                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr">
+                                <MyLinkedIn />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/mmi_montbeliard/"><MyInstagram /></a>
+                            <a href="https://www.instagram.com/mmi_montbeliard/">
+                                <MyInstagram />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://x.com/MMImontbeliard?s=20"><MyX /></a>
+                            <a href="https://x.com/MMImontbeliard?s=20">
+                                <MyX />
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -69,6 +77,7 @@
 
 
 
+
 <style lang="scss" scoped>
 .container {
     display: flex;
@@ -76,16 +85,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
 }
 
 .line {
     background-color: $secondary-color; // Adjust the color as needed
     height: 1px;
-    width: 70%;
+    width: 80%;
     margin-bottom: rem(40);
     overflow: hidden;
-
 }
 
 .footer {
@@ -94,10 +101,9 @@
     align-items: space-between;
     margin-left: 20%;
     gap: 30%;
-    font-size: $body;
+    font-size: $body-footer;
     width: 100%;
     overflow: hidden;
-
 
     &__left {
         margin: rem(0);
@@ -106,6 +112,7 @@
 
     &__title {
         font-weight: bold;
+        font-size: $body;
         margin-bottom: rem(20);
         font-family: $font-satoshi-bold;
         width: rem(500);
@@ -157,7 +164,6 @@
     }
 }
 
-
 @media screen and (max-width: 767px) {
 
     .container {
@@ -166,7 +172,6 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-
     }
 
     .line {
@@ -175,7 +180,6 @@
         width: 70%;
         margin-bottom: rem(40);
         overflow: hidden;
-
     }
 
     .footer {
@@ -187,7 +191,6 @@
         width: 100%;
         margin-left: 10%;
         overflow: hidden;
-
 
         &__left {
             margin-left: 0;
@@ -238,7 +241,7 @@
             &--menu {
                 display: flex;
                 justify-items: center;
-                align-items: start;
+                align-items: center;
                 gap: 10%;
             }
 
@@ -259,4 +262,6 @@
     }
 }
 </style>
+
+
 
