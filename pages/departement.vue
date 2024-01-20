@@ -193,6 +193,7 @@
 
 .actualite {
   position: relative;
+  margin-bottom: rem(100);
 
   &__ellipse {
     position: absolute;
@@ -202,7 +203,8 @@
   }
 
   &__title {
-    margin-top: rem(25);
+    margin-top: rem(150);
+    margin-bottom: rem(50);
     margin-left: rem(100);
     font-size: $h2;
     font-family: $font-satoshi-bold;
@@ -347,6 +349,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-bottom: rem(80);
 
     &__ellipse {
       position: absolute;
@@ -356,10 +359,12 @@
     }
 
     &__title {
-      margin: rem(54);
-      margin-top: rem(100);
+      margin: 0;
+      margin-top: rem(50);
+      margin-bottom: rem(20);
       font-size: $mobile-h2;
       font-family: $font-satoshi-bold;
+      text-align: center;
     }
   }
 }

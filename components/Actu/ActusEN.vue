@@ -35,6 +35,7 @@ const showLessActus = () => {
 <style lang="scss" scoped>
 .actus {
     margin-top: 2rem;
+    margin-bottom: rem(50);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -82,6 +83,7 @@ const showLessActus = () => {
 
     .actus {
         margin-top: 2rem;
+        margin-bottom: rem(25);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
