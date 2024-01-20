@@ -72,16 +72,17 @@ const closeMenu = () => {
         <div class="menu--line"></div>
         <div class="menu__button">
             <NuxtLink @click="closeMenu" to="/en/candidater">
-                <MyButton color="white" label="CANDIDACY" size="small" font="satoshib" />
+                <MyButton color="white" label="CANDIDACY" size="big" font="satoshib" />
             </NuxtLink>
             <NuxtLink @click="closeMenu" to="/">
-                <MyButton color="white" label="FR" size="small" font="satoshib" />
+                <MyButton color="white" label="FR" size="big" font="satoshib" />
             </NuxtLink>
         </div>
 
     </div>
 </template>
-<style lang="scss">
+
+<style lang="scss" scoped>
 .no-scroll {
     overflow: hidden;
 }
@@ -112,6 +113,7 @@ const closeMenu = () => {
         font-size: $h1;
         font-weight: bold;
         font-family: $font-satoshi-bold;
+        margin-left: rem(40);
     }
 
     &__right {
@@ -142,20 +144,27 @@ const closeMenu = () => {
     &__button {
         display: flex;
         justify-content: space-between;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: rem(40);
+        margin-right: rem(40);
+        margin-bottom: rem(10);
+        margin-top: rem(10);
+
+
+
     }
 }
 
 
 @media screen and (max-width: 767px) {
     .page {
-        min-height: 100vh;
+        height: 100%;
+        width: 100%;
         background-color: $black;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1px;
         position: relative;
+        overflow: hidden;
 
         &__croix {
             position: block;
@@ -172,6 +181,7 @@ const closeMenu = () => {
         grid-template-columns: 0.5fr 1fr 1fr;
         justify-items: start;
         align-items: center;
+        overflow: hidden;
 
         &__num {
             font-size: $mobile-h1;
@@ -210,8 +220,10 @@ const closeMenu = () => {
             display: flex;
             justify-content: space-between;
 
-            margin-left: 2%;
-            margin-right: 2%;
+            margin-left: rem(16);
+            margin-right: rem(16);
+            margin-bottom: 5%;
+            margin-top: 5%;
 
 
         }

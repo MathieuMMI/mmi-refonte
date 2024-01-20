@@ -61,9 +61,7 @@ const className = computed(() => ({
         }
     }
 
-    &.-menu {
-        
-    }
+    &.-menu {}
 
     &.-candidater {
         font-size: $body;
