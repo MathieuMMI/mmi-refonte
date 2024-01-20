@@ -181,6 +181,11 @@ export default {
 </script>
 <template>
     <div class="hero">
+        <div class='hero__buttonLang'>
+            <NuxtLink @click="closeMenu" to="/en">
+                <MyButton color="white" label="EN" size="small" font="satoshib" />
+            </NuxtLink>
+        </div>
         <h1 class="hero__title">MMI</h1>
         <h1 class="hero__title">MONTBÉLIARD</h1>
         <div ref="lineWrapper1" class="anime__1">
@@ -313,6 +318,15 @@ export default {
     align-items: flex-start; // Alignement à gauche
     justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
     position: relative;
+
+    &__buttonLang{
+        margin-left: auto;
+        margin-right: rem(20);
+        text-decoration: none;
+        border: rem(1) solid $secondary-color;
+        border-radius: rem(32);
+        padding: rem(3);
+    }
 
     &__title {
         font-size: $h1;
