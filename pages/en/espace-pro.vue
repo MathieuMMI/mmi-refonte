@@ -76,7 +76,7 @@
     color: $white;
     height: 100%;
     padding: rem(50);
-
+    margin-top: rem(100);
     position: relative;
 
     &__left {
@@ -231,6 +231,7 @@
         justify-content: center;
         align-items: center;
         background-color: $black;
+        margin-top: rem(50);
         color: $white;
         height: 100%;
         position: relative;
