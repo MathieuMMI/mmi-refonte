@@ -421,8 +421,8 @@ export default {
     }
 
     &__parcours {
-        opacity: 0; // Set initial opacity to 0
-        pointer-events: none; // Initially disable pointer events
+        opacity: 0;
+        pointer-events: none;
     }
 }
 

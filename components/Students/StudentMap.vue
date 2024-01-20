@@ -22,6 +22,7 @@
 
     </div>
 </template>
+
 <style lang="scss" scoped>
 .international {
     color: $secondary-color;
@@ -44,7 +45,7 @@
     &__canada {
         position: absolute;
         left: 10rem;
-        top: -15rem;
+        top: -16rem;
 
         &--line {
             position: absolute;
@@ -60,15 +61,15 @@
     &__portugal {
         position: absolute;
         right: 32rem;
-        top: -15rem;
+        top: -17rem;
 
         &--line {
             position: absolute;
             background-color: $primary-color;
-            height: rem(214);
+            height: rem(224);
             width: 1px;
             left: 50%;
-            bottom: rem(-214);
+            bottom: rem(-224);
         }
 
     }
@@ -76,15 +77,15 @@
     &__japon {
         position: absolute;
         right: 7rem;
-        bottom: -10rem;
+        bottom: -13rem;
 
         &--line {
             position: absolute;
             background-color: $primary-color;
-            height: rem(243);
+            height: rem(275);
             width: 1px;
             left: 50%;
-            top: rem(-210);
+            top: rem(-243.2);
         }
 
     }

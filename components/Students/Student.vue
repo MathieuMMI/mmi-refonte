@@ -56,6 +56,7 @@ const props = defineProps({
 
     &__linkedin {
         font-size: rem(16);
+        margin-bottom: rem(16);
     }
 }
 
@@ -95,6 +96,8 @@ const props = defineProps({
 
         &__linkedin {
             font-size: $mobile-body;
+            margin-bottom: rem(16);
+
         }
     }
 

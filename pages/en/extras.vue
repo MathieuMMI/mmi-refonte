@@ -110,6 +110,7 @@
 
     </div>
 </template>
+
 <style lang="scss" scoped>
 .hero {
     margin-left: rem(70);
@@ -118,6 +119,7 @@
         color: $black;
         font-size: $h2;
         font-family: $font-satoshi-bold;
+        margin-top: rem(120);
 
     }
 
