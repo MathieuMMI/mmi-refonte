@@ -4,16 +4,16 @@ import { reactive } from 'vue'
 const response = [
     {
         id: 1,
-        imageSrc: 'decouvrir_espace_pro.png',
-        imageSrcM: 'decouvrir_espace_pro_mobile.png',
+        imageSrc: 'decouvrir_espace_pro.jpg',
+        imageSrcM: 'decouvrir_espace_pro_mobile.jpg',
         imageAlt: 'decouvrir_espace_pro',
         title: 'ESPACE PRO',
         href: '/espace-pro',
     },
     {
         id: 2,
-        imageSrc: 'decouvrir_departement.png',
-        imageSrcM: 'decouvrir_departement_mobile.png',
+        imageSrc: 'decouvrir_departement.jpg',
+        imageSrcM: 'decouvrir_departement_mobile.jpg',
         imageAlt: 'decouvrir_departement',
         title: 'DÉPARTEMENT',
         href: '/departement',
@@ -21,8 +21,8 @@ const response = [
     {
 
         id: 3,
-        imageSrc: 'decouvrir_formation.png',
-        imageSrcM: 'decouvrir_formation_mobile.png  ',
+        imageSrc: 'decouvrir_formation.jpg',
+        imageSrcM: 'decouvrir_formation_mobile.jpg  ',
         imageAlt: 'decouvrir_formation',
         title: 'FORMATION',
         href: '/formation',
