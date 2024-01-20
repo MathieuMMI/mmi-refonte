@@ -34,10 +34,10 @@ const sendEmail = () => {
     <div class="template-contact">
         <header class="template-contact-header">
             <div class="template-contact-header_div" v-if="!isMenuVisible">
-                <NuxtLink to="/" class="header__accueil">
-                    <p class="header__accueil--content">Accueil</p>
+                <NuxtLink to="/" class="template-contact-header_div__accueil">
+                    <p class="template-contact-header_div__accueil--content">Accueil</p>
                 </NuxtLink>
-                <MyMenuW @click="toggleMenu" />
+                <MyMenuW class="template-contact-header_div__menuIcon" @click="toggleMenu" />
             </div>
             <Menu v-if="isMenuVisible" @close="toggleMenu" />
         </header>
@@ -117,16 +117,24 @@ const sendEmail = () => {
                             <MyGoogleW />
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><MyFacebookW /></a>
+                            <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR">
+                                <MyFacebookW />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr"><MyLinkedInW /></a>
+                            <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr">
+                                <MyLinkedInW />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/mmi_montbeliard/"><MyInstagramW /></a>
+                            <a href="https://www.instagram.com/mmi_montbeliard/">
+                                <MyInstagramW />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://x.com/MMImontbeliard?s=20"><MyXW /></a>
+                            <a href="https://x.com/MMImontbeliard?s=20">
+                                <MyXW />
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -149,35 +157,38 @@ const sendEmail = () => {
     color: white;
 
     &-header {
-        color: $white;
-        margin-left: rem(30);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: $black;
 
         &_div {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: rem(30);
+            padding: rem(45);
             z-index: 2;
+
+            &__accueil {
+                text-decoration: none;
+                border: rem(1) solid $white;
+                border-radius: rem(32);
+                padding: rem(16);
+                margin-left: rem(30);
+
+                &--content {
+                    color: $white;
+                    font-family: $font-satoshi-bold;
+                    margin-bottom: 0;
+                }
+            }
+
+            &__menuIcon {
+                margin-right: rem(30);
+            }
         }
     }
 
-}
-
-
-.header {
-
-    &__accueil {
-        text-decoration: none;
-        border: rem(1) solid $white;
-        border-radius: rem(32);
-        padding: rem(16);
-
-        &--content {
-            color: $white;
-            font-family: $font-satoshi-bold;
-            margin-bottom: 0;
-        }
-    }
 }
 
 .contact {
@@ -496,7 +507,7 @@ textarea {
 
             }
 
-            &--button {
+            /*&--button {
                 background-color: $white;
                 color: $black;
                 border: none;
@@ -510,7 +521,7 @@ textarea {
                 &:hover {
                     background-color: $primary-color;
                 }
-            }
+            }*/
         }
 
 
@@ -664,5 +675,4 @@ textarea {
             }
         }
     }
-}
-</style>
+}</style>

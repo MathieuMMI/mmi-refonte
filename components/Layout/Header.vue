@@ -37,7 +37,7 @@ watchEffect(() => {
                 <NuxtLink to="/" class="header__accueil">
                     <p class="header__accueil--content">Accueil</p>
                 </NuxtLink>
-                <MyMenu @click="toggleMenu" />
+                <MyMenu class="header__menuIcon" @click="toggleMenu" />
             </div>
             <Menu v-if="isMenuVisible" @close="toggleMenu" />
         </div>
@@ -65,8 +65,7 @@ watchEffect(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: rem(30);
-    padding: rem(15);
+    padding: rem(45);
 
     &__accueil {
         text-decoration: none;
@@ -78,6 +77,9 @@ watchEffect(() => {
         &--content {
             font-family: $font-satoshi-bold;
         }
+    }
+    &__menuIcon{
+        margin-right: rem(30);
     }
 }
 
@@ -92,8 +94,9 @@ watchEffect(() => {
 
 @media screen and (max-width: 767px) {
     .header {
+        padding: rem(20);
         &__accueil {
-            margin-left: rem(-20);
+            margin-left: rem(0);
         }
     }
 }

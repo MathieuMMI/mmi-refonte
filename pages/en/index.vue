@@ -314,9 +314,9 @@ export default {
     justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
     position: relative;
 
-    &__buttonLang{
+    &__buttonLang {
         margin-left: auto;
-        margin-right: rem(20);
+        margin-right: rem(70);
         text-decoration: none;
         border: rem(1) solid $secondary-color;
         border-radius: rem(32);
@@ -569,6 +569,10 @@ export default {
         justify-content: space-between; // Pour espacer les éléments verticalement et aligner le bouton en bas
         position: relative;
 
+        &__buttonLang {
+            margin-right: rem(40);
+        }
+
         &__title {
             font-size: $mobile-h1;
             font-weight: bold;
@@ -693,14 +697,14 @@ export default {
             font-weight: bold;
             text-align: left;
             color: $black;
-            margin-top: rem(0); 
+            margin-top: rem(0);
             margin-left: rem(30);
             margin-bottom: rem(80);
             font-family: $font-satoshi-bold;
 
             &--orange {
                 margin-left: rem(30);
-                margin-top: rem(0); 
+                margin-top: rem(0);
                 color: $primary-color;
                 font-size: $mobile-h2;
                 font-weight: bold;
