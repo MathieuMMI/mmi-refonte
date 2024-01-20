@@ -240,8 +240,11 @@
     <p class="mentions__text"><strong> 10. Applicable law and jurisdiction.</strong></p>
     <p class="mentions__text">Any dispute relating to the use of the https://xn--mmi_montbliard-jkb.fr/ site is subject to French law. Except in cases where the law does not allow it, exclusive jurisdiction is given to the competent courts of Montbéliard.</p>
 </div></template>
-<style lang="scss">.mentions {
+
+<style lang="scss">
+.mentions {
     margin-left: rem(71);
+    margin-right: 30rem;
 
     &__title {
         font-size: $h2;
@@ -261,7 +264,8 @@
 
 @media screen and (max-width: 767px) {
     .mentions {
-        margin-left: rem(30);
+        margin-left: rem(10);
+        margin-right: rem(10);
 
         &__title {
             font-size: $mobile-h2;
@@ -278,4 +282,5 @@
             }
         }
     }
-}</style>
+}
+</style>

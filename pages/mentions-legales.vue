@@ -383,9 +383,11 @@
             Montbéliard</p>
     </div>
 </template>
+
 <style lang="scss">
 .mentions {
     margin-left: rem(71);
+    margin-right: 30rem;
 
     &__title {
         font-size: $h2;
@@ -405,7 +407,8 @@
 
 @media screen and (max-width: 767px) {
     .mentions {
-        margin-left: rem(30);
+        margin-left: rem(10);
+        margin-right: rem(10);
 
         &__title {
             font-size: $mobile-h2;
