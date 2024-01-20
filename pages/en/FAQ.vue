@@ -3,33 +3,35 @@
 const { client } = usePrismic();
 const { data: questions } = await useAsyncData('faq', () => client.getAllByType('faq'));
 
-const isOpen = ref(false);
+import { ref } from 'vue';
 
-const toggleAnswer = () => {
-  isOpen.value = !isOpen.value;
+const isOpen = ref([]);
+
+const toggleAnswer = (index) => {
+  isOpen.value[index] = !isOpen.value[index];
 };
 </script>
 <template>
-  <div class="faq">
-    <h2 class="faq__title">FAQ</h2>
-    <p class="faq__paragraph">Still wondering ? We've got you covered !</p>
-    <MyEllipse size="regular" color="primary" class="faq__ellipse" />
-    <div class="faq__arrow">
-      <MyArrow />
-      <p class="faq__arrow--paragraph">Answers here.</p>
+  <div class="template-faq">
+    <div class="faq">
+      <h2 class="faq__title">FAQ</h2>
+      <p class="faq__paragraph">Still wondering ? We've got you covered !</p>
+      <MyEllipse size="regular" color="primary" class="faq__ellipse" />
+      <div class="faq__arrow">
+        <MyArrow />
+        <p class="faq__arrow--paragraph">Answers here.</p>
+      </div>
+      <MyEllipse size="giant" color="primary2" class="faq__ellipse2" />
     </div>
-    <MyEllipse size="giant" color="primary2" class="faq__ellipse2" />
-  </div>
-  <div>
-    <div v-for="question in questions" :key="question.faq_id">
+    <div v-for="(question, index) in Object.values(questions)" :key="index">
       <div v-if="question.data.faq_answer && question.data.faq_answer[0].text.trim().length > 0" class="faq-container">
         <div class="content">
-          <div class="content__question" @click="toggleAnswer">
-            <PrismicRichText :field="question.data.faq_question" />
-            <MyChevron />
+          <div class="content__question" @click="() => toggleAnswer(index)">
+            <PrismicRichText :field="question.data.faqen_question" />
+            <MyChevron class="content__question--chevron" />
           </div>
-          <div class="content__answer" v-if="isOpen">
-            <PrismicRichText :field="question.data.faq_answer" />
+          <div class="content__answer" v-if="isOpen[index]">
+            <PrismicRichText :field="question.data.faqen_answer" />
           </div>
         </div>
       </div>
@@ -37,8 +39,11 @@ const toggleAnswer = () => {
   </div>
 </template>
 
-
 <style lang="scss" scoped>
+.template-faq {
+  margin-bottom: rem(150);
+}
+
 .faq-container {
   display: flex;
   flex-direction: column;
@@ -48,7 +53,7 @@ const toggleAnswer = () => {
 
 .content {
 
-  border: rem(2) solid $black;
+  border: rem(1) solid $black;
   border-radius: rem(18);
   width: rem(1042);
   padding: rem(5);
@@ -120,6 +125,10 @@ const toggleAnswer = () => {
 
 
 @media screen and (max-width: 767px) {
+  .template-faq {
+    margin-bottom: rem(70);
+  }
+
   .faq-container {
     display: flex;
     flex-direction: column;
@@ -175,8 +184,6 @@ const toggleAnswer = () => {
       right: rem(-400);
       visibility: hidden;
     }
-
-
 
     &__title {
       font-size: $mobile-h1;
