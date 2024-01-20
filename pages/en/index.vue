@@ -202,7 +202,7 @@ export default {
             font="satoshi" class="hero__button" />
         <div class="hero__video">
             <video width="100%" height="auto" autoplay muted>
-                <source src="https://bouque.fr/medias/mmi.mp4" type="video/mp4">
+                <source src="http://bouque.fr/medias/mmi.mp4" type="video/mp4">
             </video>
             <h2 class="hero__h2">Multimedia & Internet professions</h2>
             <div class="hero__blue-line"> </div>
