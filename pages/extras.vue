@@ -121,6 +121,7 @@
         color: $black;
         font-size: $h2;
         font-family: $font-satoshi-bold;
+        margin-top: rem(120);
 
     }
 

@@ -183,7 +183,7 @@ export default {
 <template>
     <div class="hero">
         <div class='hero__buttonLang'>
-            <NuxtLink @click="closeMenu" to="/fr">
+            <NuxtLink @click="closeMenu" to="/">
                 <MyButton class="hero__buttonLang-comp" color="white" label="FR" size="small" font="satoshib" />
             </NuxtLink>
         </div>
