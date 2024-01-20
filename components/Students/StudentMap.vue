@@ -23,6 +23,7 @@
     </div>
 </template>
 
+
 <style lang="scss" scoped>
 .international {
     color: $secondary-color;
@@ -85,7 +86,7 @@
             height: rem(275);
             width: 1px;
             left: 50%;
-            top: rem(-243.2);
+            top: rem(-232);
         }
 
     }
@@ -114,7 +115,7 @@
         &__canada {
             position: absolute;
             left: rem(0);
-            top: rem(-160);
+            top: rem(-192);
 
             &--line {
                 position: absolute;
@@ -130,15 +131,15 @@
         &__portugal {
             position: absolute;
             right: rem(120);
-            top: rem(-96);
+            top: rem(-112);
 
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(84.8);
+                height: rem(76.8);
                 width: 1px;
                 left: 50%;
-                bottom: rem(-84.8);
+                bottom: rem(-76.8);
             }
 
         }
@@ -151,10 +152,10 @@
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(112);
+                height: rem(96);
                 width: 1px;
                 left: 60%;
-                top: rem(-80);
+                top: rem(-52.8);
             }
 
         }
@@ -190,15 +191,15 @@
         &__portugal {
             position: absolute;
             right: rem(104);
-            top: rem(-96);
+            top: rem(-112);
 
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(88);
+                height: rem(80);
                 width: 1px;
                 left: 50%;
-                bottom: rem(-88);
+                bottom: rem(-80);
             }
 
         }
@@ -211,26 +212,27 @@
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(112);
+                height: rem(97);
                 width: 1px;
                 left: 79%;
-                top: rem(-80);
+                top: rem(-56);
             }
 
         }
 
         &__canada {
             position: absolute;
-            left: 0rem;
+            left: 1rem;
             top: -12rem;
+            margin-top: rem(10);
 
             &--line {
                 position: absolute;
                 background-color: $primary-color;
-                height: rem(166);
+                height: rem(128);
                 width: 1px;
-                left: 40%;
-                bottom: rem(-166);
+                left: 30%;
+                bottom: rem(-128);
             }
 
         }
