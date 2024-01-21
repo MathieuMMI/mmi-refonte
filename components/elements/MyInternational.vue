@@ -28,6 +28,7 @@
         </div>
     </div>
 </template>
+
 <style lang="scss" scoped>
 .international {
     color: $secondary-color;
@@ -58,7 +59,7 @@
         padding: rem(2);
         width: 15%;
         position: absolute;
-        left: 22%;
+        left: 20rem;
         top: 0;
 
         &--body {
@@ -76,7 +77,7 @@
         padding: rem(2);
         width: 10%;
         position: absolute;
-        left: rem(640);
+        left: 40rem;
         top: 0;
 
         &--body {
@@ -94,8 +95,8 @@
         padding: rem(2);
         width: 10%;
         position: absolute;
-        bottom: rem(64);
-        right: rem(480);
+        bottom: 4rem;
+        right: 30rem;
 
         &--body {
             &--bold {
@@ -112,7 +113,7 @@
         width: 10%;
         position: absolute;
         bottom: 0;
-        right: rem(320);
+        right: 20rem;
 
         &--body {
             &--bold {
@@ -165,6 +166,143 @@
 }
 
 
+
+@media screen and (min-width: 1920px) {
+    .international {
+        color: $secondary-color;
+        font-size: $body;
+        text-align: center;
+        position: relative;
+        padding: rem(64);
+
+        &__map {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            &--ordi {
+                display: block;
+            }
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: 15%;
+            position: absolute;
+            left: 30rem;
+            top: 0;
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: 10%;
+            position: absolute;
+            left: 51rem;
+            top: 0;
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: 10%;
+            position: absolute;
+            bottom: 4rem;
+            right: 41rem;
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: 10%;
+            position: absolute;
+            bottom: 0;
+            right: 31rem;
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+        }
+
+        &__line {
+
+            &--canada {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(160);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-160);
+            }
+
+            &--espagne {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(220);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-220);
+            }
+
+            &--inde {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(220);
+                width: 1px;
+                left: 50%;
+                top: rem(-220);
+            }
+
+            &--australie {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(150);
+                width: 1px;
+                left: 50%;
+                top: rem(-150);
+            }
+
+
+        }
+    }
+}
 
 @media screen and (max-width: 767px) {
     .international {
