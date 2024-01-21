@@ -95,21 +95,21 @@ export default {
             });
 
             timeline1.to(linePath1.value, {
-                duration: 1,
+                duration: 0.5,
                 ease: 'power1.inOut',
                 strokeDashoffset: 0,
             });
 
             const animateLine2 = () => {
                 const timeline2 = gsap.timeline({
-                    delay: 1,
+                    delay: 0.5,
                     onComplete: () => {
                         animateLine3();
                     },
                 });
 
                 timeline2.to(linePath2.value, {
-                    duration: 1,
+                    duration: 0.5,
                     ease: 'power1.inOut',
                     strokeDashoffset: 0,
                 });
@@ -117,7 +117,7 @@ export default {
 
             const animateLine3 = () => {
                 const timeline3 = gsap.timeline({
-                    delay: 1,
+                    delay: 0.5,
                     onComplete: () => {
                         gsap.to(parcoursComponent.value, {
                             duration: 0.5,
@@ -131,14 +131,14 @@ export default {
                 });
 
                 timeline3.to(linePath3.value, {
-                    duration: 1,
+                    duration: 0.5,
                     ease: 'power1.inOut',
                     strokeDashoffset: 0,
                 });
             };
             const animateLine4 = () => {
                 const timeline4 = gsap.timeline({
-                    delay: 2,
+                    delay: 0.5,
                     onComplete: () => {
                         gsap.to(decouvrirComponent.value, {
                             duration: 0.5,
@@ -151,7 +151,7 @@ export default {
                 });
 
                 timeline4.to(linePath4.value, {
-                    duration: 1,
+                    duration: 0.5,
                     ease: 'power1.inOut',
                     strokeDashoffset: 0,
                 });
