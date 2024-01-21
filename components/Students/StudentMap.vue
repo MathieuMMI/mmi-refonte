@@ -31,6 +31,7 @@
     text-align: center;
     position: relative;
     padding: rem(64);
+    overflow: hidden;
 
     &__map {
         &--ordi {
