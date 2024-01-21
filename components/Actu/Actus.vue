@@ -25,7 +25,7 @@ const showLessActus = () => {
 
         <div v-else>
             <div class="actus">
-                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2).reverse()" :title="actu.data.news_title"
+                <Actu class="actus__actu" v-for="(actu, index) in news.slice(0, 2)" :title="actu.data.news_title"
                     :img="actu.data.news_img" :desc="actu.data.news_hook" :date="actu.data.news_date" :actuid="actu.id" />
             </div>
             <div class="button"><button @click="showAllActus" class="button-plus">Plus d'actus</button></div>
