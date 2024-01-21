@@ -551,32 +551,41 @@
 
         &__left {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
 
             &--img {
                 margin-left: rem(0);
-                width: rem(314);
+                width: 80%;
             }
 
             &--text {
-                margin-top: rem(0);
+                margin-top: rem(60);
                 font-family: $font-satoshi;
-                width: rem(314);
+                width: 80%;
                 margin-bottom: rem(60);
 
             }
         }
 
         &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
             &--text {
                 font-family: $font-satoshi;
-                width: rem(314);
+                width: 80%;
                 margin-bottom: rem(0);
 
             }
 
             &--img {
                 margin-left: rem(0);
-                width: rem(314);
+                width: 80%;
             }
         }
     }
@@ -659,6 +668,209 @@
                 font-family: $font-satoshi-bold;
             }
         }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .hero {
+        margin-left: rem(0);
+        text-align: center;
+
+        &__title {
+            color: $black;
+            font-size: $mobile-h1;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__paragraph {
+            font-family: $font-satoshi-bold;
+            font-size: $mobile-body;
+            color: #8B8BDC;
+            margin-bottom: rem(30);
+        }
+
+        &__img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: rem(80);
+        }
+    }
+
+
+    .canada {
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            text-align: center;
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-top: rem(40);
+        }
+
+        &__left {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            &--img {
+                margin-left: rem(0);
+                width: 80%;
+            }
+
+            &--text {
+                margin-top: rem(60);
+                font-family: $font-satoshi;
+                width: 80%;
+                margin-bottom: rem(60);
+
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            &--text {
+                font-family: $font-satoshi;
+                width: 80%;
+                margin-bottom: rem(0);
+
+            }
+
+            &--img {
+                margin-left: rem(0);
+                width: 80%;
+            }
+        }
+    }
+
+    .offf {
+
+        &__title {
+            text-align: center;
+            margin-top: rem(81);
+            margin-bottom: rem(20);
+            margin-left: rem(0);
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+        }
+
+        &__blue-line {
+            background-color: $secondary-color;
+            height: 2px;
+            width: 100%;
+        }
+
+
+        &__paragraph {
+            margin-left: rem(30);
+            max-width: rem(300);
+            margin-top: rem(40);
+        }
+    }
+
+
+    .defi {
+        margin-top: rem(80);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: rem(20);
+        margin-left: rem(0);
+
+        &__text {
+            &--title {
+                font-size: $mobile-h2;
+                font-family: $font-satoshi-bold;
+                margin-bottom: rem(20);
+                align-items: center;
+            }
+
+            &--paragraph {
+                max-width: rem(311);
+            }
+        }
+
+        &__img {
+            border: rem(2) solid $secondary-color;
+            border-radius: rem(20);
+            width: rem(312);
+        }
+    }
+
+
+    .stage {
+        display: none;
+        margin-top: rem(60);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: rem(60);
+
+        &__title {
+            font-size: $mobile-h2;
+            font-family: $font-satoshi-bold;
+            margin-bottom: rem(64);
+        }
+
+        &__paragraph {
+            max-width: rem(311);
+
+            strong {
+                font-family: $font-satoshi-bold;
+            }
+        }
+    }
+}
+
+.international {
+
+    &__title {
+        font-size: $mobile-h2;
+        font-family: $font-satoshi-bold;
+        width: rem(306);
+        text-align: center;
+        margin-left: rem(0);
+    }
+
+
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--paragraph {
+            width: rem(150);
+            font-weight: bold;
+            font-family: $font-satoshi-bold;
+
+        }
+    }
+
+    &__student {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: rem(200);
+        margin-bottom: rem(200);
     }
 }
 </style>

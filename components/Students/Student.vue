@@ -31,6 +31,8 @@ const props = defineProps({
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    margin-top: rem(10);
+
 
 
     &__country {
@@ -63,12 +65,13 @@ const props = defineProps({
 @media screen and (max-width: 767px) {
     .student {
         border-radius: 20px;
-        border: 3px solid var(--ORANGE, #FFA51D);
+        border: 2px solid var(--ORANGE, #FFA51D);
         width: rem(140);
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
+        margin-top: rem(10);
 
 
         &__country {
