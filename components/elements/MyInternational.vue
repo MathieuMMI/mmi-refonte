@@ -6,12 +6,12 @@
         <div class="international__canada">
             <p class="international__canada--body--bold">Canada</p>
             <p class="international__canada--body--ville">Montréal / Matane</p>
-            <div class="international__line--canada"></div>
+            <div class="international__canada--line"></div>
         </div>
         <div class="international__espagne">
             <p class="international__espagne--body--bold">Espagne</p>
             <p class="international__espagne--body--ville">Barcelone</p>
-            <div class="international__line--espagne"></div>
+            <div class="international__espagne--line"></div>
         </div>
         <div class="international__map">
             <MyMap class="international__map--ordi" />
@@ -20,14 +20,15 @@
 
         <div class="international__inde">
             <p class="international__inde--body--bold">Inde</p>
-            <div class="international__line--inde"></div>
+            <div class="international__inde--line"></div>
         </div>
         <div class="international__australie">
             <p class="international__australie--body--bold">Australie</p>
-            <div class="international__line--australie"></div>
+            <div class="international__australie--line"></div>
         </div>
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 .international {
@@ -69,6 +70,15 @@
                 font-family: $font-satoshi-bold;
             }
         }
+
+        &--line {
+            position: absolute;
+            background-color: $primary-color;
+            height: rem(160);
+            width: 1px;
+            left: 50%;
+            bottom: rem(-160);
+        }
     }
 
     &__espagne {
@@ -87,6 +97,15 @@
                 font-family: $font-satoshi-bold;
             }
         }
+
+        &--line {
+            position: absolute;
+            background-color: $primary-color;
+            height: rem(220);
+            width: 1px;
+            left: 50%;
+            bottom: rem(-220);
+        }
     }
 
     &__inde {
@@ -103,6 +122,15 @@
                 font-weight: bold;
                 font-family: $font-satoshi-bold;
             }
+        }
+
+        &--line {
+            position: absolute;
+            background-color: $primary-color;
+            height: rem(220);
+            width: 1px;
+            left: 50%;
+            top: rem(-220);
         }
     }
 
@@ -121,38 +149,8 @@
                 font-family: $font-satoshi-bold;
             }
         }
-    }
 
-    &__line {
-
-        &--canada {
-            position: absolute;
-            background-color: $primary-color;
-            height: rem(160);
-            width: 1px;
-            left: 50%;
-            bottom: rem(-160);
-        }
-
-        &--espagne {
-            position: absolute;
-            background-color: $primary-color;
-            height: rem(220);
-            width: 1px;
-            left: 50%;
-            bottom: rem(-220);
-        }
-
-        &--inde {
-            position: absolute;
-            background-color: $primary-color;
-            height: rem(220);
-            width: 1px;
-            left: 50%;
-            top: rem(-220);
-        }
-
-        &--australie {
+        &--line {
             position: absolute;
             background-color: $primary-color;
             height: rem(150);
@@ -160,9 +158,9 @@
             left: 50%;
             top: rem(-150);
         }
-
-
     }
+
+
 }
 
 
@@ -207,6 +205,15 @@
                     font-family: $font-satoshi-bold;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(160);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-160);
+            }
         }
 
         &__espagne {
@@ -225,6 +232,15 @@
                     font-family: $font-satoshi-bold;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(220);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-220);
+            }
         }
 
         &__inde {
@@ -241,6 +257,15 @@
                     font-weight: bold;
                     font-family: $font-satoshi-bold;
                 }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(220);
+                width: 1px;
+                left: 50%;
+                top: rem(-220);
             }
         }
 
@@ -259,38 +284,8 @@
                     font-family: $font-satoshi-bold;
                 }
             }
-        }
 
-        &__line {
-
-            &--canada {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(160);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-160);
-            }
-
-            &--espagne {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(220);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-220);
-            }
-
-            &--inde {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(220);
-                width: 1px;
-                left: 50%;
-                top: rem(-220);
-            }
-
-            &--australie {
+            &--line {
                 position: absolute;
                 background-color: $primary-color;
                 height: rem(150);
@@ -298,8 +293,6 @@
                 left: 50%;
                 top: rem(-150);
             }
-
-
         }
     }
 }
@@ -342,6 +335,15 @@
                     display: none;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
         }
 
         &__espagne {
@@ -367,6 +369,15 @@
                     display: none;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
         }
 
         &__inde {
@@ -382,6 +393,15 @@
                     font-weight: bold;
                     font-family: $font-satoshi-bold;
                 }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
             }
         }
 
@@ -400,38 +420,8 @@
                     font-family: $font-satoshi-bold;
                 }
             }
-        }
 
-        &__line {
-
-            &--canada {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(80);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-80);
-            }
-
-            &--espagne {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(115);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-115);
-            }
-
-            &--inde {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(64);
-                width: 1px;
-                left: 50%;
-                top: rem(-64);
-            }
-
-            &--australie {
+            &--line {
                 position: absolute;
                 background-color: $primary-color;
                 height: rem(32);
@@ -439,9 +429,426 @@
                 left: 50%;
                 top: rem(-32);
             }
-
-
         }
+
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .international {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        text-align: center;
+        position: relative;
+        padding: rem(0);
+
+        &__map {
+            &--ordi {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(3);
+            position: absolute;
+            left: rem(64);
+            top: rem(-48);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+
+            position: absolute;
+            left: rem(160);
+            top: rem(-64);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                    // width: rem(128);
+
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            bottom: 0;
+            right: rem(115);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+            position: absolute;
+            bottom: rem(-16);
+            right: rem(48);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(32);
+                width: 1px;
+                left: 50%;
+                top: rem(-32);
+            }
+        }
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 391px) {
+    .international {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        text-align: center;
+        position: relative;
+        padding: rem(0);
+
+        &__map {
+            &--ordi {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(3);
+            position: absolute;
+            left: rem(32);
+            top: rem(-48);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+
+            position: absolute;
+            left: rem(144);
+            top: rem(-64);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                    // width: rem(128);
+
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            bottom: 0;
+            right: rem(108);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+            position: absolute;
+            bottom: rem(-16);
+            right: rem(32);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(32);
+                width: 1px;
+                left: 50%;
+                top: rem(-32);
+            }
+        }
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 376px) {
+    .international {
+        color: $secondary-color;
+        font-size: $mobile-body;
+        text-align: center;
+        position: relative;
+        padding: rem(0);
+
+        &__map {
+            &--ordi {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__canada {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(3);
+            position: absolute;
+            left: rem(32);
+            top: rem(-48);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
+        }
+
+        &__espagne {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+
+            position: absolute;
+            left: rem(137.6);
+            top: rem(-64);
+
+            &--body {
+
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                    // width: rem(128);
+
+                }
+
+                &--ville {
+                    display: none;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
+        }
+
+        &__inde {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            position: absolute;
+            bottom: 0;
+            right: rem(100);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
+            }
+        }
+
+        &__australie {
+            border: 1px solid $primary-color;
+            border-radius: rem(10);
+            padding: rem(2);
+            width: rem(64);
+            position: absolute;
+            bottom: rem(-16);
+            right: rem(32);
+
+            &--body {
+                &--bold {
+                    font-weight: bold;
+                    font-family: $font-satoshi-bold;
+                }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(32);
+                width: 1px;
+                left: 50%;
+                top: rem(-32);
+            }
+        }
+
     }
 
 }
@@ -485,6 +892,15 @@
                     display: none;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(80);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-80);
+            }
         }
 
         &__espagne {
@@ -510,6 +926,15 @@
                     display: none;
                 }
             }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(115);
+                width: 1px;
+                left: 50%;
+                bottom: rem(-115);
+            }
         }
 
         &__inde {
@@ -525,6 +950,15 @@
                     font-weight: bold;
                     font-family: $font-satoshi-bold;
                 }
+            }
+
+            &--line {
+                position: absolute;
+                background-color: $primary-color;
+                height: rem(64);
+                width: 1px;
+                left: 50%;
+                top: rem(-64);
             }
         }
 
@@ -543,38 +977,8 @@
                     font-family: $font-satoshi-bold;
                 }
             }
-        }
 
-        &__line {
-
-            &--canada {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(80);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-80);
-            }
-
-            &--espagne {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(115);
-                width: 1px;
-                left: 50%;
-                bottom: rem(-115);
-            }
-
-            &--inde {
-                position: absolute;
-                background-color: $primary-color;
-                height: rem(64);
-                width: 1px;
-                left: 50%;
-                top: rem(-64);
-            }
-
-            &--australie {
+            &--line {
                 position: absolute;
                 background-color: $primary-color;
                 height: rem(32);
@@ -582,15 +986,7 @@
                 left: 50%;
                 top: rem(-32);
             }
-
-
         }
     }
-
-
-
-
-
-
 }
 </style>
