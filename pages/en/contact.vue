@@ -163,7 +163,7 @@ const sendEmail = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: rem(45);
+            padding: rem(16);
             z-index: 2;
 
             &__accueil {
@@ -672,4 +672,5 @@ textarea {
             }
         }
     }
-}</style>
+}
+</style>
