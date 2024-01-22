@@ -41,7 +41,7 @@
   </div>
   <div class="video">
     <video width="100%" height="auto" autoplay muted>
-      <source src="http://bouque.fr/medias/mmi.mp4" type="video/mp4">
+      <source src="/assets/mmi.mp4" type="video/mp4">
     </video>
   </div>
 
