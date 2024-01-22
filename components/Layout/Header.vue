@@ -58,7 +58,7 @@ watchEffect(() => {
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: $white;
+    background-color: none;
 }
 
 .header {
