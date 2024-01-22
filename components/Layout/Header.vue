@@ -65,7 +65,7 @@ watchEffect(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: rem(45);
+    padding: rem(16);
 
     &__accueil {
         text-decoration: none;
@@ -78,7 +78,8 @@ watchEffect(() => {
             font-family: $font-satoshi-bold;
         }
     }
-    &__menuIcon{
+
+    &__menuIcon {
         margin-right: rem(30);
     }
 }
@@ -95,6 +96,7 @@ watchEffect(() => {
 @media screen and (max-width: 767px) {
     .header {
         padding: rem(20);
+
         &__accueil {
             margin-left: rem(0);
         }
